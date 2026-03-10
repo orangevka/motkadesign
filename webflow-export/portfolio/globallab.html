@@ -65,6 +65,50 @@
 $(function() {
   $('.this-year').text(new Date().getFullYear());
 });
-</script></body>
+</script><script>
+// Webflow dropdown polyfill (non-Webflow hosting)
+(function(){
+  function open(dd){
+    dd.classList.add('w--open');
+    var t=dd.querySelector('.w-dropdown-toggle');
+    var l=dd.querySelector('.w-dropdown-list');
+    if(t) t.classList.add('w--open');
+    if(l) l.classList.add('w--open');
+  }
+  function close(dd){
+    dd.classList.remove('w--open');
+    var t=dd.querySelector('.w-dropdown-toggle');
+    var l=dd.querySelector('.w-dropdown-list');
+    if(t) t.classList.remove('w--open');
+    if(l) l.classList.remove('w--open');
+  }
+  function closeAll(){
+    document.querySelectorAll('.w-dropdown.w--open').forEach(close);
+  }
+  function init(){
+    document.querySelectorAll('.w-dropdown').forEach(function(dd){
+      var toggle=dd.querySelector('.w-dropdown-toggle');
+      if(!toggle) return;
+      var isHover=dd.getAttribute('data-hover')==='true';
+      if(isHover){
+        dd.addEventListener('mouseenter',function(){ open(dd); });
+        dd.addEventListener('mouseleave',function(){ close(dd); });
+      } else {
+        toggle.addEventListener('click',function(e){
+          e.stopPropagation();
+          var wasOpen=dd.classList.contains('w--open');
+          closeAll();
+          if(!wasOpen) open(dd);
+        });
+      }
+    });
+    document.addEventListener('click', closeAll);
+  }
+  document.readyState==='loading'
+    ? document.addEventListener('DOMContentLoaded',init)
+    : init();
+})();
+</script>
+</body>
 <!-- Mirrored from www.motka.design/portfolio/globallab by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Mar 2026 13:06:17 GMT -->
 </html>
