@@ -115,6 +115,20 @@ $(function() {
     : init();
 })();
 </script>
+<script>
+(function(){
+  var h = document.querySelector('.mtk-header');
+  if (!h) return;
+  var ly = 0;
+  window.addEventListener('scroll', function(){
+    var y = window.scrollY;
+    if (y <= 0) { h.classList.remove('is-peek'); }
+    else if (y < ly) { h.classList.add('is-peek'); }
+    else { h.classList.remove('is-peek'); }
+    ly = y;
+  }, { passive: true });
+})();
+</script>
 </body>
 <!-- Mirrored from www.motka.design/portfolio/branding by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Mar 2026 13:06:22 GMT -->
 </html>

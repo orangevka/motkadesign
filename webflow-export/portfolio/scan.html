@@ -106,4 +106,18 @@ $(function() {
     : init();
 })();
 </script>
+<script>
+(function(){
+  var h = document.querySelector('.mtk-header');
+  if (!h) return;
+  var ly = 0;
+  window.addEventListener('scroll', function(){
+    var y = window.scrollY;
+    if (y <= 0) { h.classList.remove('is-peek'); }
+    else if (y < ly) { h.classList.add('is-peek'); }
+    else { h.classList.remove('is-peek'); }
+    ly = y;
+  }, { passive: true });
+})();
+</script>
 </body></html>

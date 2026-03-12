@@ -55,6 +55,19 @@
 <style>
   html {overflow-x: hidden;}
   body, .overflow-x { overflow-x: hidden !important; -webkit-font-smoothing: antialiased }
+  /* Header: scrolls with content, reappears on scroll-up */
+  body { padding-top: 0 !important; }
+  .mtk-header { position: static !important; }
+  .mtk-header.is-peek {
+    position: fixed !important;
+    top: 0; left: 0; right: 0;
+    z-index: 9999;
+    animation: mtkHeaderIn 0.25s ease;
+  }
+  @keyframes mtkHeaderIn {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+  }
   .designlinks .portlinks {
     -webkit-column-width: 250px;
     -moz-column-width: 250px;
