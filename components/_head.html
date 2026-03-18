@@ -3,13 +3,14 @@
   Вставлять содержимое ВНУТРЬ тега <head>.
 
   Плейсхолдеры (заменить для каждой страницы):
-    {{PAGE_TITLE}}        — заголовок вкладки, напр. "About"
+    {{PAGE_TITLE}}        — заголовок вкладки, напр. "About — Motka Design"
     {{META_DESCRIPTION}}  — описание страницы (до 160 символов)
     {{OG_TITLE}}          — og:title (обычно = PAGE_TITLE)
     {{OG_DESCRIPTION}}    — og:description
     {{OG_IMAGE}}          — абсолютный URL картинки для соцсетей
                             дефолт: https://cdn.prod.website-files.com/623a4d65378e3dda4dd20f87/687a348de666b1ebd114983f_OG.png
     {{CANONICAL_URL}}     — канонический URL страницы, напр. "about.html"
+    {{BASE_URL}}          — "" для root-страниц, "../" для /portfolio/ страниц
 -->
 
 <!-- ═══════════ PAGE-SPECIFIC META (заменить) ═══════════ -->
@@ -31,6 +32,9 @@
 <!-- ═══════════ WEBFLOW CSS ═══════════ -->
 <link href="https://cdn.prod.website-files.com/623a4d65378e3dda4dd20f87/css/motka-design.webflow.shared.783500890.min.css" rel="stylesheet" type="text/css"/>
 
+<!-- ═══════════ MOTKA SHARED STYLES ═══════════ -->
+<link href="{{BASE_URL}}styles.css" rel="stylesheet" type="text/css"/>
+
 <!-- ═══════════ GOOGLE FONTS ═══════════ -->
 <link href="https://fonts.googleapis.com/" rel="preconnect"/>
 <link href="https://fonts.gstatic.com/" rel="preconnect"/>
@@ -51,53 +55,9 @@
 <!-- ═══════════ GOOGLE RECAPTCHA ═══════════ -->
 <script src="https://www.google.com/recaptcha/api.js" type="text/javascript"></script>
 
-<!-- ═══════════ INLINE STYLES ═══════════ -->
-<style>
-  html {overflow-x: hidden;}
-  body, .overflow-x { overflow-x: hidden !important; -webkit-font-smoothing: antialiased }
-  /* Header: scrolls with content, reappears on scroll-up */
-  body { padding-top: 0 !important; }
-  .mtk-header { position: static !important; }
-  .mtk-header.is-peek {
-    position: fixed !important;
-    top: 0; left: 0; right: 0;
-    z-index: 9999;
-    animation: mtkHeaderIn 0.25s ease;
-  }
-  @keyframes mtkHeaderIn {
-    from { transform: translateY(-100%); }
-    to { transform: translateY(0); }
-  }
-  .designlinks .portlinks {
-    -webkit-column-width: 250px;
-    -moz-column-width: 250px;
-    column-width: 250px;
-    -webkit-column-count: 3;
-    -moz-column-count: 3;
-    column-count: 3;
-    -webkit-column-gap: 30px;
-    -moz-column-gap: 30px;
-    column-gap: 30px;
-  }
-  .logo-box:hover .hover-text {display: inline-block;}
-  .mtk-portlinks a:hover .spanemoji, .portlinks a:hover .spanemoji {display:inline !important; text-decoration:none !important;}
-  .story5 .w-background-video>video {
-    background-image: url(https://cdn.prod.website-files.com/623a4d65378e3dda4dd20f87/625455d11c841a695102d9dc_moneywall_videoBG.png) !important;
-  }
-  input:matches([type="button"],[type="submit"]){color: #ffffff !important;}
-  .header input#button-send {color: #ffffff !important;}
-  @media screen and (max-width: 1024px) {
-    .wrapper-story, .designsystem {padding-left: 5vw;}
-    .wrapper, .footer-thin-container.maincont80.limited {padding-left: 5vw; padding-right: 5vw;}
-    .heading-4 {font-size: 80px;}
-  }
-  @media screen and (max-width: 991px) {
-    .w-container .columns-9.w-row {margin-left: 0; margin-right: 0;}
-  }
-  @media screen and (max-width: 479px) {
-    .heading-4 {font-size: 48px; line-height: 42px;}
-  }
-</style>
+<!-- ═══════════ PAGE-SPECIFIC STYLES ═══════════ -->
+<!-- Добавляй инлайн <style> здесь только если на странице есть уникальные стили,
+     которых нет в styles.css. Общие стили — в styles.css. -->
 
 <!-- ═══════════ FINSWEET COOKIE CONSENT ═══════════ -->
 <script async src="https://cdn.jsdelivr.net/npm/%40finsweet/cookie-consent%401/fs-cc.js" fs-cc-mode="informational" fs-cc-expires="180"></script>

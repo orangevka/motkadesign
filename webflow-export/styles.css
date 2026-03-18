@@ -1,0 +1,383 @@
+/* ═══════════════════════════════════════════════════════════════
+   motka.design — shared stylesheet
+   Подключается через: <link rel="stylesheet" href="styles.css"/>
+   (для /portfolio/ страниц: <link href="../styles.css" .../>)
+   ═══════════════════════════════════════════════════════════════ */
+
+
+/* ── Base reset ────────────────────────────────────────────────── */
+html { overflow-x: clip; }
+body, .overflow-x { overflow-x: clip !important; -webkit-font-smoothing: antialiased; }
+
+
+/* ── Header: static → peek-fixed on scroll-up ─────────────────── */
+body { padding-top: 0 !important; }
+.mtk-header { position: static !important; width: 100%; align-self: stretch; }
+.mtk-header.is-peek {
+  position: fixed !important;
+  top: 0; left: 0; right: 0;
+  z-index: 9999;
+  animation: mtkHeaderIn 0.25s ease;
+}
+@keyframes mtkHeaderIn {
+  from { transform: translateY(-100%); }
+  to   { transform: translateY(0); }
+}
+
+
+/* ── Nav menu gap ───────────────────────────────────────────────── */
+/* Webflow default: 16px — переопределяем по макету */
+@media screen and (min-width: 992px) {
+  .mtk-nav-menu { gap: 40px !important; }
+}
+@media screen and (min-width: 992px) and (max-width: 1440px) {
+  .mtk-nav-menu { gap: 28px !important; }
+}
+
+/* ── Spacing nav → content (HTTrack pages) ─────────────────────── */
+.mtk-main-about,
+.mtk-main-index,
+.mtk-main-cont1 { padding-top: 72px; }
+
+/* ── Common interactions ───────────────────────────────────────── */
+.mtk-maillink:hover { text-decoration: underline; }
+.logo-box:hover .hover-text { display: inline-block; }
+.mtk-portlinks a:hover .spanemoji,
+.portlinks a:hover .spanemoji { display: inline !important; text-decoration: none !important; }
+input:matches([type="button"],[type="submit"]) { color: #ffffff !important; }
+.header input#button-send { color: #ffffff !important; }
+
+
+/* ── Legacy Webflow helpers (используются на HTTrack-страницах) ── */
+.designlinks .portlinks {
+  -webkit-column-width: 250px; -moz-column-width: 250px; column-width: 250px;
+  -webkit-column-count: 3; -moz-column-count: 3; column-count: 3;
+  -webkit-column-gap: 30px; -moz-column-gap: 30px; column-gap: 30px;
+}
+.story5 .w-background-video > video {
+  background-image: url(https://cdn.prod.website-files.com/623a4d65378e3dda4dd20f87/625455d11c841a695102d9dc_moneywall_videoBG.png) !important;
+}
+
+
+/* ── Responsive legacy ─────────────────────────────────────────── */
+@media screen and (max-width: 1024px) {
+  .wrapper-story, .designsystem { padding-left: 5vw; }
+  .wrapper, .footer-thin-container.maincont80.limited { padding-left: 5vw; padding-right: 5vw; }
+  .heading-4 { font-size: 80px; }
+}
+@media screen and (max-width: 991px) {
+  .w-container .columns-9.w-row { margin-left: 0; margin-right: 0; }
+}
+@media screen and (max-width: 479px) {
+  .heading-4 { font-size: 48px; line-height: 42px; }
+}
+
+
+/* ══════════════════════════════════════════════════════════════════
+   MTK DESIGN SYSTEM
+   Все кастомные классы используют префикс mtk-
+   Используются на новых страницах вместо дублирования инлайн-CSS
+   ══════════════════════════════════════════════════════════════════ */
+
+
+/* ── Design tokens ─────────────────────────────────────────────── */
+:root {
+  --mtk-font-display: 'Factor A', 'Outfit', sans-serif;
+  --mtk-font-serif:   'Spectral', serif;
+  --mtk-font-body:    'Outfit', 'Open Sans', sans-serif;
+
+  --mtk-color-ink:        #333;
+  --mtk-color-bg:         #fff;
+  --mtk-color-sand:       #F3EFED;
+  --mtk-color-sand-dark:  #E4DDD9;
+  --mtk-color-accent:     #FF7379;
+
+  --mtk-space-page-h:  40px;   /* горизонтальный padding страницы */
+  --mtk-space-section: 64px;   /* вертикальный padding секции */
+  --mtk-max-width:     1440px;
+}
+
+
+/* ── Layout ────────────────────────────────────────────────────── */
+
+/* Центрирующая обёртка страницы */
+.mtk-page-wrap {
+  max-width: var(--mtk-max-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Стандартная секция */
+.mtk-section { background: var(--mtk-color-bg); }
+.mtk-section-inner {
+  padding: var(--mtk-space-section) var(--mtk-space-page-h);
+}
+
+/* Hero-секция (без нижнего padding — следующий блок примыкает) */
+.mtk-hero-section {
+  padding: 32px var(--mtk-space-page-h) 0;
+  background: var(--mtk-color-bg);
+}
+.mtk-hero-sub-wrap {
+  padding: 24px var(--mtk-space-page-h) var(--mtk-space-section);
+  background: var(--mtk-color-bg);
+}
+
+
+/* ── Typography ────────────────────────────────────────────────── */
+
+/* Крупный заголовок страницы (Hero) */
+.mtk-h1 {
+  font-family: var(--mtk-font-display);
+  font-size: 94px;
+  font-weight: 700;
+  color: var(--mtk-color-ink);
+  line-height: 1;
+  margin: 0;
+}
+
+/* Заголовок секции */
+.mtk-h2 {
+  font-family: var(--mtk-font-display);
+  font-size: 50px;
+  font-weight: 700;
+  color: var(--mtk-color-ink);
+  margin: 0 0 16px;
+  line-height: 1.1;
+}
+
+/* Подзаголовок / teaser */
+.mtk-h3-teaser {
+  font-family: var(--mtk-font-display);
+  font-size: 35px;
+  font-weight: 400;
+  color: var(--mtk-color-ink);
+  margin: 0;
+  max-width: 960px;
+  line-height: 1.25;
+}
+
+/* Крупный подзаголовок (hero sub) */
+.mtk-hero-sub {
+  font-family: var(--mtk-font-serif);
+  font-size: 26px;
+  font-weight: 400;
+  color: var(--mtk-color-ink);
+  margin: 0;
+  line-height: 1.4;
+  max-width: 960px;
+}
+
+/* Основной текст (serif) */
+.mtk-body-text {
+  font-family: var(--mtk-font-serif);
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--mtk-color-ink);
+  margin: 0;
+  line-height: 1.55;
+}
+
+/* Мелкий текст / подпись */
+.mtk-caption {
+  font-family: var(--mtk-font-display);
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--mtk-color-ink);
+  line-height: 1.4;
+}
+
+
+/* ── CTA-ссылка «→ Contact us» ─────────────────────────────────── */
+.mtk-cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: var(--mtk-color-ink);
+}
+.mtk-cta-link:hover .mtk-cta-text { text-decoration: underline; }
+.mtk-cta-text {
+  font-family: var(--mtk-font-display);
+  font-size: 16px;
+  font-weight: 500;
+}
+.mtk-cta-arrow {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+
+/* ── Tags / pills (фильтры, категории) ─────────────────────────── */
+.mtk-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  background: var(--mtk-color-sand);
+  font-family: var(--mtk-font-display);
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--mtk-color-ink);
+  white-space: nowrap;
+  text-decoration: none;
+  transition: background 0.15s, box-shadow 0.15s;
+  border: none;
+  cursor: pointer;
+}
+.mtk-tag:hover { background: var(--mtk-color-sand-dark); }
+.mtk-tag.is-active {
+  background: transparent;
+  box-shadow: inset 0 0 0 2px var(--mtk-color-sand);
+}
+
+
+/* ── Sticky tags bar ───────────────────────────────────────────── */
+.mtk-tags-bar {
+  position: sticky;
+  top: 0;
+  z-index: 90;
+  background: #fff;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.mtk-tags-bar.is-unsticky { position: relative; top: auto; }
+.mtk-tags-bar::-webkit-scrollbar { display: none; }
+.mtk-tags-bar-inner {
+  max-width: var(--mtk-max-width);
+  margin: 0 auto;
+  padding: 0 var(--mtk-space-page-h);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 70px;
+  flex-wrap: nowrap;
+}
+
+
+/* ── Cards row ─────────────────────────────────────────────────── */
+.mtk-cards {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+.mtk-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.mtk-card-illus {
+  height: 162px;
+  width: auto;
+  max-width: 180px;
+  object-fit: contain;
+  object-position: left center;
+}
+.mtk-card-title {
+  font-family: var(--mtk-font-display);
+  font-size: 29px;
+  font-weight: 700;
+  color: var(--mtk-color-ink);
+  margin: 0;
+  line-height: 1.2;
+}
+.mtk-card-text {
+  font-family: var(--mtk-font-serif);
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--mtk-color-ink);
+  margin: 0;
+  line-height: 1.55;
+}
+
+
+/* ── Service block (используется на services.html и аналогах) ──── */
+.mtk-svc-block-inner { padding: 0 156px 80px; }
+.mtk-svc-block-main { display: flex; flex-direction: column; gap: 16px; margin-bottom: 48px; }
+.mtk-svc-illus {
+  height: 162px;
+  width: auto;
+  max-width: 180px;
+  object-fit: contain;
+  object-position: left center;
+}
+
+
+/* ── Chips (теги-примеры внутри блока) ─────────────────────────── */
+.mtk-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.mtk-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  font-family: var(--mtk-font-display);
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--mtk-color-ink);
+  white-space: nowrap;
+}
+
+
+/* ── CTA Banner (e.g. EduTech на services.html) ────────────────── */
+.mtk-cta-banner {
+  border-radius: 16px;
+  display: flex;
+  gap: 0;
+  align-items: stretch;
+  overflow: hidden;
+  min-height: 421px;
+  position: relative;
+}
+.mtk-cta-banner-content {
+  flex: 1;
+  padding: 48px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.mtk-cta-banner-title {
+  font-family: var(--mtk-font-display);
+  font-size: 50px;
+  font-weight: 700;
+  color: var(--mtk-color-ink);
+  margin: 0;
+  line-height: 1;
+}
+.mtk-cta-banner-text {
+  font-family: var(--mtk-font-serif);
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--mtk-color-ink);
+  margin: 0;
+  line-height: 1.5;
+  max-width: 600px;
+}
+
+
+/* ── Responsive (новая система) ────────────────────────────────── */
+@media screen and (max-width: 1024px) {
+  :root { --mtk-space-page-h: 5vw; }
+  .mtk-h1 { font-size: 72px; }
+  .mtk-svc-block-inner { padding-left: 5vw; padding-right: 5vw; }
+}
+@media screen and (max-width: 991px) {
+  .mtk-h1 { font-size: 56px; }
+  .mtk-h2 { font-size: 38px; }
+  .mtk-h3-teaser { font-size: 26px; }
+  .mtk-cards { flex-direction: column; }
+}
+@media screen and (max-width: 479px) {
+  .mtk-h1 { font-size: 36px; }
+  .mtk-h2 { font-size: 28px; }
+  .mtk-hero-sub { font-size: 18px; }
+  .mtk-body-text { font-size: 16px; }
+  .mtk-h3-teaser { font-size: 20px; }
+  .mtk-cta-banner-title { font-size: 32px; }
+  .mtk-svc-block-inner { padding-bottom: 40px; }
+}
