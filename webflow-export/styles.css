@@ -32,6 +32,7 @@ body { padding-top: 0 !important; }
 
 /* ── Case pages: override Webflow padding-top on first section ──── */
 .alg-top { padding-top: 2em !important; }
+.case-wrapper-4.deepgeo { padding-top: 2em !important; }
 
 /* ── Spacing nav → content (HTTrack pages) ─────────────────────── */
 .mtk-main-about,
