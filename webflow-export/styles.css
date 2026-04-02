@@ -26,13 +26,12 @@ body { padding-top: 0 !important; }
 
 
 /* ── Nav menu gap ───────────────────────────────────────────────── */
-/* Webflow default: 16px — переопределяем по макету */
 @media screen and (min-width: 992px) {
-  .mtk-nav-menu { gap: 40px !important; }
+  .mtk-nav-menu { gap: 16px !important; }
 }
-@media screen and (min-width: 992px) and (max-width: 1440px) {
-  .mtk-nav-menu { gap: 28px !important; }
-}
+
+/* ── Case pages: override Webflow padding-top on first section ──── */
+.alg-top { padding-top: 2em !important; }
 
 /* ── Spacing nav → content (HTTrack pages) ─────────────────────── */
 .mtk-main-about,
