@@ -146,6 +146,35 @@ $(function() {
   }, { passive: true });
 })();
 </script>
+
+<style>
+.carousel-text.wrapcar { overflow: hidden; }
+.carousel.images, .carousel.images._2nd {
+  display: flex !important;
+  width: max-content !important;
+  flex-wrap: nowrap;
+  animation: carousel-scroll 35s linear infinite;
+  will-change: transform;
+}
+.carousel.images._2nd {
+  animation-duration: 28s;
+  animation-direction: reverse;
+}
+@keyframes carousel-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+</style>
+<script>
+(function() {
+  document.querySelectorAll('.carousel.images').forEach(function(el) {
+    var items = el.innerHTML;
+    // Remove IDs from clone to avoid duplicates
+    var clone = items.replace(/\s+id="[^"]*"/g, '');
+    el.innerHTML += clone;
+  });
+})();
+</script>
 </body>
 <!-- Mirrored from www.motka.design/portfolio/mtx-connect by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Mar 2026 13:06:21 GMT -->
 </html>
