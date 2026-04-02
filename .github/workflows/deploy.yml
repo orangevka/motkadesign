@@ -1,0 +1,24 @@
+name: Deploy to motka-rix.erra.net
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'webflow-export/**'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deploy via rsync
+        uses: burnett01/rsync-deployments@7.0.1
+        with:
+          switches: -avz --delete
+          path: webflow-export/
+          remote_path: /var/www/motka-rix.erra.net/
+          remote_host: 213.21.222.128
+          remote_user: motka
+          remote_key: ${{ secrets.DEPLOY_KEY }}
