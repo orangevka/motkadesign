@@ -133,6 +133,20 @@ $(function() {
   }, { passive: true });
 })();
 </script>
+
+<style>
+.carousel.long.deepgeo {
+  display: flex !important;
+  width: max-content !important;
+  flex-wrap: nowrap;
+  animation: deepgeo-scroll 40s linear infinite;
+  will-change: transform;
+}
+@keyframes deepgeo-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+</style>
 </body>
 <!-- Mirrored from www.motka.design/portfolio/deepgeo by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Mar 2026 13:06:21 GMT -->
 </html>
