@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>motka.design — разбор проекта</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Spectral:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+
+/* ── Reset & base ─────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --ink:    #333;
+  --bg:     #fff;
+  --sand:   #F3EFED;
+  --accent: #FF7379;
+  --dim:    #888;
+  --display: 'Outfit', sans-serif;
+  --serif:   'Spectral', serif;
+}
+
+html, body {
+  width: 100%; height: 100%;
+  overflow: hidden;
+  font-family: var(--display);
+  color: var(--ink);
+  background: var(--bg);
+}
+
+/* ── Slides ───────────────────────────────────────────── */
+.deck {
+  width: 100%; height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  padding: 64px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  transform: translateX(40px);
+}
+.slide.is-active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(0);
+}
+.slide.is-past {
+  opacity: 0;
+  transform: translateX(-40px);
+}
+
+/* ── Slide themes ─────────────────────────────────────── */
+.slide-title   { background: var(--bg); }
+.slide-dark    { background: var(--ink); color: #fff; }
+.slide-sand    { background: var(--sand); }
+.slide-accent  { background: var(--accent); color: #fff; }
+
+/* ── Typography ───────────────────────────────────────── */
+.label {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 24px;
+}
+.slide-dark .label { color: #FF9EA2; }
+.slide-accent .label { color: rgba(255,255,255,0.7); }
+
+.h1 {
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 24px;
+}
+.h2 {
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1.05;
+  margin-bottom: 32px;
+}
+.h3 {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+.sub {
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--dim);
+  max-width: 640px;
+}
+.slide-dark .sub { color: rgba(255,255,255,0.55); }
+.slide-accent .sub { color: rgba(255,255,255,0.8); }
+
+/* ── Lists ────────────────────────────────────────────── */
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 8px;
+}
+.list li {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.4;
+  padding-left: 28px;
+  position: relative;
+}
+.list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+.slide-dark .list li::before { color: #FF9EA2; }
+.slide-accent .list li::before { color: rgba(255,255,255,0.6); }
+
+/* ── Two columns ──────────────────────────────────────── */
+.cols {
+  display: grid;
+  gap: 48px;
+  align-items: start;
+}
+.cols-2 { grid-template-columns: 1fr 1fr; }
+.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+
+/* ── Card ─────────────────────────────────────────────── */
+.card {
+  background: var(--sand);
+  border-radius: 12px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.slide-dark .card { background: rgba(255,255,255,0.08); }
+
+.card-title {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.slide-dark .card-title { color: #FF9EA2; }
+.card-body {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--ink);
+}
+.slide-dark .card-body { color: rgba(255,255,255,0.8); }
+
+/* ── Code block ───────────────────────────────────────── */
+.code {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 15px;
+  line-height: 1.7;
+  background: rgba(0,0,0,0.06);
+  border-radius: 8px;
+  padding: 20px 24px;
+  color: var(--ink);
+  white-space: pre;
+}
+.slide-dark .code {
+  background: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.85);
+}
+.accent-text { color: var(--accent); font-weight: 600; }
+.slide-dark .accent-text { color: #FF9EA2; }
+
+/* ── Tag pill ─────────────────────────────────────────── */
+.pill {
+  display: inline-flex;
+  padding: 6px 14px;
+  background: var(--sand);
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 100px;
+  color: var(--ink);
+}
+.slide-dark .pill { background: rgba(255,255,255,0.12); color: #fff; }
+
+/* ── Big number ───────────────────────────────────────── */
+.big-num {
+  font-size: 96px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--accent);
+}
+.slide-dark .big-num { color: #FF9EA2; }
+
+/* ── Flow diagram ─────────────────────────────────────── */
+.flow {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+.flow-step {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.flow-box {
+  background: var(--sand);
+  border-radius: 8px;
+  padding: 14px 20px;
+  font-size: 17px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.slide-dark .flow-box { background: rgba(255,255,255,0.1); color: #fff; }
+.flow-arrow {
+  font-size: 24px;
+  color: var(--accent);
+  padding: 0 8px;
+  flex-shrink: 0;
+}
+
+/* ── Logo ─────────────────────────────────────────────── */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 48px;
+}
+.logo img { height: 28px; }
+
+/* ── Nav bar ──────────────────────────────────────────── */
+.nav {
+  position: fixed;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: var(--ink);
+  border-radius: 100px;
+  padding: 10px 20px;
+  z-index: 100;
+}
+.nav button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-family: var(--display);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: background 0.15s;
+  opacity: 0.7;
+}
+.nav button:hover { background: rgba(255,255,255,0.12); opacity: 1; }
+.nav button:disabled { opacity: 0.2; cursor: default; }
+.counter {
+  color: rgba(255,255,255,0.5);
+  font-size: 13px;
+  min-width: 48px;
+  text-align: center;
+}
+.progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 3px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+  z-index: 200;
+}
+
+/* ── Separator ────────────────────────────────────────── */
+.sep { height: 1px; background: rgba(0,0,0,0.08); margin: 24px 0; }
+.slide-dark .sep { background: rgba(255,255,255,0.1); }
+
+/* ── Utility ──────────────────────────────────────────── */
+.mt-8  { margin-top: 8px; }
+.mt-16 { margin-top: 16px; }
+.mt-24 { margin-top: 24px; }
+.mt-32 { margin-top: 32px; }
+.dim   { opacity: 0.5; }
+.bold  { font-weight: 700; }
+
+</style>
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+
+<div class="deck" id="deck">
+
+  <!-- ══════════════════════════════════════════════
+       1. ТИТУЛ
+  ══════════════════════════════════════════════ -->
+  <section class="slide slide-title is-active">
+    <div class="logo">
+      <img src="https://cdn.prod.website-files.com/623a4d65378e3dda4dd20f87/65c0e83fc177319cdbeff1ac_red-logo.svg" alt="Motka Design"/>
+    </div>
+    <div class="label">Учебная лаборатория · Март 2026</div>
+    <div class="h1">motka.design</div>
+    <p class="sub">Как мы перенесли сайт из Webflow<br/>в управляемую статическую систему<br/>с AI-верстальщиком</p>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════
+       2. СТАРТОВАЯ ТОЧКА
+  ══════════════════════════════════════════════ -->
+  <section class="slide slide-sand">
+    <div class="label">Контекст</div>
+    <div class="h2">Откуда взялся проект</div>
+    <div class="cols cols-3 mt-32">
+      <div class="card">
+        <div class="card-title">Было</div>
+        <div class="card-body">Сайт на Webflow — платный хостинг, редактирование только внутри Webflow</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Задача</div>
+        <div class="card-body">Перенести на независимый хостинг. Иметь возможность добавлять страницы вне Webflow</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Инструмент</div>
+        <div class="card-body">HTTrack скачал весь сайт: <span class="bold">28 HTML-страниц</span> + 21 кейс в /portfolio/</div>
+      </div>
+    </div>
+    <div class="flow mt-32">
+      <div class="flow-step">
+        <div class="flow-box">motka.design (Webflow)</div>
+        <div class="flow-arrow">→</div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-box">HTTrack</div>
+        <div class="flow-arrow">→</div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-box">webflow-export/ <span class="dim">(28 .html)</span></div>
+        <div class="flow-arrow">→</div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-box">Netlify</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════
+       3. ПРОБЛЕМА
+  ══════════════════════════════════════════════ -->
+  <section class="slide slide-dark">
+    <div class="label">Проблема</div>
+    <div class="h2" style="color:#fff">Что мешало нормально работать</div>
+    <div class="cols cols-2 mt-24">
+      <ul class="list">
+        <li>Тысячи строк инлайн-стилей на каждой странице — скопированы из Webflow как есть</li>
+        <li>Нет общей таблицы стилей: любое изменение — вручную на 28 страницах</li>
+        <li>Навигационные дропдауны сломаны вне Webflow (Webflow JS не работал)</li>
+      </ul>
+      <ul class="list">
+        <li><code style="background:rgba(255,255,255,0.1);padding:2px 8px;border-radius:4px">overflow-x: hidden</code> блокировал <code style="background:rgba(255,255,255,0.1);padding:2px 8px;border-radius:4px">position: sticky</code> — навигация не залипала</li>
+        <li>Контактная форма отправляла данные на сервера Webflow — и падала с ошибкой</li>
+        <li>Нет системы для добавления новых страниц из Figma</li>
+      </ul>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════
+       4. РЕШЕНИЕ: styles.css
+  ══════════════════════════════════════════════ -->
+  <section class="slide slide-title">
+    <div class="label">Решение 1 из 3</div>
+    <div class="h2">Единая таблица стилей</div>
+    <div class="cols cols-2 mt-16">
+      <div>
+        <p class="sub" style="font-size:18px;margin-bottom:24px">Один файл <strong>styles.css</strong> подключён ко всем 28 страницам. Содержит design tokens и систему классов с префиксом <strong>mtk-</strong></p>
+        <div class="code">:root {
+  --mtk-color-accent:  <span class="accent-text">#FF7379</span>;
+  --mtk-color-sand:    #F3EFED;
+  --mtk-font-display:  'Outfit', sans-serif;
+  --mtk-font-serif:    'Spectral', serif;
+  --mtk-space-section: 64px;
+  --mtk-max-width:     1440px;
+}</div>
+      </div>
+      <div>
+        <div class="card mt-8">
+          <div class="card-title">Ключевое открытие</div>
+          <div class="card-body"><code style="background:rgba(0,0,0,0.06);padding:2px 6px;border-radius:4px">overflow-x: hidden</code> создаёт scroll container и ломает <code style="background:rgba(0,0,0,0.06);padding:2px 6px;border-radius:4px">position: sticky</code>.<br/><br/>Заменили на <strong>overflow-x: clip</strong> — поведение то же, но sticky работает корректно.</div>
+        </div>
+        <div class="card mt-16">
+          <div class="card-title">Классы системы</div>
+          <div class="card-body"><code>.mtk-h1</code> / <code>.mtk-h2</code> / <code>.mtk-body-text</code><br/><code>.mtk-section</code> / <code>.mtk-page-wrap</code><br/><code>.mtk-tag</code> / <code>.mtk-card</code> / <code>.mtk-cta-link</code></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════
+       5. РЕШЕНИЕ: КОМПОНЕНТЫ
+  ══════════════════════════════════════════════ -->
+  <section class="slide slide-sand">
+    <div class="label">Решение 2 из 3</div>
+    <div class="h2">Система компонентов</div>
+    <p class="sub" style="font-size:17px;margin-bottom:32px">7 HTML-файлов в папке <strong>components/</strong> — повторно используемые блоки. Новая страница собирается как конструктор.</p>
+    <div class="cols cols-2">
+      <div class="code" style="font-size:14px">components/
+  _head.html          ← &lt;head&gt;: meta, шрифты, аналитика
+  _nav.html           ← светлая навигация (все уровни)
+  _nav-case.html      ← тёмная навигация (4 кейса)
+  _footer.html        ← футер root-страниц
+  _footer-case.html   ← футер кейсов
+  _contact-form.html  ← форма (Netlify Forms)
+  _scripts.html       ← jQuery, peek nav, год</div>
+      <div>
+        <div class="card">
+          <div class="card-title">Как собирается страница</div>
+          <div class="card-body" style="font-family:monospace;font-size:14px;line-height:2">
+            _head.html<br/>
+            <span style="color:var(--accent)">_nav.html</span><br/>
+            &lt;main&gt; уникальный контент &lt;/main&gt;<br/>
+            <span style="color:var(--accent)">_contact-form.html</span><br/>
+            <span style="color:var(--accent)">_footer.html</span><br/>
+            _scripts.html
+          </div>
+        </div>
+        <div class="mt-16" style="font-size:15px;color:var(--dim)">Абсолютные пути в nav (/about.html) — компонент работает с любой вложенности</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════
+       6. ЧТО ПОЧИНИЛИ
+  ══════════════════════════════════════════════ -->
+  <section class="slide slide-title">
+    <div class="label">Исправления</div>
+    <div class="h2">4 поведения навигации</div>
+    <div class="cols cols-2 mt-24">
+      <div class="card">
+        <div class="card-title">Peek nav</div>
+        <div class="card-body">При скролле вниз навигация скрывается. При скролле вверх — плавно выезжает и залипает сверху. Работает на всех 28 страницах через styles.css + один JS-блок в _scripts.html</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Sticky tags bar</div>
+        <div class="card-body">На странице Services теги-якоря (UI Design, Branding...) залипают при скролле по секциям и отлипают в конце. Стало возможным после замены overflow-x: hidden → clip</div>
+      </div>
+      <div class="card mt-16">
+        <div class="card-title">Маркиз-карусель</div>
+        <div class="card-body">На странице Design Subscription секция Selected Work — бесконечная карусель кейсов справа налево. Webflow-анимации заменены на CSS @keyframes + JS-дублирование карточек</div>
+      </div>
+      <div class="card mt-16">
+        <div class="card-title">Nav gap и spacing</div>
+        <div class="card-body">Расстояние между пунктами меню: 40px на десктопе, 28px на планшете (было 16px). Отступ 72px между навигацией и контентом на About, Portfolio, Contacts</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════
+       7. КОНТАКТНАЯ ФОРМА
+  ══════════════════════════════════════════════ -->
+  <section class="slide slide-dark">
+    <div class="label">Контактная форма</div>
+    <div class="h2" style="color:#fff">Webflow Forms → Netlify Forms</div>
+    <div class="cols cols-2 mt-24">
+      <div>
+        <div class="card">
+          <div class="card-title">Было</div>
+          <div class="card-body">Форма отправляла данные на серверы Webflow. Вне Webflow-хостинга — ошибка при каждой отправке</div>
+        </div>
+        <div class="card mt-16">
+          <div class="card-title">Стало</div>
+          <div class="card-body">Netlify Forms: <code style="background:rgba(255,255,255,0.1);padding:2px 6px;border-radius:4px">data-netlify="true"</code>, уведомление на hello@motka.design</div>
+        </div>
+      </div>
+      <div>
+        <div class="card">
+          <div class="card-title">Нетривиальный момент</div>
+          <div class="card-body">Webflow JS перехватывал событие <code style="background:rgba(255,255,255,0.1);padding:2px 6px;border-radius:4px">submit</code> раньше Netlify и отправлял данные себе.<br/><br/>Решение: собственный обработчик с <code style="background:rgba(255,255,255,0.1);padding:2px 6px;border-radius:4px">capture: true</code> + <code style="background:rgba(255,255,255,0.1);padding:2px 6px;border-radius:4px">stopImmediatePropagation()</code> — перехватывает submit первым и отправляет в Netlify через fetch</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════
+       8. AI-СКИЛЫ
+  ══════════════════════════════════════════════ -->
+  <section class="slide slide-sand">
+    <div class="label">Решение 3 из 3</div>
+    <div class="h2">AI-скилы для верстки</div>
+    <div class="cols cols-2 mt-16">
+      <div>
+        <p class="sub" style="font-size:18px;margin-bottom:24px">Два slash-команды для Claude Code. Верстают новую страницу по Figma-макету без написания кода вручную.</p>
+        <div class="card">
+          <div class="card-title">/build-page</div>
+          <div class="card-body">Root-страницы: About, Services, Blog и любые новые. Аргументы: Figma URL + имя файла</div>
+        </div>
+        <div class="card mt-16">
+          <div class="card-title">/build-case</div>
+          <div class="card-body">Кейсы портфолио. Дополнительный параметр: light / dark хедер</div>
+        </div>
+      </div>
+      <div>
+        <div class="card">
+          <div class="card-title">Как работает</div>
+          <div class="card-body" style="line-height:2">
+            1. Читает Figma через MCP API<br/>
+            2. Считывает <strong>имена слоёв</strong> → понимает структуру секций<br/>
+            3. Делает скриншот для финальной сверки<br/>
+            4. Явно перечисляет секции до начала вёрстки<br/>
+            5. Читает компоненты, собирает HTML<br/>
+            6. Сравнивает результат со скриншотом
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════
+       9. FIGMA_PREP
+  ══════════════════════════════════════════════ -->
+  <section class="slide slide-sand">
+    <div class="label">Figma → Code</div>
+    <div class="h2">Как подготовить макет</div>
+    <p class="sub" style="font-size:17px;margin-bottom:32px">Чтобы вёрстка получилась точной — нужна правильная подготовка. Правила зафиксированы в <strong>FIGMA_PREP.md</strong></p>
+    <div class="cols cols-3">
+      <div class="card">
+        <div class="card-title">Фрейм и слои</div>
+        <div class="card-body">Один фрейм = одна страница, 1440px. Секции называть осмысленно: <code style="background:rgba(0,0,0,0.06);padding:2px 6px;border-radius:4px">Hero</code>, <code style="background:rgba(0,0,0,0.06);padding:2px 6px;border-radius:4px">Challenge</code>, <code style="background:rgba(0,0,0,0.06);padding:2px 6px;border-radius:4px">Results</code> — не <code style="background:rgba(0,0,0,0.06);padding:2px 6px;border-radius:4px">Frame 123</code></div>
+      </div>
+      <div class="card">
+        <div class="card-title">Auto Layout</div>
+        <div class="card-body">На каждой секции — Auto Layout с вертикальным направлением и gap. Верстальщик получает flex-значения вместо абсолютных координат</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Адаптив и ссылка</div>
+        <div class="card-body">Ссылка на конкретный фрейм с <code style="background:rgba(0,0,0,0.06);padding:2px 6px;border-radius:4px">node-id</code>. Если нужен точный адаптив — отдельные фреймы 1440 / 991 / 375px</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════
+       10. РЕЗУЛЬТАТ
+  ══════════════════════════════════════════════ -->
+  <section class="slide slide-accent">
+    <div class="label">Результат</div>
+    <div class="h2" style="color:#fff">Что получили</div>
+    <div class="cols cols-3 mt-32">
+      <div style="text-align:center">
+        <div class="big-num">28</div>
+        <div style="font-size:18px;font-weight:500;color:rgba(255,255,255,0.8);margin-top:8px">страниц под<br/>единой системой</div>
+      </div>
+      <div style="text-align:center">
+        <div class="big-num">7</div>
+        <div style="font-size:18px;font-weight:500;color:rgba(255,255,255,0.8);margin-top:8px">переиспользуемых<br/>компонентов</div>
+      </div>
+      <div style="text-align:center">
+        <div class="big-num">2</div>
+        <div style="font-size:18px;font-weight:500;color:rgba(255,255,255,0.8);margin-top:8px">AI-скила для<br/>верстки из Figma</div>
+      </div>
+    </div>
+    <div class="flow mt-48">
+      <div class="flow-step">
+        <div class="flow-box" style="background:rgba(255,255,255,0.2);color:#fff">Figma</div>
+        <div class="flow-arrow" style="color:rgba(255,255,255,0.6)">→</div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-box" style="background:rgba(255,255,255,0.2);color:#fff">/build-page или /build-case</div>
+        <div class="flow-arrow" style="color:rgba(255,255,255,0.6)">→</div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-box" style="background:rgba(255,255,255,0.2);color:#fff">HTML в git</div>
+        <div class="flow-arrow" style="color:rgba(255,255,255,0.6)">→</div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-box" style="background:rgba(255,255,255,0.2);color:#fff">Netlify deploy</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════
+       11. ЧТО ДАЛЬШЕ
+  ══════════════════════════════════════════════ -->
+  <section class="slide slide-title">
+    <div class="logo">
+      <img src="https://cdn.prod.website-files.com/623a4d65378e3dda4dd20f87/65c0e83fc177319cdbeff1ac_red-logo.svg" alt="Motka Design"/>
+    </div>
+    <div class="label">Следующие шаги</div>
+    <div class="h2">Что дальше</div>
+    <ul class="list mt-16">
+      <li>Подготовить макет нового кейса по правилам <strong>FIGMA_PREP.md</strong> — слои, Auto Layout, ссылка на фрейм</li>
+      <li>Запустить <strong>/build-case</strong> на первом реальном Figma-фрейме</li>
+      <li>Итерировать скилы и инструкцию по результатам</li>
+    </ul>
+  </section>
+
+</div><!-- /deck -->
+
+
+<!-- ── Navigation ──────────────────────────────────────── -->
+<nav class="nav">
+  <button id="btn-prev" onclick="go(-1)" disabled>←</button>
+  <span class="counter" id="counter">1 / 11</span>
+  <button id="btn-next" onclick="go(1)">→</button>
+</nav>
+
+<script>
+(function(){
+  var slides = Array.from(document.querySelectorAll('.slide'));
+  var total  = slides.length;
+  var cur    = 0;
+
+  function show(n) {
+    slides[cur].classList.remove('is-active');
+    slides[cur].classList.add('is-past');
+    if (n < cur) {
+      slides[cur].classList.remove('is-past');
+      slides[n].classList.remove('is-past');
+    }
+    cur = n;
+    slides.forEach(function(s, i){
+      s.classList.remove('is-active','is-past');
+      if (i < cur) s.classList.add('is-past');
+    });
+    slides[cur].classList.add('is-active');
+
+    document.getElementById('counter').textContent = (cur+1) + ' / ' + total;
+    document.getElementById('btn-prev').disabled = cur === 0;
+    document.getElementById('btn-next').disabled = cur === total - 1;
+    document.getElementById('progress').style.width = ((cur+1)/total*100) + '%';
+  }
+
+  window.go = function(dir){
+    var next = cur + dir;
+    if (next >= 0 && next < total) show(next);
+  };
+
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'ArrowRight' || e.key === ' ')  go(1);
+    if (e.key === 'ArrowLeft')                     go(-1);
+  });
+
+  // init
+  document.getElementById('progress').style.width = (1/total*100) + '%';
+})();
+</script>
+
+</body>
+</html>
