@@ -1,15 +1,17 @@
-name: Deploy to motka-rix.erra.net
+name: Deploy
 
 on:
   push:
     branches:
       - master
-    paths:
-      - 'webflow-export/**'
 
 jobs:
-  deploy:
+  deploy-en:
+    name: Deploy EN → motka-rix.erra.net
     runs-on: ubuntu-latest
+    if: |
+      contains(toJson(github.event.commits.*.modified), 'webflow-export/') ||
+      contains(toJson(github.event.commits.*.added), 'webflow-export/')
     steps:
       - uses: actions/checkout@v4
 
@@ -22,3 +24,22 @@ jobs:
           remote_host: 213.21.222.128
           remote_user: motka
           remote_key: ${{ secrets.DEPLOY_KEY }}
+
+  deploy-ru:
+    name: Deploy RU → new.motka.ru
+    runs-on: ubuntu-latest
+    if: |
+      contains(toJson(github.event.commits.*.modified), 'webflow-export-ru/') ||
+      contains(toJson(github.event.commits.*.added), 'webflow-export-ru/')
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deploy via rsync
+        uses: burnett01/rsync-deployments@7.0.1
+        with:
+          switches: -avz --delete
+          path: webflow-export-ru/
+          remote_path: /var/www/new.motka.ru/motka-mirror/
+          remote_host: 176.53.146.40
+          remote_user: motka
+          remote_key: ${{ secrets.DEPLOY_KEY_RU }}
