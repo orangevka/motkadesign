@@ -1,0 +1,908 @@
+<!DOCTYPE html><!-- Last Published: Sat Mar 07 2026 06:46:20 GMT+0000 (Coordinated Universal Time) --><html data-wf-domain="motka-proxy.davidmz.me" data-wf-page="6576c5109dea6fc963ab8ef5" data-wf-site="6576c5109dea6fc963ab8e4e" lang="ru"><head><meta charset="utf-8"/><title>Читай-город: редизайн сайта и приложения — Мотка</title><meta content="Редизайн сайта и приложения крупнейшей книжной сети России: модульная дизайн-система, +6% к конверсии, три платформы" name="description"/><meta content="Читай-город: редизайн сайта и приложения — Мотка" property="og:title"/><meta content="Редизайн сайта и приложения крупнейшей книжной сети России: модульная дизайн-система, +6% к конверсии, три платформы" property="og:description"/><meta content="Читай-город: редизайн сайта и приложения — Мотка" property="twitter:title"/><meta content="Редизайн сайта и приложения крупнейшей книжной сети России: модульная дизайн-система, +6% к конверсии, три платформы" property="twitter:description"/><meta property="og:type" content="website"/><meta content="summary_large_image" name="twitter:card"/><meta content="width=device-width, initial-scale=1" name="viewport"/><link href="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/css/motka-ru.webflow.shared.d1c8c5ea8.min.css" rel="stylesheet" type="text/css" integrity="sha384-0cjF6olJEjZMw6eFgMQxX+wi49jm3eAC1SwSwvaXIqavWVCABfwvfzvC1gbDTRGV" crossorigin="anonymous"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous"/><script src="/assets/ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script><script type="text/javascript">WebFont.load({google:{families:["Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic","Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic","Inter:300,400,500,600,700","Outfit:300,400,500,600,700","Roboto:300,400,500,600,700","Spectral:300,400,500,600,700"]}});</script><script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script><link href="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/6576c5109dea6fc963ab8e81_MOTKA-favicon.png" rel="shortcut icon" type="image/x-icon"/><link href="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/6576c5109dea6fc963ab8e7d_MOTKA-256.png" rel="apple-touch-icon"/><link href="https://www.motka.ru/portfolio/chitay-gorod" rel="canonical"/><script src="https://www.google.com/recaptcha/api.js" type="text/javascript" async></script>
+<style>
+body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; }
+.overflow-x { -webkit-font-smoothing: antialiased }
+.logo-box:hover .hover-text { display: inline-block; }
+.mtk-portlinks a:hover .spanemoji, .portlinks a:hover .spanemoji { display:inline !important; text-decoration:none !important; }
+input:matches([type="button"],[type="submit"]) { color: #ffffff !important; }
+.header input#button-send { color: #ffffff !important; }
+@media screen and (max-width: 1024px) {
+  .wrapper-story, .designsystem { padding-left: 5vw; }
+  .wrapper, .footer-thin-container.maincont80.limited { padding-left: 5vw; padding-right: 5vw; }
+  .heading-4 { font-size: 80px; }
+}
+@media screen and (max-width: 991px) {
+  .w-container .columns-9.w-row { margin-left: 0; margin-right: 0; }
+}
+@media screen and (max-width: 479px) {
+  .heading-4 { font-size: 48px; line-height: 42px; }
+}
+</style>
+<!-- Finsweet Cookie Consent -->
+<script async src="/assets/cdn.jsdelivr.net/npm/@finsweet/cookie-consent@1/fs-cc.js" fs-cc-mode="informational" fs-cc-expires="180"></script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+   const ymInit = ()=> ym(7523998, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true });
+   window.FsCC = window.FsCC || [];
+   window.FsCC.push((FsCC) => {
+     if (FsCC.store.confirmed) { ymInit(); } else {
+       const timer = setInterval(() => { if (!FsCC.store.confirmed) return; clearInterval(timer); ymInit(); }, 1000);
+     }
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/7523998" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<script type="text/javascript">window.__WEBFLOW_CURRENCY_SETTINGS = {"currencyCode":"USD","symbol":"$","decimal":".","fractionDigits":2,"group":",","template":"{{wf {\"path\":\"symbol\",\"type\":\"PlainText\"} }} {{wf {\"path\":\"amount\",\"type\":\"CommercePrice\"} }} {{wf {\"path\":\"currencyCode\",\"type\":\"PlainText\"} }}","hideDecimalForWholeNumbers":false};</script>
+<link rel="stylesheet" href="/assets/local/styles.css?_=39ba71">
+<script src="/assets/local/script.js?_=39ba71" type="module"></script>
+
+<style>
+  /* ── Reset Webflow p override inside cg-classes ── */
+  [class*="cg-"] p { font-size: inherit; font-family: inherit; }
+  p.cg-body { font-size: 24px; }
+
+  /* ── Typography ── */
+  .cg-case-title {
+    font-family: 'Factor A', sans-serif;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 1;
+    color: #202320;
+    text-align: center;
+    width: 100%;
+  }
+  .cg-h3 {
+    font-family: 'Factor A', sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 1.15;
+    color: #333;
+  }
+  /* Numbered section header — 30px title, 25px number (from Figma) */
+  .cg-h4 {
+    font-family: 'Factor A', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1.15;
+    color: #333;
+  }
+  .cg-h4-num {
+    font-family: 'Factor A', sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 1.15;
+    color: #000;
+    width: 48px;
+    height: 48px;
+    border-radius: 40px;
+    background: #f4f0ea;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    text-align: center;
+  }
+  .cg-h4-cont {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+  .cg-chitay-gorod .cg-body {
+    font-family: 'Spectral', serif;
+    font-size: 24px;
+    line-height: 1.34;
+    letter-spacing: -0.32px;
+    color: #333;
+  }
+  .cg-chitay-gorod .cg-body p { margin-bottom: 20px; }
+  .cg-chitay-gorod .cg-body p:last-child { margin-bottom: 0; }
+  .cg-chitay-gorod .cg-body ul { list-style: disc; padding-left: 36px; margin-top: 0; }
+  .cg-chitay-gorod .cg-body ul li { margin-bottom: 4px; line-height: 1.34; }
+  .cg-chitay-gorod .cg-body ul li:last-child { margin-bottom: 0; }
+
+  /* ── Layout helpers ── */
+  .cg-text-col {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+  .cg-wide-img-wrap {
+    max-width: 1400px;
+    margin: 0 auto;
+    border-radius: 40px;
+    overflow: hidden;
+  }
+  .cg-wide-img-wrap img { width: 100%; height: auto; display: block; }
+
+  /* Section paddings */
+  .cg-section     { padding: 96px 40px 0; }
+  .cg-section-64  { padding: 64px 40px 0; }
+  .cg-section-80  { padding: 80px 40px 0; }
+  .cg-section-120 { padding: 120px 40px 0; }
+  .cg-section-last { padding: 120px 40px 120px; }
+
+  /* ── Tags ── */
+  .cg-subtitle-mascot { width: 102px; height: 184px; display: block; }
+
+  /* ── Hero ── */
+  .cg-hero { padding: 32px 20px 0; }
+  .cg-hero-inner { max-width: 1400px; margin: 0 auto; border-radius: 40px; overflow: hidden; }
+  .cg-hero-inner img { width: 100%; height: auto; display: block; }
+
+  /* ── H1 section ── */
+  .cg-h1-section { padding: 96px 40px 0; }
+  .cg-h1-section-inner {
+    max-width: 1152px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+  }
+
+  /* ── Context section (vertical, centered content at 900px) ── */
+  .cg-context-section { padding: 96px 40px 0; }
+  .cg-context-item { max-width: 900px; margin: 0 auto; width: 100%; }
+  .cg-context-item + .cg-context-item { margin-top: 40px; }
+  .cg-context-header {
+    font-family: 'Factor A', sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 1.15;
+    color: #333;
+    margin: 0 0 40px;
+  }
+
+  /* ── Video placeholder ── */
+  .cg-video-wrap { max-width: 1400px; margin: 40px auto 0; }
+  .cg-video-placeholder {
+    background: #f4f0ea;
+    border-radius: 24px;
+    width: 100%;
+    aspect-ratio: 16/9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Factor A', sans-serif;
+    font-size: 16px;
+    color: #aaa;
+  }
+
+  /* ── Plan infograph ── */
+  .cg-plan-infograph { padding: 80px 0 0 40px; overflow-x: auto; display: flex; justify-content: center; }
+  .cg-plan-cont { display: inline-flex; gap: 24px; align-items: flex-start; }
+  .cg-info-col {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: flex-start;
+    flex-shrink: 0;
+  }
+  .cg-info-col-5 { position: relative; }
+  .cg-info-h5 {
+    font-family: 'Factor A', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    color: #333;
+    padding-left: 16px;
+  }
+  .cg-info-col-2 .cg-info-h5 { padding-left: 0; width: 100%; text-align: center; }
+  .cg-info-cards { display: flex; flex-direction: column; align-items: center; width: 100%; }
+  .cg-info-cards.is-gap { gap: 16px; align-items: stretch; }
+  .cg-info-card {
+    background: #f4f0ea;
+    border-radius: 24px;
+    padding: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Factor A', sans-serif;
+    font-weight: 400;
+    font-size: 14.4px;
+    line-height: 1.34;
+    color: #333;
+  }
+  .cg-info-card.is-bold { font-weight: 700; }
+  .cg-info-divider { display: flex; justify-content: center; }
+  .cg-info-divider img { display: block; width: 2px; height: 16px; }
+  .cg-info-arrow { flex-shrink: 0; align-self: flex-start; }
+  .cg-info-arrow img { display: block; width: 23px; height: 90px; }
+  .cg-info-mascot { position: absolute; left: 83px; top: 123px; pointer-events: none; }
+  .cg-info-mascot img { display: block; width: 110px; height: 83px; }
+
+  /* ── Approach section ── */
+  .cg-approach-section { padding: 80px 40px 0; }
+  .cg-approach-wrap {
+    background: #f4f0ea;
+    border-radius: 40px;
+    padding: 50px 76px;
+    max-width: 1144px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .cg-approach-row {
+    display: flex;
+    gap: 8px;
+    align-items: stretch;
+  }
+  .cg-approach-cards-left {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    width: 608px;
+    flex-shrink: 0;
+  }
+  .cg-approach-card {
+    background: #fff;
+    border-radius: 24px;
+    padding: 24px;
+    width: 292px;
+    min-height: 240px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .cg-approach-card-top { justify-content: flex-end; }
+  .cg-approach-card-itog {
+    width: 296px;
+    min-height: 0;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    gap: 48px;
+    flex-shrink: 0;
+  }
+  .cg-approach-text {
+    font-family: 'Spectral', serif;
+    font-size: 18px;
+    line-height: 1.34;
+    letter-spacing: -0.32px;
+    color: #333;
+    width: 100%;
+  }
+  .cg-approach-arrow-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 68px;
+    flex-shrink: 0;
+  }
+  .cg-approach-arrow-icon { width: 58px; height: auto; display: block; }
+  .cg-approach-owl { width: 130px; height: auto; display: block; }
+
+  /* ── Book card formula ── */
+  .cg-formula-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin: 0 auto 40px;
+    flex-wrap: wrap;
+  }
+  .cg-formula-item {
+    font-family: 'Factor A', sans-serif;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 1;
+    color: #333;
+    background: #f4f0ea;
+    border-radius: 41px;
+    padding: 14px 41px;
+  }
+  .cg-formula-plus {
+    font-family: 'Factor A', sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+    color: #333;
+  }
+
+  /* ── Big stat ── */
+  .cg-stat-wrap {
+    background: #f4f0ea;
+    border-radius: 24px;
+    padding: 48px;
+    max-width: 900px;
+    margin: 40px auto 0;
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+  }
+  .cg-stat-nums { display: flex; flex-direction: column; flex-shrink: 0; }
+  .cg-stat-num {
+    font-family: 'Factor A', sans-serif;
+    font-weight: 700;
+    font-size: 116px;
+    line-height: 0.95;
+    letter-spacing: -4px;
+    color: #333;
+  }
+  .cg-stat-label {
+    font-family: 'Factor A', sans-serif;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 0.95;
+    color: #333;
+    max-width: 240px;
+  }
+  .cg-stat-wrap .cg-body { flex: 1; }
+
+  /* ── Section images ── */
+  .cg-img-full {
+    width: 100%;
+    max-width: 1400px;
+    height: auto;
+    display: block;
+    border-radius: 24px;
+    margin: 48px auto 0;
+  }
+
+  /* ── Results section ── */
+  .cg-result-cont { max-width: 900px; margin: 0 auto; }
+  .cg-reply-wrap { padding: 120px 40px 120px; }
+  .cg-reply-card {
+    max-width: 1013px;
+    margin: 40px auto 0;
+    background: #fff;
+    border-radius: 24px;
+    box-shadow: 0px 4px 60px 0px rgba(0,0,0,0.1);
+    padding: 80px 46px 80px 55px;
+  }
+  .cg-quote-text {
+    font-family: 'Spectral', serif;
+    font-size: 28px;
+    line-height: 1.34;
+    letter-spacing: -0.32px;
+    color: #333;
+    margin-bottom: 32px;
+  }
+  .cg-reply-author {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 40px;
+  }
+  .cg-author-ava {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+  .cg-quote-author {
+    font-family: 'Factor A', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.3;
+    color: #333;
+  }
+  .cg-quote-role {
+    font-family: 'Factor A', sans-serif;
+    font-size: 20px;
+    line-height: 1.3;
+    color: #333;
+    margin-top: 4px;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 1024px) {
+    .cg-case-title { font-size: 48px; }
+    .cg-h3 { font-size: 40px; }
+    .cg-context-header { font-size: 40px; }
+    .cg-h4 { font-size: 26px; }
+    .cg-body { font-size: 20px; }
+    .cg-approach-wrap { padding: 40px; }
+    .cg-approach-cards-left { width: auto; flex: 1; }
+    .cg-approach-card { width: calc(50% - 12px); }
+    .cg-approach-card-itog { flex: none; width: 240px; }
+    .cg-stat-wrap { padding: 36px; gap: 28px; }
+    .cg-stat-num { font-size: 88px; }
+    .cg-stat-label { font-size: 32px; }
+    .cg-quote-text { font-size: 24px; }
+    .cg-formula-item { font-size: 28px; }
+    .cg-formula-plus { font-size: 40px; }
+  }
+  @media (max-width: 991px) {
+    .cg-case-title { font-size: 36px; }
+    .cg-h3 { font-size: 32px; }
+    .cg-context-header { font-size: 32px; }
+    .cg-h4 { font-size: 22px; }
+    .cg-h4-num { font-size: 20px; }
+    .cg-body { font-size: 18px; }
+    .cg-section, .cg-section-64, .cg-section-80, .cg-section-120 {
+      padding-left: 24px; padding-right: 24px;
+    }
+    .cg-hero { padding: 16px 16px 0; }
+    .cg-h1-section { padding: 64px 24px 0; }
+    .cg-context-section { padding: 64px 24px 0; }
+    .cg-plan-infograph { padding: 56px 24px 0; justify-content: flex-start; }
+    .cg-approach-section { padding: 56px 24px 0; }
+    .cg-approach-wrap { padding: 32px 24px; gap: 24px; }
+    .cg-approach-row { flex-direction: column; align-items: center; }
+    .cg-approach-cards-left { width: 100%; }
+    .cg-approach-card { width: calc(50% - 12px); min-height: 180px; }
+    .cg-approach-card-itog { width: 100%; min-height: 180px; flex-direction: row; justify-content: flex-start; gap: 24px; }
+    .cg-approach-arrow-wrap { transform: rotate(90deg); }
+    .cg-stat-wrap { flex-direction: column; padding: 24px; gap: 16px; }
+    .cg-stat-num { font-size: 64px; }
+    .cg-stat-label { font-size: 26px; }
+    .cg-quote-text { font-size: 20px; }
+    .cg-reply-wrap { padding: 80px 24px 80px; }
+    .cg-reply-card { padding: 40px 24px; }
+    .cg-formula-item { font-size: 22px; padding: 14px 18px; }
+    .cg-formula-plus { font-size: 32px; }
+  }
+  @media (max-width: 479px) {
+    .cg-case-title { font-size: 28px; }
+    .cg-h3 { font-size: 26px; }
+    .cg-context-header { font-size: 26px; }
+    .cg-h4 { font-size: 18px; }
+    .cg-h4-num { font-size: 18px; }
+    .cg-body { font-size: 16px; }
+    .cg-formula-item { font-size: 18px; padding: 12px 16px; }
+    .cg-formula-plus { font-size: 26px; }
+    .cg-stat-num { font-size: 52px; }
+    .cg-stat-label { font-size: 20px; max-width: 160px; }
+    .cg-stages-col-5 { width: 140px; }
+    .cg-stages-mascot { display: none; }
+  }
+</style>
+</head>
+<body class="body overflow-x case-body case-light cg-chitay-gorod">
+
+<!-- ── Navigation ── -->
+<div data-w-id="99910c96-38fa-c5b3-d75a-a89e75eccb78" class="mtk-header-category"><div class="mtk-wrapper mtk-case-wrapper case-navbar"><div data-animation="default" data-collapse="small" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="mtk-navbar nav-desktop w-nav"><div class="mtk-top-nav"><a href="../." class="mtk-logo w-nav-brand"><img width="120" height="31" alt="Motka design studio" src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/6576c5109dea6fc963ab9035_motka-logo-black.svg" loading="lazy" class="mtk-top-logo logo-top"/></a><nav role="navigation" class="mtk-nav-menu w-nav-menu"><div class="tab-port-link-cont"><a href="../portfolio" class="mtk-nav-link nav-ru tab-port-link w-nav-link">Портфолио</a><div data-delay="0" data-hover="false" class="mtk-nav-link-2 first-nav w-dropdown"><div class="dropdown-toggle-2 tab-drop w-dropdown-toggle"><img loading="lazy" src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/6576c5109dea6fc963ab91d6_chevron-down-black.svg" alt="" class="dropdown-arrow-2"/></div><nav class="dropdown-nav-2 tad-drop-nav w-dropdown-list"><div class="w-layout-hflex dropdown-link-cont"><a href="chitay-gorod" aria-current="page" class="dropdown-link w-dropdown-link w--current">Читай-город <span class="spanemoji nav-emoji">📚</span></a><a href="gramota" class="dropdown-link w-dropdown-link">Грамота.ru <span class="spanemoji nav-emoji">📚</span></a><a href="algoritmika" class="dropdown-link w-dropdown-link">Алгоритмика <span class="spanemoji nav-emoji">🦄</span></a><a href="ai-body" class="dropdown-link w-dropdown-link">AI Body <span class="spanemoji nav-emoji">🔮</span></a><a href="globallab" class="dropdown-link w-dropdown-link">GlobalLab <span class="spanemoji nav-emoji">🐱</span></a><a href="scan" class="dropdown-link w-dropdown-link">SCAN <span class="spanemoji nav-emoji">🤖</span></a><a href="spherum" class="dropdown-link w-dropdown-link">Spherum <span class="spanemoji nav-emoji">🎮</span></a><a href="moneywall" class="dropdown-link w-dropdown-link">Moneywall <span class="spanemoji nav-emoji">💰</span></a><a href="moskvagrafika" class="dropdown-link w-dropdown-link">Москваграфика <span class="spanemoji nav-emoji">🛴</span></a><a href="dunice" class="dropdown-link w-dropdown-link">Dunice <span class="spanemoji nav-emoji">🌱</span></a><a href="../portfolio#all-cases" class="dropdown-link w-inline-block"><div>Все кейсы</div><img loading="lazy" src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/6576c5109dea6fc963ab91d7_arrow-right.svg" alt="" class="arrow-link"/></a></div></nav></div></div><div data-delay="0" data-hover="true" class="mtk-nav-link-drop dt-mob-view w-dropdown"><div class="dropdown-toggle w-dropdown-toggle"><a href="../portfolio" class="mtk-nav-link nav-ru menu w-inline-block"><div>Портфолио</div><img loading="lazy" src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/6576c5109dea6fc963ab91d6_chevron-down-black.svg" alt="" class="dropdown-arrow"/></a></div><nav class="dropdown-nav w-dropdown-list"><div class="w-layout-hflex dropdown-link-cont desk"><a href="chitay-gorod" aria-current="page" class="dropdown-link menu w-dropdown-link w--current">Читай-город <span class="spanemoji nav-emoji">📚</span></a><a href="logistic-saas-platform" class="dropdown-link menu w-dropdown-link">Интерфейс для грузоперевозок <span class="spanemoji nav-emoji">🛳️</span></a><a href="gramota" class="dropdown-link menu w-dropdown-link">Грамота.ru <span class="spanemoji nav-emoji">📚</span></a><a href="algoritmika" class="dropdown-link menu w-dropdown-link">Алгоритмика <span class="spanemoji nav-emoji">🦄</span></a><a href="connect" class="dropdown-link menu w-dropdown-link">Брендинг для услуг связи <span class="spanemoji nav-emoji">📞</span></a><a href="deepgeo" class="dropdown-link menu w-dropdown-link">DeepGeo <span class="spanemoji nav-emoji">🌍</span></a><a href="ai-body" class="dropdown-link menu w-dropdown-link">AI Body <span class="spanemoji nav-emoji">🔮</span></a><a href="globallab" class="dropdown-link menu w-dropdown-link">GlobalLab <span class="spanemoji nav-emoji">🐱</span></a><a href="scan" class="dropdown-link menu w-dropdown-link">SCAN <span class="spanemoji nav-emoji">🤖</span></a><a href="spherum" class="dropdown-link menu w-dropdown-link">Spherum <span class="spanemoji nav-emoji">🎮</span></a><a href="moneywall" class="dropdown-link menu w-dropdown-link">Moneywall <span class="spanemoji nav-emoji">💰</span></a><a href="moskvagrafika" class="dropdown-link menu w-dropdown-link">Москваграфика <span class="spanemoji nav-emoji">🛴</span></a><a href="../portfolio#all-cases" class="dropdown-link menu w-inline-block"><div>Все кейсы</div><img loading="lazy" src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/6576c5109dea6fc963ab91d7_arrow-right.svg" alt="" class="arrow-link"/></a></div><div class="w-layout-hflex dropdown-link-cont"><a href="chitay-gorod" aria-current="page" class="dropdown-link menu w-dropdown-link w--current">Читай-город</a><a href="logistic-saas-platform" class="dropdown-link menu w-dropdown-link">Интерфейс для грузоперевозок</a><a href="gramota" class="dropdown-link menu w-dropdown-link">Грамота.ru</a><a href="connect" class="dropdown-link menu w-dropdown-link">Брендинг для услуг связи</a><a href="deepgeo" class="dropdown-link menu w-dropdown-link">DeepGeo</a><a href="algoritmika" class="dropdown-link menu w-dropdown-link">Алгоритмика</a><a href="ai-body" class="dropdown-link menu w-dropdown-link">AI Body</a><a href="globallab" class="dropdown-link menu w-dropdown-link">GlobalLab</a><a href="scan" class="dropdown-link menu w-dropdown-link">SCAN</a><a href="spherum" class="dropdown-link menu w-dropdown-link">Spherum</a><a href="moneywall" class="dropdown-link menu w-dropdown-link">Moneywall</a><a href="moskvagrafika" class="dropdown-link menu w-dropdown-link">Москваграфика</a><a href="../portfolio#all-cases" class="dropdown-link menu w-inline-block"><div>Все кейсы</div><img loading="lazy" src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/6576c5109dea6fc963ab91d7_arrow-right.svg" alt="" class="arrow-link"/></a></div></nav></div><a href="../services" class="mtk-nav-link nav-ru w-nav-link">Услуги</a><a href="#" class="case-close hide w-inline-block"><img loading="lazy" src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/6576c5109dea6fc963ab9037_white-close.svg" alt="" class="case-close-img"/></a><a href="../about" class="mtk-nav-link nav-ru last-nav w-nav-link">О студии</a><a href="#" class="ask-button-link black idx-how-slider-arr w-inline-block"><div class="w-layout-hflex ask-button"><div class="ask-button-text">Заказать дизайн</div></div></a><a href="#" class="ask-button-link black mobhide w-inline-block"><div class="w-layout-hflex ask-button"><div class="ask-button-text">Заказать дизайн</div></div></a></nav><div class="div-block-17"><a href="#" class="ask-button-link black not-absolute w-inline-block"><div class="w-layout-hflex ask-button"><div class="ask-button-text">Заказать дизайн</div></div></a><div data-w-id="99910c96-38fa-c5b3-d75a-a89e75eccbf6" class="mtk-menu-button w-nav-button"><div class="nav-icon"><img loading="lazy" src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/658464b626ba8bc52acff71b_dots.svg" alt="" class="nav-icon-img"/><img loading="lazy" src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/6582fb8a85780c63a8eb1802_close.svg" alt="" class="nav-close-icon-img"/></div></div></div></div></div></div><div class="w-embed"><style>.dropdown-link:hover span.spanemoji.nav-emoji{display:inline !important;text-decoration:none !important;} .mtk-nav-link:hover .dropdown-arrow{opacity:.6;transform:rotate(180deg);}</style></div></div>
+
+<!-- ── Main Content ── -->
+<main>
+
+  <!-- Hero -->
+  <section class="cg-hero">
+    <div class="cg-hero-inner">
+      <img src="images/chitay-gorod/hero-vector.webp" alt="Читай-город — редизайн сайта и приложения" loading="lazy">
+    </div>
+  </section>
+
+  <!-- Subtitle / H1 -->
+  <section class="cg-h1-section">
+    <div class="cg-h1-section-inner">
+      <h1 class="cg-case-title">Читай-город: редизайн сайта и приложения</h1>
+      <img class="cg-subtitle-mascot" src="images/chitay-gorod/mascot-subtitle.svg" alt="" loading="lazy">
+    </div>
+  </section>
+
+  <!-- Context: Задача + Решение (вертикальный стек, 900px по центру) -->
+  <section class="cg-context-section">
+    <div class="cg-context-item">
+      <h2 class="cg-context-header">Задача</h2>
+      <div class="cg-body">
+        <p>Читай-город — крупнейшая книжная сеть России: 600+ магазинов, миллионы покупателей, устоявшиеся конверсионные воронки. Нельзя просто взять и переделать: можно сломать то, что работало годами.</p>
+        <p>У компании появилась новая стратегия развития, новое позиционирование, брендбук и слоган «Место встречи с книгами». Офлайновые магазины уже начали меняться в новом стиле, а сайт и приложение рассказывали старую историю.</p>
+        <p>Перед редизайном стояло три основные задачи: синхронизировать онлайн с новым офлайн-образом, развить e-commerce логику сайта, не уронив метрики, и значительно улучшить эстетику. При этом все решения должны были работать одновременно на трех платформах: десктоп, адаптивная мобильная версия и нативное приложение iOS/Android.</p>
+        <p>Внутренняя дизайн-команда была полностью загружена поддержкой действующего продукта. Кроме того, компании нужен был свежий взгляд: одной из целей было улучшить возвращаемость пользователей, а для этого требовались новые решения, а не эволюция существующих.</p>
+        <p>К нам пришли, когда новый брендбук уже был готов, а цифровые продукты за ним не успевали.</p>
+        <p>Вопросы, которые стояли в начале проекта:<br>
+        1) Как перенести ощущение офлайн-магазина в онлайн? За счет каких приёмов и элементов создать в интерфейсе пространство, где книги хочется взять в руки?<br>
+        2) Что должно быть на первом месте: бренд, магазин, товар или книга?<br>
+        3) Как обеспечить гибкость решений для поддержки большой разветвлённой командой продукта?</p>
+      </div>
+    </div>
+    <div class="cg-context-item">
+      <h2 class="cg-context-header">Решение</h2>
+      <div class="cg-body">
+        <p>В феврале 2025 Читай-город пригласил Мотку в открытый тендер на редизайн сайта. В конкурсе участвовали 15 студий, а отбор включал тестовое задание, тестирование на пользователях и голосование команды Читай-города.</p>
+        <p>Мы предложили 2 концепции с разными гипотезами. 1-я: рукотворный винтаж с контентными вставками и редакционной сёткой. 2-я: чёткая модульная система, где главным объектом стала книга — крупная и осязаемая.</p>
+        <p>На всё ушло 4 недели. Команда клиента вышла с презентации и сразу сказала про модульный вариант: «Нам это нужно. Мы будем это защищать». Тестирование и голосование показали однозначную победу нашей концепции. На протяжении всего проекта команда продукта верила в этот дизайн и защищала его перед руководством на каждом этапе.</p>
+        <p>До начала работы мы договорились разделить ответственность: заказчик отвечает за четкий сбор требований (UX, брендинг, разработка), а Мотка отвечает за дизайн-решения. Мы зафиксировали четыре принципа и не отступали от них:<br>
+        1) Постепенный редизайн. Сначала шапка и навигация: пользователи привыкают. Потом главная. Затем каталог и мини-карточка. Следом новые разделы. Карточка товара в самом конце.<br>
+        2) Mobile First. Адаптивная мобильная версия должна быть похожа на нативное приложение, а не на уменьшенный десктоп. Пользователь на телефоне получает один UX и на сайте, и в приложении.<br>
+        3) Из дизайна в продакшн. Первую версию делаем для десктопа. Дорабатываем, параллельно рисуем адаптив и мобильное приложение, синхронизируя с дизайн-системой. Передаем в разработку все три набора макетов, A/B-тестим, правим и релизим.<br>
+        4) Книга — главный герой, всё остальное обслуживает ее. Этот принцип прошёл через каждый экран на всех платформах.</p>
+        <p>За 8 месяцев мы перестроили дизайн на всех трёх платформах. На старте определили ключевые точки, где нужно менять интерфейс и запустили обновления в три волны (Figma → верстка → тестирование → продакшн):<br>
+        — Главная страница, мини-карточка и списки: каталог, результаты поиска (2,5 месяцев)<br>
+        — Новые разделы и страницы третьего уровня: личный кабинет, сертификаты, страницы авторов (3 месяца)<br>
+        — Карточка товара (2 месяца)</p>
+        <p>На каждом промежуточном этапе было важно, чтобы страницы выглядели цельно, даже когда часть элементов уже обновлена, а часть ещё нет. Всю работу вели в тесной связке с продуктовой командой и разработкой Читай-города: от совместных обсуждений архитектуры страниц до передачи в разработку.</p>
+      </div>
+    </div>
+    <div class="cg-video-wrap">
+      <div class="cg-video-placeholder">TODO: видео кейса</div>
+    </div>
+  </section>
+
+  <!-- #1 Планирование работы -->
+  <section class="cg-section-120">
+    <div class="cg-text-col">
+      <div class="cg-h4-cont">
+        <span class="cg-h4-num">1</span>
+        <h2 class="cg-h4">Планирование работы</h2>
+      </div>
+      <div class="cg-body">
+        <p>Модульная концепция легла в основу нового дизайна, и началась работа по рисованию страниц интерфейса всего магазина.</p>
+        <p>Редизайн живого сервиса с оптимизированными конверсионными воронками — задача посложнее, чем стартовать с чистого листа. Необходима буквально хирургическая точность при каждом серьезном вмешательстве. Все изменения проверялись на данных, и должны быть внедрены без потери метрик.  После обсуждения деталей с командой Читай-города весь процесс «постепенного» редизайна был разбит на несколько этапов.</p>
+      </div>
+    </div>
+    <div class="cg-plan-infograph">
+      <div class="cg-plan-cont">
+
+        <!-- Колонка 1: Главная и навигация (255px) -->
+        <div class="cg-info-col" style="width:255px">
+          <div class="cg-info-h5">Главная и навигация</div>
+          <div class="cg-info-cards">
+            <div class="cg-info-card is-bold">Финализация главной страницы</div>
+            <div class="cg-info-divider"><img src="images/chitay-gorod/plan-divider.svg" alt="" width="2" height="16" loading="lazy"></div>
+            <div class="cg-info-card">Обновление шапки, фона и основных компонентов дизайн-систем для первого этапа редизайна сайта и мобильного приложения</div>
+            <div class="cg-info-divider"><img src="images/chitay-gorod/plan-divider.svg" alt="" width="2" height="16" loading="lazy"></div>
+            <div class="cg-info-card">Мини-карточка товара для сайта и мобильного приложения</div>
+          </div>
+        </div>
+
+        <div class="cg-info-arrow"><img src="images/chitay-gorod/plan-arrow.svg" alt="" width="23" height="90" loading="lazy"></div>
+
+        <!-- Колонка 2: Новые разделы (159px) -->
+        <div class="cg-info-col cg-info-col-2" style="width:159px">
+          <div class="cg-info-h5">Новые разделы</div>
+          <div class="cg-info-cards">
+            <div class="cg-info-card is-bold">Новый раздел «Мои книги»</div>
+            <div class="cg-info-divider"><img src="images/chitay-gorod/plan-divider.svg" alt="" width="2" height="16" loading="lazy"></div>
+            <div class="cg-info-card">Главная</div>
+            <div class="cg-info-divider"><img src="images/chitay-gorod/plan-divider.svg" alt="" width="2" height="16" loading="lazy"></div>
+            <div class="cg-info-card">Новый раздел «Библиотека»</div>
+            <div class="cg-info-divider"><img src="images/chitay-gorod/plan-divider.svg" alt="" width="2" height="16" loading="lazy"></div>
+            <div class="cg-info-card">Обновление закладок</div>
+            <div class="cg-info-divider"><img src="images/chitay-gorod/plan-divider.svg" alt="" width="2" height="16" loading="lazy"></div>
+            <div class="cg-info-card">Новый раздел «Рекомендации»</div>
+          </div>
+        </div>
+
+        <div class="cg-info-arrow"><img src="images/chitay-gorod/plan-arrow.svg" alt="" width="23" height="90" loading="lazy"></div>
+
+        <!-- Колонка 3: Списки (114px) -->
+        <div class="cg-info-col" style="width:114px">
+          <div class="cg-info-h5">Списки</div>
+          <div class="cg-info-cards">
+            <div class="cg-info-card is-bold">Каталог и поиск</div>
+            <div class="cg-info-divider"><img src="images/chitay-gorod/plan-divider2.svg" alt="" width="2" height="16" loading="lazy"></div>
+            <div class="cg-info-card is-bold">Циклы</div>
+            <div class="cg-info-divider"><img src="images/chitay-gorod/plan-divider2.svg" alt="" width="2" height="16" loading="lazy"></div>
+            <div class="cg-info-card is-bold">Авторы</div>
+            <div class="cg-info-divider"><img src="images/chitay-gorod/plan-divider2.svg" alt="" width="2" height="16" loading="lazy"></div>
+            <div class="cg-info-card is-bold">Подборки</div>
+            <div class="cg-info-divider"><img src="images/chitay-gorod/plan-divider2.svg" alt="" width="2" height="16" loading="lazy"></div>
+            <div class="cg-info-card is-bold">Серии</div>
+            <div class="cg-info-divider"><img src="images/chitay-gorod/plan-divider2.svg" alt="" width="2" height="16" loading="lazy"></div>
+            <div class="cg-info-card is-bold">Статьи</div>
+          </div>
+        </div>
+
+        <div class="cg-info-arrow"><img src="images/chitay-gorod/plan-arrow.svg" alt="" width="23" height="90" loading="lazy"></div>
+
+        <!-- Колонка 4: 3-й уровень (176px) — gap 16px, без коннекторов -->
+        <div class="cg-info-col" style="width:176px">
+          <div class="cg-info-h5">3-й уровень</div>
+          <div class="cg-info-cards is-gap">
+            <div class="cg-info-card is-bold">Электронные сертификаты</div>
+            <div class="cg-info-card is-bold">Разделы книжных циклов</div>
+            <div class="cg-info-card is-bold">Страницы авторов</div>
+            <div class="cg-info-card is-bold">Центр управления подпиской</div>
+            <div class="cg-info-card is-bold">Личный кабинет</div>
+            <div class="cg-info-card is-bold">Адаптивная навигация</div>
+          </div>
+        </div>
+
+        <div class="cg-info-arrow"><img src="images/chitay-gorod/plan-arrow.svg" alt="" width="23" height="90" loading="lazy"></div>
+
+        <!-- Колонка 5: Книга (183px) — маскот абсолютный -->
+        <div class="cg-info-col cg-info-col-5" style="width:183px">
+          <div class="cg-info-h5">Книга</div>
+          <div class="cg-info-cards">
+            <div class="cg-info-card is-bold">Карточка товара</div>
+          </div>
+          <div class="cg-info-mascot">
+            <img src="images/chitay-gorod/plan-mascot.svg" alt="" width="110" height="83" loading="lazy">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- #2 Главная страница и навигация -->
+  <section class="cg-section-120">
+    <div class="cg-text-col">
+      <div class="cg-h4-cont">
+        <span class="cg-h4-num">2</span>
+        <h2 class="cg-h4">Главная страница и навигация</h2>
+      </div>
+      <div class="cg-body">
+        <p>Главная — онлайн-витрина книжного магазина, на которой должны быть представлены все форматы, жанры, товары, рубрики. Одновременно это точка пересечения интересов маркетинга, бренд-менеджмента и руководства. Нужно было собрать страницу, которая устроила бы все стороны, и прежде всего пользователей. Нам сильно помогло, что после победы в тендере структура и состав элементов страницы уже были близки к финальному. Первый релиз: шапка, фоновые компоненты, основные блоки. Появилась точка входа: пользователи впервые увидели новый Читай-город. Новая навигация сразу показала результат: нужные действия стали ближе и заметнее, кликабельность ключевых элементов выросла.</p>
+        <p>В A/B-тесте зафиксировали дельту +2,1% к конверсии в добавление в корзину, что уже неплохо, тест продолжается.</p>
+      </div>
+    </div>
+    <img class="cg-img-full" src="images/chitay-gorod/main-page.webp" alt="Главная страница Читай-города — редизайн" loading="lazy">
+  </section>
+
+  <!-- #3 Мини-карточка товара -->
+  <section class="cg-section-120">
+    <div class="cg-text-col">
+      <h2 class="cg-h3" style="text-align:center; margin-bottom:32px;">Формула маркетплейса</h2>
+      <div class="cg-formula-wrap">
+        <div class="cg-formula-item">поиск</div>
+        <div class="cg-formula-plus">+</div>
+        <div class="cg-formula-item">каталог</div>
+        <div class="cg-formula-plus">+</div>
+        <div class="cg-formula-item">карточка товара</div>
+      </div>
+      <div class="cg-h4-cont">
+        <span class="cg-h4-num">3</span>
+        <h2 class="cg-h4">Мини-карточка товара как главная молекула</h2>
+      </div>
+      <div class="cg-body">
+        <p>Мини-карточка (блок представляющий книгу на витрине) встречается на каждой странице: лента новинок, каталог, поиск, рекомендации, закладки. Это базовая молекула, и из неё собирается весь магазин. Около 80 состояний: от компактной превьюшки до развёрнутой карточки с отзывом и серией.</p>
+        <p>Ключевое решение: книга крупная, фронтальная, показана в объеме. Пользователь принимает решение о покупке ещё в листинге, без перехода внутрь карточки. A/B-тест подтвердил гипотезу: количество кликов внутрь снизилось, конверсия в покупку выросла. Люди стали лучше считывать книгу прямо из списка.</p>
+        <p>После релиза рост конверсии в покупку на 6,06%. Он значим сам по себе, но главное другое. Старая система не давала экспериментировать: любое изменение было рискованным, потому что все держалось на хрупких связях. Теперь карточка разбита на управляемые блоки, и полноценная оптимизация под конверсию только начинается.</p>
+        <p>Одним из преимуществ выбранной клиентом было то, как мы представили книгу в карточке: книга не теряется среди интерфейса.</p>
+      </div>
+      <div class="cg-stat-wrap">
+        <div class="cg-stat-nums">
+          <div class="cg-stat-num">80</div>
+          <div class="cg-stat-label">вариантов<br>карточки</div>
+        </div>
+        <div class="cg-body">
+          <p>Мы нарисовали варианты на все случаи использования и для всех устройств:</p>
+          <ul>
+            <li>товар или книга</li>
+            <li>книга с популярным отзывом на нее</li>
+            <li>акцентированная карточка для продвижения книги</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <img class="cg-img-full" src="images/chitay-gorod/book-card.webp" alt="Карточки товара — 80 состояний мини-карточки" loading="lazy">
+  </section>
+
+  <!-- #4 Синхронизация дизайн-систем -->
+  <section class="cg-section-120">
+    <div class="cg-text-col">
+      <div class="cg-h4-cont">
+        <span class="cg-h4-num">4</span>
+        <h2 class="cg-h4">Синхронизация макетов и дизайн-систем</h2>
+      </div>
+      <div class="cg-body">
+        <p>У Читай-города к моменту нашего прихода сложились две независимые дизайн-системы: одна для сайта, другая для мобильного приложения. Каждая годами настраивалась под нужды своей команды разработки, со своими компонентами, типографическими стилями и правилами.</p>
+        <p>Наша задача была не создавать новую дизайн-систему с нуля, а постепенно обновить существующие: связать их с новыми дизайн-макетами, не сломав то, чем команды уже пользуются. Мы обновили шрифтовую систему, ввели обновленную цветовую палитру, пересобрали базовые компоненты и сотни производных состояний. Все это делалось в тесной связке с разработчиками: пока одни компоненты еще утверждались, другие уже уходили в продакшн.</p>
+        <p>Что мы поняли — главное качество дизайн-системы состоит в том, чтобы иметь возможность быстро ее обновлять сразу в нескольких местах.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Наш подход -->
+  <section class="cg-approach-section">
+    <div class="cg-approach-wrap">
+      <h2 class="cg-h3" style="text-align:center;">Наш подход</h2>
+      <div class="cg-approach-row">
+        <div class="cg-approach-cards-left">
+          <div class="cg-approach-card cg-approach-card-top">
+            <p class="cg-approach-text"><strong>Постепенный редизайн.</strong> Сначала шапка и навигация: пользователи привыкают. Потом главная. Затем каталог и мини-карточка. Следом новые разделы. Страница карточки товара.</p>
+          </div>
+          <div class="cg-approach-card cg-approach-card-top">
+            <p class="cg-approach-text"><strong>Mobile First.</strong> Адаптивная мобильная версия должна быть похожа на нативное приложение, а не на уменьшенный десктоп. Пользователь не замечает, где сайт в браузере, а где приложение.</p>
+          </div>
+          <div class="cg-approach-card">
+            <p class="cg-approach-text"><strong>Из дизайна в продакшн.</strong> Первую версию делаем для десктопа. Дорабатываем, параллельно рисуем адаптив и мобайл. Привязываем к дизайн-системе. Передаем в разработку все три набора макетов, A/B-тестим, правим и релизим.</p>
+          </div>
+          <div class="cg-approach-card">
+            <p class="cg-approach-text"><strong>Три дизайн-системы.</strong> Десктоп, адаптивная мобильная версия и нативное приложение живут в трёх отдельных дизайн-подсистемах, каждая опирается на общие принципы, но учитывает специфику платформы.</p>
+          </div>
+        </div>
+        <div class="cg-approach-arrow-wrap">
+          <img src="images/chitay-gorod/approach-arrow.svg" alt="" class="cg-approach-arrow-icon">
+        </div>
+        <div class="cg-approach-card cg-approach-card-itog">
+          <img src="images/chitay-gorod/approach-owl.png" alt="" class="cg-approach-owl" loading="lazy">
+          <p class="cg-approach-text"><strong>Книга — главный герой.</strong> Обложка крупная, фронтальная, с корешком. Всё остальное обслуживает именно её. Этот принцип прошёл через каждый экран на всех платформах.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- #5 Пересборка страницы товара -->
+  <section class="cg-section-120">
+    <div class="cg-text-col">
+      <div class="cg-h4-cont">
+        <span class="cg-h4-num">5</span>
+        <h2 class="cg-h4">Пересборка страницы товара</h2>
+      </div>
+      <div class="cg-body">
+        <p>Предыдущая версия карточки собиралась годами: каждая новая функция добавлялась поверх существующей структуры. Воздух уходил, книга уменьшалась, важные действия уходили ниже сгиба.</p>
+        <p>Вместе с продуктовой командой мы заново перепроектировали весь шаблон. Книга, крупная и фронтальная, заняла центр страницы. Купить, забронировать, добавить в избранное, читать отрывок — всё на первом экране. В мобильной версии первый экран также полностью отдан тому, что важно для конверсии.</p>
+        <p>Добавили аннотацию с реальным размером книги в миллиметрах. Мелкая деталь, которая сразу объясняет принцип: пользователь покупает физический объект.</p>
+        <p>Для ритейл-маркетплейса первый экран карточки — это продавец. Всё, что не помещается — не работает.</p>
+      </div>
+    </div>
+    <img class="cg-img-full" src="images/chitay-gorod/renew-pages.webp" alt="Пересборка страницы товара — до и после редизайна" loading="lazy">
+  </section>
+
+  <!-- #6 Иллюстрации и графика -->
+  <section class="cg-section-120">
+    <div class="cg-text-col">
+      <div class="cg-h4-cont">
+        <span class="cg-h4-num">6</span>
+        <h2 class="cg-h4">Иллюстрации и графика</h2>
+      </div>
+      <div class="cg-body">
+        <p>Кошки с книгами, читающие персонажи, летящие страницы, конверты. Они стали частью дизайн-системы, новым смысловым слоем: тёплый рукотворный штрих в мире продаж. Эти иллюстрации регулярно появляются в интерфейсе, в промо-блоках, в разделе «Мои книги», на страницах подборок.</p>
+        <p>Это помогает создать ту самую теплую книжную атмосферу, которую хотел клиент. Пользователь чувствует, что он определенно находится в каком-то новом месте, а не просто листает каталог товаров. Новый брендбук Читай-города задал правило: иллюстрации должны быть сделаны одной непрерывной линией в реалистичной манере. Это оказалось не самым простым решением для экранов. От иллюстраторов потребовалось большое мастерство, чтобы большие иллюстрации не получались слишком абстрактными, а мелким иконкам хватало деталей.</p>
+      </div>
+    </div>
+    <img class="cg-img-full" src="images/chitay-gorod/illustration.webp" alt="Иллюстрации и графика — Читай-город" loading="lazy">
+  </section>
+
+  <!-- #7 Читай-журнал -->
+  <section class="cg-section-120">
+    <div class="cg-text-col">
+      <div class="cg-h4-cont">
+        <span class="cg-h4-num">7</span>
+        <h2 class="cg-h4">Оформление Читай-журнала</h2>
+      </div>
+      <div class="cg-body">
+        <p>У ЧГ разная аудитория, и для брендированных картинок нам нужен был набор узнаваемых приёмов, некоторые общие правила построения и выразительная типографика. Вне зависимости от стиля иллюстрации, такие карточки всегда будут симпатично собираться в общую ленту. Для оформления Читай-журнала мы предложили не ограничиваться одной стилистикой для иллюстраций. Сначала единый стиль работает на узнаваемость, но в перспективе быстро приедается. Поэтому для журнала мы придумали сетку в которой можно использовать и фото, и иллюстрации, и картинки товаров.</p>
+      </div>
+    </div>
+    <img class="cg-img-full" src="images/chitay-gorod/read-magazine.webp" alt="Оформление Читай-журнала — сетка для контента" loading="lazy">
+  </section>
+
+  <!-- #8 Типографика и шрифты -->
+  <section class="cg-section-120">
+    <div class="cg-text-col">
+      <div class="cg-h4-cont">
+        <span class="cg-h4-num">8</span>
+        <h2 class="cg-h4">Типографика и шрифты</h2>
+      </div>
+      <div class="cg-body">
+        <p>В офлайн-брендинге Читай-города использовался шрифт Parangon — в оформлении магазинов и наружных баннеров он работал хорошо, но для онлайн-среды оказался слишком декоративным и специфическим.</p>
+        <p>Как основной шрифт мы использовали Big City с его живыми характерными деталями. Пару ему составил шрифт Onest. Для фирменного Parangon'а тоже в итоге нашлось подходящее место: крупные баннеры-тизеры.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- #9 Мои книги -->
+  <section class="cg-section-120">
+    <div class="cg-text-col">
+      <div class="cg-h4-cont">
+        <span class="cg-h4-num">9</span>
+        <h2 class="cg-h4">Новый раздел «Мои книги»</h2>
+      </div>
+      <div class="cg-body">
+        <p>Закладки, история покупок, отзывы, персональные рекомендации по поведению пользователя. Всё собрали в один общий хаб. Место в Читай-городе, которое знает, что тебе интересно, а не просто хранит чеки.</p>
+        <p>Кстати это был первый раздел, который мы проектировали сразу параллельно для трёх платформ.</p>
+        <p>После релиза раздел показал цифры, которых никто не ожидал: 63% постоянных пользователей начали им пользоваться в первую неделю после запуска.</p>
+        <p>8% всех заказов за эту неделю пришло именно со страниц «Моих книг». Персональный раздел стал новым каналом продаж. Была история про удержание, стала про конверсию.</p>
+      </div>
+    </div>
+    <img class="cg-img-full" src="images/chitay-gorod/my-books.webp" alt="Новый раздел «Мои книги» — Читай-город" loading="lazy">
+  </section>
+
+  <!-- #10 Каталог и поиск -->
+  <section class="cg-section-120">
+    <div class="cg-text-col">
+      <div class="cg-h4-cont">
+        <span class="cg-h4-num">10</span>
+        <h2 class="cg-h4">Каталог и поиск</h2>
+      </div>
+      <div class="cg-body">
+        <p>Помимо товаров есть книжные циклы, редакционные подборки, серии, статьи Читай-журнала и страницы авторов. В прежней версии все эти разделы жили отдельно. В новой версии все видно прямо в результатах поиска: что книга входит в серию, что можно купить комплектом, что есть рецензия в журнале.</p>
+        <p>Этот инсайт пришёл из пользовательских исследований: люди хотели видеть книгу в книжном контексте, а не как изолированную позицию с ценой.</p>
+      </div>
+    </div>
+    <img class="cg-img-full" src="images/chitay-gorod/catalog-search.webp" alt="Каталог и поиск — результаты с контекстом книги" loading="lazy">
+  </section>
+
+  <!-- #11 Электронные сертификаты -->
+  <section class="cg-section-120">
+    <div class="cg-text-col">
+      <div class="cg-h4-cont">
+        <span class="cg-h4-num">11</span>
+        <h2 class="cg-h4">Электронные сертификаты</h2>
+      </div>
+      <div class="cg-body">
+        <p>Процесс покупки подарка мы сделали красивой пошаговой игрой. Переработали весь флоу: выбор повода, темы, карточки и конверта. Каждый шаг визуально насыщенный, с атмосферой книжного мира.</p>
+        <p>Маркетинговая команда получила гибкий инструмент: страницы магазина теперь можно переоформить под любой праздничный сезон без отдельной разработки.</p>
+      </div>
+    </div>
+    <img class="cg-img-full" src="images/chitay-gorod/certificates.webp" alt="Электронные сертификаты — пошаговый флоу выбора подарка" loading="lazy">
+  </section>
+
+  <!-- #12 Книжные циклы и страницы авторов -->
+  <section class="cg-section-120">
+    <div class="cg-text-col">
+      <div class="cg-h4-cont">
+        <span class="cg-h4-num">12</span>
+        <h2 class="cg-h4">Книжные циклы и страницы авторов</h2>
+      </div>
+      <div class="cg-body">
+        <p>На странице автора собрали всё, что нужно читателю: самая популярная книга с отзывами, полная библиография, статьи Читай-журнала о нём. Книжные циклы показывают серию как единое целое: пользователь сразу видит, где он находится в истории и что читать дальше.</p>
+      </div>
+    </div>
+    <img class="cg-img-full" src="images/chitay-gorod/book-series.webp" alt="Книжные циклы и страницы авторов — Читай-город" loading="lazy">
+  </section>
+
+  <!-- Результат -->
+  <section class="cg-section-120">
+    <div class="cg-result-cont">
+      <h2 class="cg-h3" style="margin-bottom:40px;">Результат</h2>
+      <div class="cg-body">
+        <p>Читай-город переосмыслил, как должен выглядеть специализированный книжный маркетплейс.</p>
+        <p>Сайт и приложение обновляются параллельно на 3 платформах (десктоп, мобильный веб, мобильное приложение). Все макеты базируются на каскаде из двух дизайн-систем. Собрано 80+ комбинаций только одной мини-карточки товара, сотни других экранов и компонентов.</p>
+        <p>При редизайне крупного e-commerce сервиса метрики часто сначала проседают: аудитория привыкала к старому интерфейсу, переключение требует времени. В нашем случае ни одна ключевая метрика не ухудшилась. Для большого живого продукта с лояльной аудиторией — это победа.</p>
+        <p>Почему все получилось:<br>
+        — Интерфейс стал тёплым и ламповым, близким к атмосфере обновлённых офлайн-магазинов. Обложка вышла на первый план.<br>
+        — Концепция попала в ожиданиям клиента с первого показа — еще на этапе тендера появился кредит доверия, который держался весь проект. В результате команда заказчика была включена и готова защищать предложенные решения перед стейкхолдерами — без этого дизайн не проходит в продакшн.<br>
+        — Работали в тесной связке с двумя командами разработки. Встроились в обе дизайн-системы: при необходимости дизайнеры общались с разработчиками напрямую, без длинных цепочек согласований.<br>
+        — Оставляли варианты для проверки гипотез. Спорные решения шли через A/B-тесты, а не через споры на встречах.<br>
+        — Легко расставались с идеями, предлагали новые. Не жалели итераций и не боялись переделывать ключевые элементы дизайна, влияющие на конверсию.</p>
+        <p>Сформированная и отлаженная система работает: роллаут продолжается весной 2026 года. Инхаус команда Читай-города развивает продукт в рамках разработанных нами дизайн-систем и добавляет новые экраны самостоятельно.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Отзыв клиента -->
+  <section class="cg-reply-wrap">
+    <div class="cg-text-col">
+      <h2 class="cg-h3">Отзыв клиента</h2>
+    </div>
+    <div class="cg-reply-card">
+      <p class="cg-quote-text">Мы вышли с презентации концепции и сразу сказали: нам это нужно, мы это берём и будем защищать. Насколько комплексно ребята подошли к задаче — это был лучший и самый живой вариант из всего, что мы видели. Видно было, что сделано не ради победы в тендере, а они идут и думают своим путём. На протяжении работы с Моткой была уверенность, что на них можно положиться в трудный момент. Здравый смысл, четкая коммуникация и контакт — на таком большом проекте это прям бесценно.</p>
+      <div class="cg-reply-author">
+        <img src="images/chitay-gorod/author-belov.png" alt="Александр Белов" class="cg-author-ava" loading="lazy">
+        <div>
+          <p class="cg-quote-author">Александр Белов</p>
+          <p class="cg-quote-role">Арт-директор «Читай-города»</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ── Footer ── -->
+<div class="footer-new"><div class="mtk-main footer-main"><div class="mtk-wrapper wrap-footer static"><div class="mtk-footer"><div class="w-layout-hflex mtk-footer-flex"><div class="w-layout-vflex mtk-footer-flex-coll"><div class="h3-footer-cont"><h3 class="h3-footer nowrap">Расскажите о своей задаче</h3></div><div class="w-layout-hflex mtk-footer-lena-cont"><div class="adress-links-footter"><p class="p-bubble">Назначить звонок</p><a href="https://planerka.app/meet/design-motka/30min" target="_blank" class="icon-footer-link w-inline-block"><img src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/68f7541cd6ff4a9992738ea9_1b9a475c4b7d98059d43398da09a8215_Frame%202131327889.svg" loading="lazy" alt="" class="image-47"/><p class="p-bubble link-bold"><div class="link-bold">Выбрать дату и время</div></p></a></div><div class="adress-links-footter"><p class="p-bubble">напишите в телеграм</p><a href="https://t.me/hellomotka" target="_blank" class="icon-footer-link w-inline-block"><img src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/68f7541cfc7a5da497e7120b_23319605bb02660f0de761488f3f9b7f_Frame%202131327889-1.svg" loading="lazy" alt="" class="image-47"/><p class="p-bubble link-bold"><div class="link-bold">@hellomotka</div></p></a></div><div class="adress-links-footter"><p class="p-bubble">или на почту</p><a href="mailto:design@motka.ru" class="icon-footer-link w-inline-block"><img src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/68f7541c2c1b9b81eb5d58a8_115b1f0d00cf4f6caa75a2f4b8d69600_Frame%202131327889-2.svg" loading="lazy" alt="" class="image-47"/><p class="p-bubble link-bold"><div class="link-bold">design@motka.ru</div></p></a></div></div></div><div class="w-layout-vflex mtk-footer-flex-coll"><div class="h3-footer-cont"><h3 class="h3-footer">Новые кейсы</h3></div><div class="div-block-31"><ul role="list" class="footer-cases w-list-unstyled"><li class="footer-cases-li"><a href="chitay-gorod" aria-current="page" class="footer-case-link w--current">Читай-город, <span class="footer-case-cat">редизайн сайта и приложения</span></a></li><li class="footer-cases-li"><a href="deepgeo" class="footer-case-link">DeepGeo, <span class="footer-case-cat">фирстиль, UI дизайн для геологов</span></a></li><li class="footer-cases-li"><a href="connect" class="footer-case-link">Сотовый оператор, <span class="footer-case-cat">брендинг, лендинг</span></a></li><li class="footer-cases-li"><a href="logistic-saas-platform" class="footer-case-link">Логистика, <span class="footer-case-cat">интерфейс, UX/UI платформы</span></a></li><li class="footer-cases-li"><a href="scan" class="footer-case-link">СКАН, <span class="footer-case-cat">фирстиль, дизайн лендинга для SAAS</span></a></li></ul><ul role="list" class="footer-cases w-list-unstyled"><li class="footer-cases-li"><a href="moneywall" class="footer-case-link">MoneyWall, <span class="footer-case-cat">брендинг, UX/UI платёжной системы</span></a></li><li class="footer-cases-li"><a href="gramota" class="footer-case-link">Грамота, <span class="footer-case-cat">редизайн портала</span></a></li><li class="footer-cases-li"><a href="algoritmika" class="footer-case-link">Алгоритмика, <span class="footer-case-cat">ребрендинг онлайн-школы</span></a></li><li class="footer-cases-li"><a href="ai-body" class="footer-case-link">AI Body, <span class="footer-case-cat">дизайн AI персонажа</span></a></li><li class="footer-cases-li"><a href="globallab" class="footer-case-link">ГлобалЛаб, <span class="footer-case-cat">интерфейс для Edutech</span></a></li></ul></div></div><div class="w-layout-vflex mtk-footer-flex-coll last-coll"><h3 class="h3-footer">Ссылки</h3><div class="div-block-32"><ul role="list" class="mtk-footer-links new w-list-unstyled"><li class="mtk-footer-li-link"><a href="https://t.me/hellomotka" target="_blank" class="footer-link w-inline-block"><img loading="lazy" src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/68ef77928dd79747797fd78a_Group%202087329316.svg" alt="Telegram - Motka Design" class="image-45"/></a></li><li class="mtk-footer-li-link"><div class="footer-link"><div class="w-embed w-script"><script type="text/javascript">(function(){var WORKSPACE_VERIFICATION_CODE='e9e825d59fb685fafa527c6d330efd58';var img=new Image(1,1);img.src="https://workspace.ru/local/tools/verification.php?code=e9e825d59fb685fafa527c6d330efd58&type=1x1&nocache="+Math.random();img.style="display:none;";document.body.appendChild(img);})();</script><noscript><img src="https://workspace.ru/local/tools/verification.php?code=e9e825d59fb685fafa527c6d330efd58" style="display:none;"></noscript><a href="https://workspace.ru/contractors/motka/" target="_blank"><img src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/666c6ea235420e9338c6594d_workspace.svg"></a></div></div></li><li class="mtk-footer-li-link"><a href="https://www.behance.net/motkastudio" target="_blank" class="footer-link w-inline-block"><img loading="lazy" src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/666c6ea27085f83e2a4a5347_behance.svg" alt="Behance - Motka Design"/></a></li></ul><ul role="list" class="footer-cases w-list-unstyled"><li class="footer-cases-li"><a href="../consent-to-personal-data-processing" target="_blank" class="footer-case-link light-link">Согласие на обработку персональных данных</a></li><li class="footer-cases-li"><a href="../privacy-policy" target="_blank" class="footer-case-link light-link">Политика конфиденциальности</a></li></ul></div></div></div></div></div></div></div>
+
+<div class="footer-case desktop"><div class="footer-fix-cont"><div class="w-layout-hflex footer-fix-menu"><div data-animation="default" data-collapse="none" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="footer-navigation w-nav"><div class="footer-navigation-cont w-container"><a href="../." class="footer-logo w-nav-brand"><img src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/6576c5109dea6fc963ab8fcc_motka-logo-black.svg" loading="lazy" alt="" class="logo-img-footer"/></a><nav role="navigation" class="footer-nav-menu w-nav-menu"><a href="../portfolio" class="footer-nav-link w-nav-link">Портфолио</a><a href="../services" class="footer-nav-link w-nav-link">Услуги</a><a href="../about" class="footer-nav-link w-nav-link">О студии</a></nav><div class="w-nav-button"><div class="w-icon-nav-menu"></div></div></div></div></div><a href="https://t.me/hellomotka" target="_blank" class="ask-button-link w-inline-block"><div class="w-layout-hflex ask-button"><img src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/66799b96ada974ac8b244d96_ask.svg" loading="lazy" alt="" class="ask-button-icon"/><div class="ask-button-text">Я только спросить</div></div></a></div></div></div>
+
+<footer class="footer-case mobile"><div class="footer-case-cont"><a href="https://t.me/hellomotka" class="ask-button-link w-inline-block"><div class="w-layout-hflex ask-button"><img loading="lazy" src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/66799b96ada974ac8b244d96_ask.svg" alt="" class="ask-button-icon"/><div class="ask-button-text">Я только спросить</div></div></a><div class="footer-navigation mob-nav"><div class="footer-nav-button"><div data-hover="false" data-delay="1200" data-w-id="07a66768-1b38-50ed-a23c-6d6d63af02fc" class="dropdown-button w-dropdown"><div class="footef-nav-dots-cont w-dropdown-toggle"><img loading="lazy" src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/667addc26b8b5536d1d6c0d9_nav-dots.svg" alt="" class="footef-nav-dots"/></div><nav class="footer-dropdown-nav w-dropdown-list"><a href="../." class="footer-nav-link first-item w-inline-block"><div>Главная</div></a><a href="../portfolio" class="footer-nav-link w-inline-block"><div>Портфолио</div></a><a href="../services" class="footer-nav-link w-inline-block"><div>Услуги</div></a><a href="../about" class="footer-nav-link w-inline-block"><div>О студии</div></a></nav></div></div></div></div></footer>
+
+<!-- ── Scripts ── -->
+<script src="/assets/d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js%3Fsite=6576c5109dea6fc963ab8e4e" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/js/webflow.schunk.1a807f015b216e46.js" type="text/javascript" integrity="sha384-oY4R8SfnVBTWnix6ULiWbZs/5tyRyxEiWcG+WrT3unnu5pmfsIYJEraZcyFVlvND" crossorigin="anonymous"></script>
+<script src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/js/webflow.schunk.c712c37d3a866764.js" type="text/javascript" integrity="sha384-o3fiqFynJ263VpVHO8p9uwtk2QfcIRzIWbaGm5M+j5tJupOdNzUZUF0q9l9rOX5L" crossorigin="anonymous"></script>
+<script src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/js/webflow.edfd93b5.e6d997e658d17709.js" type="text/javascript" integrity="sha384-OEKWgQuZVBhZ/YlM7sdQuB0k7ajeJGHMPNGaFOtwvVO3OQsG7/7p61iTaVXbiBUt" crossorigin="anonymous"></script>
+
+<script>
+(function(){const SEL=['.case-paragraph','.lsp-li_main','.popup-text','.call-button-text','.text-block-18','.paragraph-15'].join(', ');function fixSpaces(root){const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,null);let n;while((n=walker.nextNode())){const s=n.nodeValue;const t=s.replace(/&amp;nbsp;/g,'\u00A0').replace(/&nbsp;/g,'\u00A0').replace(/[\u202F\u2009]/g,'\u00A0').replace(/[\u2028\u2029]/g,' ').replace(/\u00AD/g,'');if(t!==s)n.nodeValue=t;}}function run(scope){scope.querySelectorAll(SEL).forEach(fixSpaces);}document.addEventListener('DOMContentLoaded',function(){run(document);new MutationObserver(muts=>{for(const m of muts){m.addedNodes&&m.addedNodes.forEach(node=>{if(node.nodeType!==1)return;if(node.matches?.(SEL))fixSpaces(node);else if(node.querySelector?.(SEL))run(node);});}}).observe(document.body,{childList:true,subtree:true});});})();
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+  const bottomMenu=document.querySelector(".footer-fix-cont");
+  const topMenu=document.querySelector(".mtk-header-category");
+  function isInViewport(el){const r=el.getBoundingClientRect();return r.top>=0&&r.bottom<=window.innerHeight;}
+  function checkScroll(){const scrollBottom=(window.scrollY||window.pageYOffset)+window.innerHeight;if(scrollBottom>=document.body.offsetHeight-10){bottomMenu.classList.add("visible");}else if(isInViewport(topMenu)){bottomMenu.classList.remove("visible");}}
+  window.addEventListener("scroll",checkScroll);checkScroll();
+});
+</script>
+<style>
+.footer-fix-cont{position:fixed;bottom:0;z-index:9999;opacity:0;pointer-events:none;transform:translateY(100%);transition:none;}
+.footer-fix-cont.visible{opacity:1;pointer-events:auto;transform:translateY(0%);transition:opacity 0.4s ease,transform 0.4s ease;}
+</style>
+<script src="/assets/local/polyfills.js"></script>
+</body></html>

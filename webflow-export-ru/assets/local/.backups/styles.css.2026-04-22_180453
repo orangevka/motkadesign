@@ -1,0 +1,28 @@
+.motka-form {
+  margin: 0 0 15px;
+}
+
+.motka-form-done {
+  text-align: center;
+  background-color: #ddd;
+  padding: 20px;
+  display: none;
+}
+
+.motka-form-fail {
+  background-color: #ffdede;
+  margin-top: 10px;
+  padding: 10px;
+  display: none;
+}
+
+/* Fix: на экранах >=1440px Webflow задаёт left/right:auto — position:fixed
+   с такими значениями не центрируется. Явно задаём left:0; right:0;
+   тогда margin:auto (из правила 1280px) правильно центрирует 1400px-контейнер
+   и кнопка остаётся на той же горизонтальной позиции, что и в навигации. */
+@media screen and (min-width: 1440px) {
+  .buttom-design-wrapper {
+    left: 0;
+    right: 0;
+  }
+}

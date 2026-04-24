@@ -1,0 +1,26 @@
+.motka-form {
+  margin: 0 0 15px;
+}
+
+.motka-form-done {
+  text-align: center;
+  background-color: #ddd;
+  padding: 20px;
+  display: none;
+}
+
+.motka-form-fail {
+  background-color: #ffdede;
+  margin-top: 10px;
+  padding: 10px;
+  display: none;
+}
+
+/* Fix: на экранах >=1440px правило Webflow меняет inset:0% auto auto,
+   убирая right:0 — кнопка уходит влево. Возвращаем прижатие к правому краю. */
+@media screen and (min-width: 1440px) {
+  .buttom-design-wrapper {
+    inset: 0% 0% auto auto;
+    margin-right: 0;
+  }
+}

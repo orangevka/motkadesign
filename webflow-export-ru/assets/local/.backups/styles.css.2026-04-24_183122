@@ -1,0 +1,86 @@
+.motka-form {
+  margin: 0 0 15px;
+}
+
+.motka-form-done {
+  text-align: center;
+  background-color: #ddd;
+  padding: 20px;
+  display: none;
+}
+
+.motka-form-fail {
+  background-color: #ffdede;
+  margin-top: 10px;
+  padding: 10px;
+  display: none;
+}
+
+/* Fix: на экранах >=1440px Webflow задаёт left/right:auto — position:fixed
+   с такими значениями не центрируется. Явно задаём left:0; right:0;
+   тогда margin:auto (из правила 1280px) правильно центрирует 1400px-контейнер
+   и кнопка остаётся на той же горизонтальной позиции, что и в навигации. */
+@media screen and (min-width: 1440px) {
+  .buttom-design-wrapper {
+    left: 0;
+    right: 0;
+  }
+}
+
+/* chitay-gorod: блок Команда — одна центрированная колонка */
+.cg-team .lsp-team-colls {
+  justify-content: center;
+}
+.cg-team .lsp-motka-coll {
+  max-width: none;
+  width: auto;
+}
+.cg-team .lsp-people-2 {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 40px;
+}
+
+/* Fix: Webflow shared CSS скрывает .div-block-17 (кнопка + гамбургер) при <=479px.
+   Показываем блок, скрываем только дочернюю ссылку «Заказать дизайн» — гамбургер остаётся. */
+@media screen and (max-width: 479px) {
+  .div-block-17 {
+    display: flex;
+  }
+  .div-block-17 > a {
+    display: none;
+  }
+  .cg-context-header {
+    margin-bottom: 20px;
+  }
+  .cg-h4-cont {
+    margin-bottom: 16px;
+  }
+  .cg-h3 {
+    margin-bottom: 20px;
+  }
+  .cg-approach-wrap {
+    border-radius: 24px;
+  }
+  .cg-approach-card {
+    width: 100%;
+    border-radius: 16px;
+  }
+  .cg-book-card-pic,
+  .cg-renew-pic,
+  .cg-renew-pic-main,
+  .cg-renew-coll-img,
+  .cg-read-mag-pic,
+  .cg-mybooks-pic1,
+  .cg-mybooks-pic1-main,
+  .cg-catalog-pic1,
+  .cg-catalog-pic1-main,
+  .cg-catalog-pic2,
+  .cg-illus-pic,
+  .cg-bs-main-img,
+  .cg-bs-col-img,
+  .cg-video-placeholder {
+    border-radius: 16px;
+  }
+}

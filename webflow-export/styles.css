@@ -34,6 +34,9 @@ body { padding-top: 0 !important; }
 .alg-top { padding-top: 2em !important; }
 .case-wrapper-4.deepgeo { padding-top: 2em !important; }
 
+/* ── subscription.html: reduce hero top margin ─────────────────── */
+.hero-subs { margin-top: 60px !important; }
+
 /* ── Spacing nav → content (HTTrack pages) ─────────────────────── */
 .mtk-main-about,
 .mtk-main-index,
