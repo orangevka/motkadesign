@@ -4,14 +4,20 @@ on:
   push:
     branches:
       - master
+  workflow_dispatch:
+    inputs:
+      target:
+        description: 'Which site to deploy (en / ru / both)'
+        required: false
+        default: 'both'
 
 jobs:
   deploy-en:
     name: Deploy EN → motka-rix.erra.net
     runs-on: ubuntu-latest
     if: |
-      contains(toJson(github.event.commits.*.modified), 'webflow-export/') ||
-      contains(toJson(github.event.commits.*.added), 'webflow-export/')
+      (github.event_name == 'workflow_dispatch' && (github.event.inputs.target == 'en' || github.event.inputs.target == 'both')) ||
+      (github.event_name == 'push' && (contains(toJson(github.event.commits.*.modified), 'webflow-export/') || contains(toJson(github.event.commits.*.added), 'webflow-export/')))
     steps:
       - uses: actions/checkout@v4
 
@@ -29,8 +35,8 @@ jobs:
     name: Deploy RU → new.motka.ru
     runs-on: ubuntu-latest
     if: |
-      contains(toJson(github.event.commits.*.modified), 'webflow-export-ru/') ||
-      contains(toJson(github.event.commits.*.added), 'webflow-export-ru/')
+      (github.event_name == 'workflow_dispatch' && (github.event.inputs.target == 'ru' || github.event.inputs.target == 'both')) ||
+      (github.event_name == 'push' && (contains(toJson(github.event.commits.*.modified), 'webflow-export-ru/') || contains(toJson(github.event.commits.*.added), 'webflow-export-ru/')))
     steps:
       - uses: actions/checkout@v4
 
