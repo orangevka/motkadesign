@@ -45,7 +45,7 @@ jobs:
         with:
           switches: -avz --delete
           path: webflow-export-ru/
-          remote_path: /var/www/new.motka.ru/motka-mirror/
+          remote_path: /var/www/new.motka.ru/motka-mirror/motka-ru.webflow.io/
           remote_host: 176.53.146.40
           remote_user: motka
           remote_key: ${{ secrets.DEPLOY_KEY_RU }}
