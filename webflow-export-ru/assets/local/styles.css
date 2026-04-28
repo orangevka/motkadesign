@@ -66,6 +66,7 @@ input:matches([type="button"],[type="submit"]) { color: #ffffff !important; }
   font-size: 50px;
   line-height: 1.15;
   color: #333;
+  margin-bottom: 40px;
 }
 .cg-h4 {
   font-family: 'Factor A', sans-serif;
@@ -494,12 +495,13 @@ p.cg-bs-caption { font-family: 'Spectral', serif; font-size: 24px; line-height: 
   .cg-approach-section .cg-h3 { margin-bottom: 0; }
   .cg-context-header { font-size: 26px; margin-bottom: 20px; }
   .cg-h4 { font-size: 18px; }
-  .cg-h4-num { font-size: 18px; }
-  .cg-h4-cont { margin-bottom: 16px; }
-  .cg-chitay-gorod .cg-body { font-size: 16px; }
-  .cg-chitay-gorod .cg-body p { font-size: 16px; }
-  .cg-formula-item { font-size: 18px; padding: 12px 16px; }
-  .cg-formula-plus { font-size: 26px; }
+  .cg-h4-num { font-size: 14px; width: 32px; height: 32px; }
+  .cg-h4-cont { margin-bottom: 16px; gap: 10px; }
+  .cg-chitay-gorod .cg-body,
+  .cg-chitay-gorod .cg-body p,
+  p.cg-bs-caption { font-size: 18px; }
+  .cg-formula-item { font-size: 16px; padding: 10px 14px; }
+  .cg-formula-plus { font-size: 20px; }
   .cg-stat-num { font-size: 52px; }
   .cg-stat-label { font-size: 20px; max-width: 160px; }
   p.cg-quote-text { font-size: 16px; }
@@ -527,7 +529,7 @@ p.cg-bs-caption { font-family: 'Spectral', serif; font-size: 24px; line-height: 
   .cg-catalog-pics { gap: 24px; padding-top: 48px; }
   .cg-catalog-pic2 { height: 180px; }
   .cg-cert-cont { gap: 24px; padding-top: 48px; }
-  .cg-cert-desktop { height: 200px; border-radius: 16px; }
+  .cg-cert-desktop { height: auto; border-radius: 16px; }
   .cg-mybooks-pic2 { gap: 12px; padding-top: 0; }
   .cg-mybooks-phone { max-width: 220px; border-radius: 16px; }
   .cg-cert-mobile { max-width: 260px; }
@@ -562,7 +564,6 @@ p.cg-bs-caption { font-family: 'Spectral', serif; font-size: 24px; line-height: 
 
   .cg-illus-lines { flex-wrap: wrap; justify-content: center; gap: 16px; }
   .cg-illus-lines img { flex: none; width: calc(50% - 8px); }
-  .cg-bs-caption { font-size: 18px; }
   .cg-bs-pics-cont { gap: 40px; }
   .cg-hero-inner,
   .cg-img-full,
@@ -583,4 +584,54 @@ p.cg-bs-caption { font-family: 'Spectral', serif; font-size: 24px; line-height: 
   .cg-video-placeholder {
     border-radius: 16px;
   }
+}
+
+/* ══════════════════════════════════════════
+   chitay-gorod: дополнительные мобильные правки
+   ══════════════════════════════════════════ */
+@media (max-width: 479px) {
+  /* Меню не уходит за hero-изображение */
+  .mtk-header-category { position: relative; z-index: 200; }
+  .cg-hero { position: relative; z-index: 0; }
+
+  /* Маскот-берёза под заголовком — вдвое меньше */
+  .cg-subtitle-mascot { width: 51px; height: 92px; }
+
+  /* Формула маркетплейса — в одну строку */
+  .cg-formula-wrap { flex-wrap: nowrap; gap: 8px; }
+
+  /* Подход: gap между карточками и сова */
+  .cg-approach-cards-left { gap: 8px; }
+  .cg-approach-owl { width: 91px; }
+
+  /* Подписи под картинками — прижать к изображению */
+  .cg-bs-col { gap: 12px; }
+
+  /* Мои книги — gap между первой строкой и строкой с двумя телефонами */
+  .cg-mybooks-pictures { gap: 12px; }
+
+  /* Видео сертификатов — не обрезать высоту */
+  .cg-cert-desktop video { height: auto !important; }
+
+  /* Два изображения сертификатов рядом через grid */
+  .cg-cert-colls {
+    display: grid;
+    grid-template-areas: "text text" "img1 img2";
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .cg-cert-coll1 { display: contents; }
+  .cg-cert-coll1 > p.cg-body { grid-area: text; }
+  .cg-cert-coll1 > .cg-cert-mobile {
+    grid-area: img1;
+    max-width: none;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 550 / 817;
+  }
+  .cg-cert-coll2 { grid-area: img2; align-self: start; }
+  .cg-cert-coll2 img { width: 100%; height: auto; }
+
+  /* Абзац "У автора на странице" — под картинку */
+  .cg-bs-col:last-child .cg-bs-col-img { order: -1; }
 }
