@@ -635,3 +635,21 @@ p.cg-bs-caption { font-family: 'Spectral', serif; font-size: 24px; line-height: 
   /* Абзац "У автора на странице" — под картинку */
   .cg-bs-col:last-child .cg-bs-col-img { order: -1; }
 }
+
+@media (max-width: 425px) {
+  .cg-plan-infograph { padding-left: 0; }
+  .cg-plan-cont { gap: 16px; }
+  .cg-info-col { gap: 24px; }
+  .cg-formula-item { padding: 10px; }
+  .cg-section-120 { padding-top: 32px; }
+  .cg-read-mag-cont { padding-top: 32px; }
+  .cg-mybooks-pictures { padding-top: 32px; }
+  .cg-catalog-pics { padding-top: 32px; }
+  .cg-cert-cont { padding-top: 32px; }
+  .cg-bs-pics-cont { margin: 32px auto 0; }
+  .cg-reply-card { margin: 32px auto 0; }
+  .lsp-team.cg-team { padding-left: 0; padding-right: 0; }
+  .mtk-wrapper.wrap-footer { padding-top: 0; }
+  .cg-team .lsp-people-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 16px; }
+  .cg-team .lsp-person.person-motka.cent { align-items: flex-start; width: 100%; text-align: left; }
+}
