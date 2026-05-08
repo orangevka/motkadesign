@@ -648,6 +648,8 @@ p.cg-bs-caption { font-family: 'Spectral', serif; font-size: 24px; line-height: 
   .cg-cert-cont { padding-top: 32px; }
   .cg-bs-pics-cont { margin: 32px auto 0; }
   .cg-reply-card { margin: 32px auto 0; }
+  p.cg-quote-author { font-size: 18px; }
+  p.cg-quote-role { font-size: 16px; }
   .lsp-team.cg-team { padding-left: 0; padding-right: 0; }
   .mtk-wrapper.wrap-footer { padding-top: 0; }
   .cg-team .lsp-people-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 16px; }
