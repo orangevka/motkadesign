@@ -67,19 +67,39 @@ def find_nav_block(html):
     return start, start + 200 + end_offset
 
 
+NINE_DIVS = '</div></div></div></div></div></div></div></div></div>'
+
+
+def _popup_form_end(html, start):
+    """Найти конец form-wrapper popup по маркеру motka-form-fail + 9 закрывающих div."""
+    fail_idx = html.find('motka-form-fail', start)
+    if fail_idx == -1:
+        return -1
+    end_divs = html.find(NINE_DIVS, fail_idx)
+    if end_divs == -1:
+        return -1
+    return end_divs + len(NINE_DIVS)
+
+
 def find_popup_block(html):
-    """Найти (start, end) popup-блока (form-wrapper + buttom-design-wrapper)."""
+    """Найти (start, end) popup-блока (form-wrapper + опциональный buttom-design-wrapper)."""
     start = html.find('<div class="form-wrapper popup">')
     if start == -1:
         return None
-    # buttom-design-wrapper заканчивается двумя закрывающими </div></div>
-    btn_idx = html.find('buttom-design-wrapper', start)
-    if btn_idx == -1:
+
+    # Конец основной формы (работает для старого и нового формата)
+    form_end = _popup_form_end(html, start)
+    if form_end == -1:
         return None
-    btn_end = html.find('</div></div>', btn_idx)
-    if btn_end == -1:
-        return None
-    return start, btn_end + len('</div></div>')
+
+    # Если после формы есть buttom-design-wrapper — включаем его
+    btn_idx = html.find('buttom-design-wrapper', form_end)
+    if btn_idx != -1 and btn_idx < form_end + 200:
+        btn_end = html.find('</a></div></div>', btn_idx)
+        if btn_end != -1:
+            return start, btn_end + len('</a></div></div>')
+
+    return start, form_end
 
 
 def find_footer_block(html):
@@ -158,8 +178,8 @@ for html_file in sorted(ROOT.glob("**/*.html")):
                 html = html[:s2] + popup + "\n\n" + html[s2:]
                 changes.append("popup вставлен")
 
-        # 2.5. Если nav не был найден — вставить после popup
-        if not nav_block:
+        # 2.5. Если nav пропал (или не было) — вставить после popup
+        if find_nav_block(html) is None:
             pb = find_popup_block(html)
             if pb:
                 _, pe = pb
@@ -174,6 +194,14 @@ for html_file in sorted(ROOT.glob("**/*.html")):
             s, e = footer_block
             html = html[:s] + footer + html[e:]
             changes.append("footer")
+
+        # 5. Удалить дублирующиеся popup (старый формат без buttom-design-wrapper)
+        all_popups = [m.start() for m in re.finditer(r'<div class="form-wrapper popup">', html)]
+        for extra_start in reversed(all_popups[1:]):
+            end = _popup_form_end(html, extra_start)
+            if end != -1:
+                html = html[:extra_start] + html[end:]
+                changes.append("дубль popup удалён")
 
         if html == original:
             continue
