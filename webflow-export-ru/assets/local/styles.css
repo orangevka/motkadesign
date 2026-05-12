@@ -648,10 +648,93 @@ p.cg-bs-caption { font-family: 'Spectral', serif; font-size: 24px; line-height: 
   .cg-cert-cont { padding-top: 32px; }
   .cg-bs-pics-cont { margin: 32px auto 0; }
   .cg-reply-card { margin: 32px auto 0; }
-  p.cg-quote-author { font-size: 18px; }
-  p.cg-quote-role { font-size: 16px; }
+  p.cg-quote-author { font-size: 20px; }
+  p.cg-quote-role { font-size: 18px; }
   .lsp-team.cg-team { padding-left: 0; padding-right: 0; }
   .mtk-wrapper.wrap-footer { padding-top: 0; }
   .cg-team .lsp-people-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 16px; }
   .cg-team .lsp-person.person-motka.cent { align-items: flex-start; width: 100%; text-align: left; }
 }
+
+/* ══════════════════════════════════════════
+   Перенесено из inline <style> страниц
+   ══════════════════════════════════════════ */
+
+/* Root pages: сброс margin-top от Webflow shared CSS */
+body.mtk-body-main { margin-top: 0; }
+
+/* Колонки ссылок (портфолио/главная) */
+.designlinks .portlinks {
+  -webkit-column-width: 250px; -moz-column-width: 250px; column-width: 250px;
+  -webkit-column-count: 3; -moz-column-count: 3; column-count: 3;
+  -webkit-column-gap: 30px; -moz-column-gap: 30px; column-gap: 30px;
+}
+
+/* Видео-фон Moneywall */
+.story5 .w-background-video > video {
+  background-image: url(/assets/cdn.prod.website-files.com/623a4d65378e3dda4dd20f87/625455d11c841a695102d9dc_moneywall_videoBG.png) !important;
+}
+
+/* Скрытие полосы прокрутки (services) */
+body::-webkit-scrollbar, body ::-webkit-scrollbar { display: none; }
+body { -ms-overflow-style: none; }
+html { scrollbar-width: none; }
+
+/* Services: hover-эффект карточки */
+@media (min-width: 992px) {
+  .service-container-right .service-image img { transition: transform 0.4s ease; will-change: transform; }
+  .service-container-right:hover .service-image img { transform: scale(1.05); }
+}
+
+/* Services: скролл к якорям с учётом sticky-шапки */
+.anchor, .service-wrap { scroll-margin-top: var(--anchor-offset, 0px); }
+.sticky-tabs-spacer { height: 0px; }
+.sticky-tabs.is-fixed {
+  position: fixed !important;
+  top: var(--sticky-top, 0px) !important;
+  left: var(--sticky-left, 0px);
+  width: var(--sticky-width, auto);
+  z-index: 999;
+}
+
+/* Index: кастомные чекбоксы формы */
+.checkbox-3 {
+  appearance: none; -webkit-appearance: none; -moz-appearance: none;
+  opacity: 0; position: absolute; inset: 0; margin: 0; padding: 0;
+  width: 100%; height: 100%; z-index: 2; cursor: pointer; outline: none; box-shadow: none;
+}
+.checkbox-field-2 {
+  position: relative; display: inline-flex; align-items: center; justify-content: center;
+  padding: 4px 16px; border: 2px solid #D1C2BB; border-radius: 16px;
+  background-color: transparent; transition: all 0.2s ease; cursor: pointer; overflow: hidden;
+}
+.checkbox-3.w--redirected-checked ~ .checkbox-field-2 { background-color: #f7f3f1; border: none; }
+
+/* Congratz: плавная прокрутка ленты */
+.trusted-by-list {
+  -webkit-transition-timing-function: linear !important;
+  -o-transition-timing-function: linear !important;
+  transition-timing-function: linear !important;
+}
+
+/* Форма «Заказать дизайн»: капсульные чекбоксы */
+.checkbox-pill-mobile {
+  position: relative; display: inline-flex; align-items: center;
+  padding: 0; border: none; background: transparent; cursor: pointer;
+  font-family: 'Factor A', Arial, sans-serif;
+  -webkit-tap-highlight-color: transparent; touch-action: manipulation;
+}
+.checkbox-pill-mobile input[type="checkbox"] {
+  position: absolute; inset: 0; opacity: 0; margin: 0;
+  width: 100%; height: 100%; cursor: pointer; z-index: 1;
+}
+.checkbox-pill-mobile span {
+  position: relative; z-index: 0; display: inline-block;
+  padding: 2px 11px; border: 1px solid #D1C2BB; border-radius: 16px;
+  background: transparent; font-size: 14px; line-height: 24px;
+  color: #858585; font-weight: 400; user-select: none;
+  transition: background 0.18s, border-color 0.18s, color 0.18s;
+}
+.checkbox-pill-mobile input[type="checkbox"]:checked + span { background: #F3EFED; border-color: #F3EFED; color: #333; }
+.checkbox-pill-mobile:hover span { border-color: #BBA89C; }
+.checkbox-pill-mobile input[type="checkbox"]:focus-visible + span { outline: 2px solid #BBA89C; outline-offset: 2px; }

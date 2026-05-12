@@ -1,4 +1,17 @@
 const version = new URL(import.meta.url).searchParams.get("_") || "";
+
+// Popup open/close (IX2 не управляет попапом на страницах кроме services)
+const popup = document.querySelector('.form-wrapper.popup');
+if (popup) {
+    popup.style.display = 'none';
+    document.querySelectorAll('.order-des').forEach(btn => {
+        btn.addEventListener('click', e => { e.preventDefault(); popup.style.display = 'flex'; });
+    });
+    const closeBtn = popup.querySelector('.close-button');
+    if (closeBtn) closeBtn.addEventListener('click', () => { popup.style.display = 'none'; });
+    popup.addEventListener('click', e => { if (e.target === popup) popup.style.display = 'none'; });
+}
+
 const captcha = await import(`./captcha.js?_=${version}`);
 
 // Lazy-load captcha script on first interaction with a form
