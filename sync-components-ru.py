@@ -188,6 +188,16 @@ for html_file in sorted(ROOT.glob("**/*.html")):
             else:
                 no_nav.append(html_file.relative_to(ROOT))
 
+        # 2.7. Убрать мусорные закрывающие теги после nav
+        nav_b = find_nav_block(html)
+        if nav_b:
+            _, ne = nav_b
+            after_nav = html[ne:]
+            cleaned = re.sub(r'^(</(?:a|div)>)+', '', after_nav)
+            if cleaned != after_nav:
+                html = html[:ne] + cleaned
+                changes.append("мусор после nav")
+
         # 4. Заменить footer
         footer_block = find_footer_block(html)
         if footer_block:
