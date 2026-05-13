@@ -398,8 +398,17 @@ p.cg-bs-caption { font-family: 'Spectral', serif; font-size: 24px; line-height: 
   }
   /* Сдвигаем список вниз от toggle, чтобы он не перекрывал ссылку */
   .mtk-nav-link-drop.dt-mob-view .dropdown-nav {
-    top: 100%;
-    padding-top: 0.5em;
+    top: 3.1em;
+    padding-top: 0;
+  }
+  /* Webflow перехватывает mousedown на .w-dropdown-toggle — отключаем pointer-events
+     на самом toggle, возвращаем детям. Ссылка «Портфолио» становится кликабельной,
+     hover-дропдаун продолжает работать через CSS выше. */
+  .mtk-nav-link-drop.dt-mob-view .w-dropdown-toggle {
+    pointer-events: none;
+  }
+  .mtk-nav-link-drop.dt-mob-view .w-dropdown-toggle > * {
+    pointer-events: auto;
   }
 }
 
