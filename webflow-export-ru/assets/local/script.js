@@ -39,10 +39,8 @@ if (navBar && fixedBtn) {
   function syncFixedBtn() {
     const gone = navBar.getBoundingClientRect().bottom <= 0;
     if (gone) {
-      fixedBtn.style.transition = 'opacity 0.15s ease';
       fixedBtn.classList.add('active');
     } else {
-      fixedBtn.style.transition = 'none';
       fixedBtn.classList.remove('active');
     }
   }
