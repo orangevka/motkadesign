@@ -391,6 +391,12 @@ p.cg-quote-role { font-family: 'Factor A', sans-serif; font-size: 20px; line-hei
 .cg-bs-col-img { width: 100%; height: auto; display: block; border-radius: 32px; }
 p.cg-bs-caption { font-family: 'Spectral', serif; font-size: 24px; line-height: 1.34; letter-spacing: -0.32px; color: #333; }
 
+/* ── Планшет: поворот стрелки при открытом dropdown ── */
+.mtk-nav-link-2.w-dropdown.w--open .dropdown-arrow-2 {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
 /* ── Десктоп: dropdown «Портфолио» появляется по hover ── */
 @media (min-width: 992px) {
   .mtk-nav-link-drop.dt-mob-view:hover > .w-dropdown-list {

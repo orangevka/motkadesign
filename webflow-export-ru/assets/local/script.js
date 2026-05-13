@@ -8,15 +8,28 @@ document.querySelectorAll('.w-dropdown-toggle a[href]:not([href="#"])').forEach(
 // Планшет: клик по клювику (.tab-drop) открывает/закрывает выпадашку
 document.querySelectorAll('.dropdown-toggle-2.tab-drop').forEach(toggle => {
   toggle.addEventListener('click', e => {
-    e.stopPropagation();
-    const list = toggle.closest('.w-dropdown').querySelector('.w-dropdown-list');
-    const isOpen = list.classList.contains('w--open');
-    document.querySelectorAll('.w-dropdown-list.w--open').forEach(l => l.classList.remove('w--open'));
-    if (!isOpen) list.classList.add('w--open');
+    e.preventDefault();
+    e.stopImmediatePropagation(); // глушим все хэндлеры на этом элементе, включая Webflow
+    const dropdown = toggle.closest('.w-dropdown');
+    const list = dropdown.querySelector('.w-dropdown-list');
+    const isOpen = dropdown.classList.contains('w--open');
+    document.querySelectorAll('.w-dropdown.w--open').forEach(d => {
+      d.classList.remove('w--open');
+      d.querySelector('.w-dropdown-list')?.classList.remove('w--open');
+    });
+    if (!isOpen) {
+      dropdown.classList.add('w--open');
+      list.classList.add('w--open');
+    }
   });
 });
-document.addEventListener('click', () => {
-  document.querySelectorAll('.w-dropdown-list.w--open').forEach(l => l.classList.remove('w--open'));
+document.addEventListener('click', e => {
+  if (!e.target.closest('.w-dropdown')) {
+    document.querySelectorAll('.w-dropdown.w--open').forEach(d => {
+      d.classList.remove('w--open');
+      d.querySelector('.w-dropdown-list')?.classList.remove('w--open');
+    });
+  }
 });
 
 // Fixed CTA button: показывать только когда nav полностью ушёл за верхний край
