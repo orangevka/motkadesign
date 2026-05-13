@@ -36,10 +36,18 @@ input:matches([type="button"],[type="submit"]) { color: #ffffff !important; }
 .footer-fix-cont.visible { opacity: 1; pointer-events: auto; transform: translateY(0%); transition: opacity 0.4s ease, transform 0.4s ease; }
 
 /* ── Fixed top-right CTA button ── */
-/* visibility:hidden — элемент не кликабелен (в отличие от opacity:0) */
-.buttom-design-wrapper { visibility: hidden; }
-.buttom-design-wrapper.active { visibility: visible; transition: visibility 0s; }
-/* На мобильном кнопка не нужна совсем — убираем из потока */
+/* Webflow задаёт position:fixed только внутри max-width:479px.
+   На 992–1279px элемент падает в static-поток и ломает лейаут.
+   Явно фиксируем позицию для всех десктопных размеров. */
+.buttom-design-wrapper {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: auto;
+}
+.buttom-design-wrapper.active { visibility: visible; }
+/* На мобильном/планшете убираем совсем */
 @media (max-width: 991px) {
   .buttom-design-wrapper { display: none !important; }
 }
