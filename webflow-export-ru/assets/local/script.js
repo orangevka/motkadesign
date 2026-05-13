@@ -6,10 +6,12 @@ document.querySelectorAll('.w-dropdown-toggle a[href]:not([href="#"])').forEach(
 });
 
 // Планшет: клик по клювику (.tab-drop) открывает/закрывает выпадашку
+// capture:true — перехватываем ДО любых Webflow-обработчиков
 document.querySelectorAll('.dropdown-toggle-2.tab-drop').forEach(toggle => {
   toggle.addEventListener('click', e => {
     e.preventDefault();
-    e.stopImmediatePropagation(); // глушим все хэндлеры на этом элементе, включая Webflow
+    e.stopImmediatePropagation();
+    e.stopPropagation();
     const dropdown = toggle.closest('.w-dropdown');
     const list = dropdown.querySelector('.w-dropdown-list');
     const isOpen = dropdown.classList.contains('w--open');
@@ -21,7 +23,7 @@ document.querySelectorAll('.dropdown-toggle-2.tab-drop').forEach(toggle => {
       dropdown.classList.add('w--open');
       list.classList.add('w--open');
     }
-  });
+  }, true); // capture phase
 });
 document.addEventListener('click', e => {
   if (!e.target.closest('.w-dropdown')) {

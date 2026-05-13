@@ -425,13 +425,16 @@ p.cg-bs-caption { font-family: 'Spectral', serif; font-size: 24px; line-height: 
     padding-top: 0;
   }
   /* Webflow перехватывает mousedown на .w-dropdown-toggle — отключаем pointer-events
-     на самом toggle, возвращаем детям. Ссылка «Портфолио» становится кликабельной,
-     hover-дропдаун продолжает работать через CSS выше. */
+     на самом toggle, возвращаем только ссылке (не стрелке). */
   .mtk-nav-link-drop.dt-mob-view .w-dropdown-toggle {
     pointer-events: none;
   }
-  .mtk-nav-link-drop.dt-mob-view .w-dropdown-toggle > * {
+  .mtk-nav-link-drop.dt-mob-view .w-dropdown-toggle a {
     pointer-events: auto;
+  }
+  /* Стрелка некликабельна — только декоративный элемент на десктопе */
+  .mtk-nav-link-drop.dt-mob-view .dropdown-arrow {
+    pointer-events: none;
   }
 }
 
