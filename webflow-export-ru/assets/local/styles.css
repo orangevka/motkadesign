@@ -455,7 +455,11 @@ p.cg-bs-caption { font-family: 'Spectral', serif; font-size: 24px; line-height: 
   .cg-chitay-gorod .cg-body p { font-size: 20px; }
   .cg-approach-wrap { padding: 40px; }
   .cg-approach-cards-left { width: auto; flex: 1; }
-  .cg-approach-card { width: calc(50% - 12px); }
+  /* Прямые дети cards-left (карточки 1 и 2) */
+  .cg-approach-cards-left > .cg-approach-card { width: calc(50% - 12px); }
+  /* Обёртки карточек 3 и 4 — тоже 50%, карточка внутри — 100% */
+  .cg-approach-card-wrap { width: calc(50% - 12px); flex-shrink: 1; }
+  .cg-approach-card-wrap .cg-approach-card { width: 100%; }
   .cg-approach-card-itog { flex: none; width: 240px; }
   .cg-stat-wrap { padding: 36px; gap: 28px; }
   .cg-stat-num { font-size: 88px; }
@@ -477,7 +481,8 @@ p.cg-bs-caption { font-family: 'Spectral', serif; font-size: 24px; line-height: 
   .cg-renew-pic-main img, .cg-mybooks-pic1-main img, .cg-catalog-pic1-main img { width: 100%; height: auto; object-fit: contain; }
   /* Ренью — две колонки → одна */
   .cg-renew-coll { width: 100%; flex-shrink: 1; }
-  /* Мои книги — телефон */
+  /* Мои книги — телефон и gap */
+  .cg-mybooks-pic2 { gap: 24px; }
   .cg-mybooks-phone { width: calc(50% - 12px); height: auto; aspect-ratio: 550 / 817; }
   /* Сертификаты */
   .cg-cert-coll2 { width: 100%; flex-shrink: 1; }
