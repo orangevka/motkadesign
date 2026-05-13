@@ -482,8 +482,8 @@ p.cg-bs-caption { font-family: 'Spectral', serif; font-size: 24px; line-height: 
   /* Сертификаты */
   .cg-cert-coll2 { width: 100%; flex-shrink: 1; }
   .cg-cert-coll2 img { width: 100%; height: auto; }
-  /* Plan — разрешить перенос инфо-колонок */
-  .cg-plan-cont { flex-wrap: wrap; max-width: 100%; }
+  /* Plan — горизонтальный скролл внутри секции */
+  .cg-plan-infograph { width: 100%; overflow-x: auto; justify-content: flex-start; }
   .cg-info-col { flex-shrink: 1; }
 }
 
