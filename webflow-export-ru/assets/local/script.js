@@ -5,6 +5,20 @@ document.querySelectorAll('.w-dropdown-toggle a[href]:not([href="#"])').forEach(
   a.addEventListener('click', e => { e.stopPropagation(); });
 });
 
+// Планшет: клик по клювику (.tab-drop) открывает/закрывает выпадашку
+document.querySelectorAll('.dropdown-toggle-2.tab-drop').forEach(toggle => {
+  toggle.addEventListener('click', e => {
+    e.stopPropagation();
+    const list = toggle.closest('.w-dropdown').querySelector('.w-dropdown-list');
+    const isOpen = list.classList.contains('w--open');
+    document.querySelectorAll('.w-dropdown-list.w--open').forEach(l => l.classList.remove('w--open'));
+    if (!isOpen) list.classList.add('w--open');
+  });
+});
+document.addEventListener('click', () => {
+  document.querySelectorAll('.w-dropdown-list.w--open').forEach(l => l.classList.remove('w--open'));
+});
+
 // Fixed CTA button: показывать только когда nav полностью ушёл за верхний край
 const navBar = document.querySelector('.mtk-header-category');
 const fixedBtn = document.querySelector('.buttom-design-wrapper');
