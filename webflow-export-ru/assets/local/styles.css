@@ -468,6 +468,23 @@ p.cg-bs-caption { font-family: 'Spectral', serif; font-size: 24px; line-height: 
   .cg-bs-col { gap: 40px; }
   p.cg-bs-caption { font-size: 20px; }
   .cg-illus-lines { gap: 32px; }
+
+  /* Скриншоты с тенью — убрать тени, сделать картинки адаптивными */
+  .cg-renew-pic-shadow-layer, .cg-mybooks-shadow-layer, .cg-catalog-shadow-layer { display: none; }
+  .cg-renew-pic, .cg-mybooks-pic1, .cg-catalog-pic1 { height: auto; padding-left: 48px; padding-right: 48px; padding-top: 56px; padding-bottom: 56px; }
+  .cg-renew-pic-inner, .cg-mybooks-pic1-inner, .cg-catalog-pic1-inner { display: block; width: 100%; }
+  .cg-renew-pic-main, .cg-mybooks-pic1-main, .cg-catalog-pic1-main { position: static; width: 100% !important; height: auto !important; }
+  .cg-renew-pic-main img, .cg-mybooks-pic1-main img, .cg-catalog-pic1-main img { width: 100%; height: auto; object-fit: contain; }
+  /* Ренью — две колонки → одна */
+  .cg-renew-coll { width: 100%; flex-shrink: 1; }
+  /* Мои книги — телефон */
+  .cg-mybooks-phone { width: calc(50% - 12px); height: auto; aspect-ratio: 550 / 817; }
+  /* Сертификаты */
+  .cg-cert-coll2 { width: 100%; flex-shrink: 1; }
+  .cg-cert-coll2 img { width: 100%; height: auto; }
+  /* Plan — разрешить перенос инфо-колонок */
+  .cg-plan-cont { flex-wrap: wrap; max-width: 100%; }
+  .cg-info-col { flex-shrink: 1; }
 }
 
 @media (max-width: 991px) {
