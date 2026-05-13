@@ -38,6 +38,9 @@ input:matches([type="button"],[type="submit"]) { color: #ffffff !important; }
 /* ── Fixed top-right CTA button ── */
 .buttom-design-wrapper { opacity: 0; }
 .buttom-design-wrapper.active { opacity: 1; }
+/* Когда кнопка скрыта — убираем pointer-events у вложенной ссылки,
+   иначе она перекрывает гамбургер (оба в правом верхнем углу) */
+.buttom-design-wrapper:not(.active) .ask-button-link { pointer-events: none; }
 
 /* ── chitay-gorod: блок Команда — одна центрированная колонка ── */
 .cg-team .lsp-team-colls {
