@@ -1,5 +1,28 @@
 const version = new URL(import.meta.url).searchParams.get("_") || "";
 
+// Ссылка «Портфолио» внутри w-dropdown-toggle: stopPropagation чтобы клик не перехватывался Webflow
+document.querySelectorAll('.w-dropdown-toggle a[href]:not([href="#"])').forEach(a => {
+  a.addEventListener('click', e => { e.stopPropagation(); });
+});
+
+// Fixed CTA button: показывать только когда nav полностью ушёл за верхний край
+const navBar = document.querySelector('.mtk-header-category');
+const fixedBtn = document.querySelector('.buttom-design-wrapper');
+if (navBar && fixedBtn) {
+  function syncFixedBtn() {
+    const gone = navBar.getBoundingClientRect().bottom <= 0;
+    if (gone) {
+      fixedBtn.style.transition = 'opacity 0.15s ease';
+      fixedBtn.classList.add('active');
+    } else {
+      fixedBtn.style.transition = 'none';
+      fixedBtn.classList.remove('active');
+    }
+  }
+  window.addEventListener('scroll', syncFixedBtn, { passive: true });
+  syncFixedBtn();
+}
+
 // Popup open/close (IX2 не управляет попапом на страницах кроме services)
 const popup = document.querySelector('.form-wrapper.popup');
 if (popup) {

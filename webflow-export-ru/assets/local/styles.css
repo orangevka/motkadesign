@@ -31,6 +31,10 @@ input:matches([type="button"],[type="submit"]) { color: #ffffff !important; }
 .footer-fix-cont { position: fixed; bottom: 0; z-index: 9999; opacity: 0; pointer-events: none; transform: translateY(100%); transition: none; }
 .footer-fix-cont.visible { opacity: 1; pointer-events: auto; transform: translateY(0%); transition: opacity 0.4s ease, transform 0.4s ease; }
 
+/* ── Fixed top-right CTA button ── */
+.buttom-design-wrapper { opacity: 0; }
+.buttom-design-wrapper.active { opacity: 1; }
+
 /* ── chitay-gorod: блок Команда — одна центрированная колонка ── */
 .cg-team .lsp-team-colls {
   justify-content: center;
@@ -136,7 +140,7 @@ input:matches([type="button"],[type="submit"]) { color: #ffffff !important; }
 .cg-subtitle-mascot { width: 102px; height: 184px; display: block; }
 
 /* ── Hero ── */
-.cg-hero { padding: 32px 20px 0; }
+.cg-hero { padding: 0 20px 0; }
 .cg-hero-inner { max-width: 1400px; margin: 0 auto; border-radius: 40px; overflow: hidden; }
 .cg-hero-inner img { width: 100%; height: auto; display: block; }
 
@@ -387,6 +391,18 @@ p.cg-quote-role { font-family: 'Factor A', sans-serif; font-size: 20px; line-hei
 .cg-bs-col-img { width: 100%; height: auto; display: block; border-radius: 32px; }
 p.cg-bs-caption { font-family: 'Spectral', serif; font-size: 24px; line-height: 1.34; letter-spacing: -0.32px; color: #333; }
 
+/* ── Десктоп: dropdown «Портфолио» появляется по hover ── */
+@media (min-width: 992px) {
+  .mtk-nav-link-drop.dt-mob-view:hover > .w-dropdown-list {
+    display: block;
+  }
+  /* Сдвигаем список вниз от toggle, чтобы он не перекрывал ссылку */
+  .mtk-nav-link-drop.dt-mob-view .dropdown-nav {
+    top: 100%;
+    padding-top: 0.5em;
+  }
+}
+
 /* ══════════════════════════════════════════
    Responsive
    ══════════════════════════════════════════ */
@@ -434,7 +450,7 @@ p.cg-bs-caption { font-family: 'Spectral', serif; font-size: 24px; line-height: 
   .cg-chitay-gorod .cg-body { font-size: 18px; }
   .cg-chitay-gorod .cg-body p { font-size: 18px; }
   .cg-section, .cg-section-64, .cg-section-80, .cg-section-120 { padding-left: 24px; padding-right: 24px; }
-  .cg-hero { padding: 16px 16px 0; }
+  .cg-hero { padding: 0 16px 0; }
   .cg-h1-section { padding: 64px 24px 0; }
   .cg-context-section { padding: 64px 24px 0; }
   .cg-plan-infograph { padding: 56px 24px 0; justify-content: flex-start; }
@@ -488,6 +504,7 @@ p.cg-bs-caption { font-family: 'Spectral', serif; font-size: 24px; line-height: 
   /* Fix: Webflow shared CSS скрывает .div-block-17 (гамбургер + кнопка) при <=479px */
   .div-block-17 { display: flex; }
   .div-block-17 > a { display: none; }
+  .nav-close-icon-img { width: 20px; }
   .heading-4 { font-size: 48px; line-height: 42px; }
 
   .cg-case-title { font-size: 28px; }
@@ -507,7 +524,7 @@ p.cg-bs-caption { font-family: 'Spectral', serif; font-size: 24px; line-height: 
   p.cg-quote-text { font-size: 16px; }
   .cg-section, .cg-section-64, .cg-section-80, .cg-section-120 { padding-left: 16px; padding-right: 16px; }
   .cg-section-120 { padding-top: 56px; }
-  .cg-hero { padding: 10px 10px 0; }
+  .cg-hero { padding: 0 10px 0; }
   .cg-h1-section { padding: 36px 16px 0; }
   .cg-context-section { padding: 36px 16px 0; }
   .cg-plan-infograph { padding: 24px 16px 0; }
@@ -637,6 +654,13 @@ p.cg-bs-caption { font-family: 'Spectral', serif; font-size: 24px; line-height: 
 }
 
 @media (max-width: 425px) {
+  /* Кнопка «Заказать дизайн» — снаружи меню, перед тремя точками */
+  .div-block-17 > a { display: flex; }
+  /* Убираем её из раскрывающегося меню, чтобы не было дублирования */
+  .mtk-nav-menu .ask-button-link.order-des { display: none; }
+  /* Убираем лишний отступ справа от кнопки перед гамбургером */
+  .div-block-17 > a.ask-button-link.order-des { margin-right: 0; }
+
   .cg-plan-infograph { padding-left: 0; }
   .cg-plan-cont { gap: 16px; }
   .cg-info-col { gap: 24px; }
