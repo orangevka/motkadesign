@@ -367,7 +367,7 @@ p.cg-approach-text {
 .cg-section-mascot { height: 120px; width: auto; display: block; margin-bottom: 48px; }
 
 /* ── Illustration block ── */
-.cg-illus-cont { display: flex; flex-direction: column; gap: 48px; align-items: center; padding-top: 56px; width: 100%; overflow: hidden; }
+.cg-illus-cont { display: flex; flex-direction: column; gap: 48px; align-items: center; padding-top: 56px; width: 100%; }
 .cg-illus-lines {
   width: 100%;
   max-width: 1508px;
@@ -376,7 +376,7 @@ p.cg-approach-text {
   justify-content: center;
   gap: 56px;
 }
-.cg-illus-lines img { flex: 1; height: auto; display: block; }
+.cg-illus-lines img { flex: 1; height: auto; display: block; min-width: 0; max-width: 100%; }
 .cg-illus-pic { width: 100%; max-width: 1469px; border-radius: 24px; overflow: hidden; box-shadow: 0 0 64px 0 rgba(206,206,206,0.34); }
 .cg-illus-pic img { width: 100%; height: auto; display: block; }
 
@@ -467,6 +467,7 @@ p.cg-bs-caption { font-family: 'Spectral', serif; font-size: 24px; line-height: 
   .cg-bs-cols { gap: 40px; }
   .cg-bs-col { gap: 40px; }
   p.cg-bs-caption { font-size: 20px; }
+  .cg-illus-lines { gap: 32px; }
 }
 
 @media (max-width: 991px) {
