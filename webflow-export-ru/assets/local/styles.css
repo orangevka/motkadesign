@@ -529,6 +529,7 @@ p.cg-bs-caption { font-family: 'Spectral', serif; font-size: 24px; line-height: 
   .div-block-17 { display: flex; }
   .div-block-17 > a { display: none; }
   .nav-close-icon-img { width: 20px; }
+  .project-intro.saas { padding-top: 0; }
   .heading-4 { font-size: 48px; line-height: 42px; }
 
   .cg-case-title { font-size: 28px; }
