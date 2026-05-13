@@ -1,6 +1,8 @@
 /* ── Global (перенесено из <style> страниц) ── */
 /* Форма на странице (не попап): убираем ограничение max-width из Webflow CSS */
 .mtk-form:not(.popup) { max-width: none; }
+/* Футер: ссылки в колонке «Расскажите о своей задаче» — Factor A */
+.mtk-footer-lena-cont .link-bold { font-family: 'Factor A', sans-serif; }
 body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; }
 .overflow-x { -webkit-font-smoothing: antialiased; }
 .logo-box:hover .hover-text { display: inline-block; }
