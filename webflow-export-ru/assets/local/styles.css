@@ -367,7 +367,7 @@ p.cg-approach-text {
 .cg-section-mascot { height: 120px; width: auto; display: block; margin-bottom: 48px; }
 
 /* ── Illustration block ── */
-.cg-illus-cont { display: flex; flex-direction: column; gap: 48px; align-items: center; padding-top: 56px; }
+.cg-illus-cont { display: flex; flex-direction: column; gap: 48px; align-items: center; padding-top: 56px; width: 100%; overflow: hidden; }
 .cg-illus-lines {
   width: 100%;
   max-width: 1508px;
