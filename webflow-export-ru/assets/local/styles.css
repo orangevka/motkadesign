@@ -825,3 +825,10 @@ body.mtk-body-main { margin-top: 0; }
 
 /* privacy-policy, consent: список не должен быть тоньше остального текста */
 .cookie-list .cookie-text { font-weight: 400; }
+
+@media screen and (max-width: 479px) {
+  .mtk-h4-cases {
+    font-size: 1.4em;
+    line-height: 95%;
+  }
+}
