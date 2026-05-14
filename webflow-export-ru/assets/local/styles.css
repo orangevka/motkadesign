@@ -36,15 +36,28 @@ input:matches([type="button"],[type="submit"]) { color: #ffffff !important; }
 .footer-fix-cont.visible { opacity: 1; pointer-events: auto; transform: translateY(0%); transition: opacity 0.4s ease, transform 0.4s ease; }
 
 /* ── Fixed top-right CTA button ── */
-/* display:none — элемент не рендерится совсем, нет влияния на лейаут и кликов */
 .buttom-design-wrapper { display: none !important; }
 .buttom-design-wrapper.active {
   display: flex !important;
   position: fixed;
   top: 0;
+  left: 0;
   right: 0;
-  left: auto;
-  visibility: visible;
+  pointer-events: none;
+  z-index: 101;
+}
+.buttom-design-wrapper .button-call-to-action {
+  width: 100%;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: flex-end;
+  pointer-events: none;
+  z-index: 999;
+}
+.buttom-design-wrapper .button-call-to-action > a {
+  pointer-events: auto;
 }
 
 /* ── chitay-gorod: блок Команда — одна центрированная колонка ── */
@@ -437,10 +450,6 @@ p.cg-bs-caption { font-family: 'Spectral', serif; font-size: 24px; line-height: 
    Responsive
    ══════════════════════════════════════════ */
 
-@media screen and (min-width: 1440px) {
-  /* Fix: position:fixed с left/right:auto не центрируется */
-  .buttom-design-wrapper { left: 0; right: 0; }
-}
 
 @media (max-width: 1024px) {
   .wrapper-story, .designsystem { padding-left: 5vw; }
@@ -753,10 +762,7 @@ body.mtk-body-main { margin-top: 0; }
   background-image: url(/assets/cdn.prod.website-files.com/623a4d65378e3dda4dd20f87/625455d11c841a695102d9dc_moneywall_videoBG.png) !important;
 }
 
-/* Скрытие полосы прокрутки (services) */
-body::-webkit-scrollbar, body ::-webkit-scrollbar { display: none; }
-body { -ms-overflow-style: none; }
-html { scrollbar-width: none; }
+
 
 /* Services: hover-эффект карточки */
 @media (min-width: 992px) {
@@ -772,7 +778,7 @@ html { scrollbar-width: none; }
   top: var(--sticky-top, 0px) !important;
   left: var(--sticky-left, 0px);
   width: var(--sticky-width, auto);
-  z-index: 999;
+  z-index: 100;
 }
 
 /* Index: кастомные чекбоксы формы */
@@ -816,3 +822,6 @@ html { scrollbar-width: none; }
 .checkbox-pill-mobile input[type="checkbox"]:checked + span { background: #F3EFED; border-color: #F3EFED; color: #333; }
 .checkbox-pill-mobile:hover span { border-color: #BBA89C; }
 .checkbox-pill-mobile input[type="checkbox"]:focus-visible + span { outline: 2px solid #BBA89C; outline-offset: 2px; }
+
+/* privacy-policy, consent: список не должен быть тоньше остального текста */
+.cookie-list .cookie-text { font-weight: 400; }
