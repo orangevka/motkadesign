@@ -556,6 +556,17 @@
     checkScroll();
   });
 </script>
+<script>
+(function () {
+  if (location.hash !== '#all-cases') return;
+  history.replaceState(null, '', location.pathname);
+  window.scrollTo(0, 0);
+  window.addEventListener('load', function () {
+    var el = document.getElementById('all-cases');
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  });
+}());
+</script>
 <style>
 .footer-fix-cont {
     position: fixed;
