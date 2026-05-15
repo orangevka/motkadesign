@@ -38,6 +38,7 @@ input:matches([type="button"],[type="submit"]) { color: #ffffff !important; }
 }
 
 /* ── Footer sticky fix ── */
+.footer-case.desktop { background: #fff; }
 .footer-fix-cont { position: relative; z-index: 9999; opacity: 0; pointer-events: none; transform: translateY(100%); transition: none; }
 .footer-fix-cont.visible { opacity: 1; pointer-events: auto; transform: translateY(0%); transition: opacity 0.4s ease, transform 0.4s ease; }
 
