@@ -3,11 +3,12 @@
 .mtk-form:not(.popup) { max-width: none; }
 /* Футер: ссылки в колонке «Расскажите о своей задаче» — Factor A */
 .mtk-footer-lena-cont .link-bold { font-family: 'Factor A', sans-serif; }
-body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; overflow-x: hidden; }
+body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; overflow-x: clip; }
 .footer-case-cont { min-width: 0; max-width: 100%; }
 
 @media screen and (max-width: 991px) {
   .footer-case.desktop { display: flex; position: fixed; bottom: 0; background: #fff; }
+  .mtk-about-cont-text, .narrow-cont { width: 100%; max-width: 100%; }
 }
 .footer-fix-cont { position: relative; }
 .overflow-x { -webkit-font-smoothing: antialiased; }
@@ -46,10 +47,12 @@ input:matches([type="button"],[type="submit"]) { color: #ffffff !important; }
 .buttom-design-wrapper { display: none !important; }
 .buttom-design-wrapper.active {
   display: flex !important;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  max-width: none !important;
+  padding: 0 !important;
   pointer-events: none;
   z-index: 101;
 }
@@ -462,6 +465,7 @@ p.cg-bs-caption { font-family: 'Spectral', serif; font-size: 24px; line-height: 
   .wrapper-story, .designsystem { padding-left: 5vw; }
   .wrapper, .footer-thin-container.maincont80.limited { padding-left: 5vw; padding-right: 5vw; }
   .heading-4 { font-size: 80px; }
+  .mtk-reviews-grid { grid-template-columns: 1fr 1fr; }
 
   .cg-case-title { font-size: 48px; }
   .cg-h3 { font-size: 40px; }
