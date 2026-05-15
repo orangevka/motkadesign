@@ -3,7 +3,13 @@
 .mtk-form:not(.popup) { max-width: none; }
 /* Футер: ссылки в колонке «Расскажите о своей задаче» — Factor A */
 .mtk-footer-lena-cont .link-bold { font-family: 'Factor A', sans-serif; }
-body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; }
+body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; overflow-x: hidden; }
+.footer-case-cont { min-width: 0; max-width: 100%; }
+
+@media screen and (max-width: 991px) {
+  .footer-case.desktop { display: flex; position: fixed; bottom: 0; }
+}
+.footer-fix-cont { position: relative; }
 .overflow-x { -webkit-font-smoothing: antialiased; }
 .logo-box:hover .hover-text { display: inline-block; }
 .mtk-portlinks a:hover .spanemoji, .portlinks a:hover .spanemoji { display: inline !important; text-decoration: none !important; }
@@ -32,7 +38,7 @@ input:matches([type="button"],[type="submit"]) { color: #ffffff !important; }
 }
 
 /* ── Footer sticky fix ── */
-.footer-fix-cont { position: fixed; bottom: 0; z-index: 9999; opacity: 0; pointer-events: none; transform: translateY(100%); transition: none; }
+.footer-fix-cont { position: relative; z-index: 9999; opacity: 0; pointer-events: none; transform: translateY(100%); transition: none; }
 .footer-fix-cont.visible { opacity: 1; pointer-events: auto; transform: translateY(0%); transition: opacity 0.4s ease, transform 0.4s ease; }
 
 /* ── Fixed top-right CTA button ── */
@@ -501,6 +507,16 @@ p.cg-bs-caption { font-family: 'Spectral', serif; font-size: 24px; line-height: 
   .cg-info-col { flex-shrink: 1; }
 }
 
+@media (max-width: 768px) {
+  .cg-approach-section { padding: 56px 24px 0; }
+  .cg-approach-wrap { padding: 32px 24px; gap: 24px; }
+  .cg-approach-row { flex-direction: column; }
+  .cg-approach-cards-left { width: 100%; flex: none; }
+  .cg-approach-card { min-height: 180px; }
+  .cg-approach-card-itog { width: 100%; min-height: 180px; flex-direction: row; justify-content: flex-start; gap: 24px; }
+  .cg-approach-arrow-wrap { transform: rotate(90deg); }
+}
+
 @media (max-width: 991px) {
   .w-container .columns-9.w-row { margin-left: 0; margin-right: 0; }
 
@@ -516,13 +532,6 @@ p.cg-bs-caption { font-family: 'Spectral', serif; font-size: 24px; line-height: 
   .cg-h1-section { padding: 64px 24px 0; }
   .cg-context-section { padding: 64px 24px 0; }
   .cg-plan-infograph { padding: 56px 24px 0; justify-content: flex-start; }
-  .cg-approach-section { padding: 56px 24px 0; }
-  .cg-approach-wrap { padding: 32px 24px; gap: 24px; }
-  .cg-approach-row { flex-direction: column; align-items: center; }
-  .cg-approach-cards-left { width: 100%; }
-  .cg-approach-card { width: calc(50% - 12px); min-height: 180px; }
-  .cg-approach-card-itog { width: 100%; min-height: 180px; flex-direction: row; justify-content: flex-start; gap: 24px; }
-  .cg-approach-arrow-wrap { transform: rotate(90deg); }
   .cg-stat-wrap { flex-direction: column; padding: 24px; gap: 16px; }
   .cg-stat-num { font-size: 64px; }
   .cg-stat-label { font-size: 26px; }
@@ -560,6 +569,27 @@ p.cg-bs-caption { font-family: 'Spectral', serif; font-size: 24px; line-height: 
   .cg-bs-cols { flex-direction: column; }
   .cg-bs-col { width: 100%; }
   .cg-illus-lines { gap: 32px; }
+}
+
+@media (max-width: 768px) {
+  .cg-renew-colls { flex-direction: row; gap: 24px; }
+  .cg-renew-coll { flex: 1; gap: 24px; }
+  .cg-mybooks-pictures { gap: 24px; }
+  .cg-illus-cont { gap: 24px; }
+  .cg-mybooks-pic2 { padding-top: 0; }
+  .cg-catalog-pics { padding-top: 48px; gap: 24px; }
+  .cg-cert-cont { padding-top: 48px; gap: 48px; }
+  .cg-bs-pics-cont { gap: 24px; }
+  .cg-cert-colls { flex-direction: row; }
+  .cg-cert-coll1, .cg-cert-coll2 { flex: 1; width: auto; }
+  .cg-bs-cols { flex-direction: row; }
+  .cg-bs-col { width: auto; }
+  .cg-team .lsp-people-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .cg-team .lsp-person.person-motka.cent { align-items: flex-start; width: 100%; text-align: left; }
+  .cg-context-header { margin: 0 0 24px; }
+  .cg-h4-cont { margin-bottom: 16px; }
+  .cg-info-h5 { font-size: 18px; }
+  .cg-section-120 { padding: 48px 40px 0; }
 }
 
 @media (max-width: 479px) {
@@ -831,4 +861,8 @@ body.mtk-body-main { margin-top: 0; }
     font-size: 1.4em;
     line-height: 95%;
   }
+}
+
+@media screen and (max-width: 991px) {
+  .review-text-p.big-size-p { font-size: 24px; }
 }

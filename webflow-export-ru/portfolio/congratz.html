@@ -585,21 +585,4 @@
     checkScroll();
   });
 </script>
-<style>
-.footer-fix-cont {
-    position: fixed;
-    bottom: 0;
-    z-index: 9999;
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(100%);
-    transition: none; /* отключаем анимацию по умолчанию */
-  }
-
-  .footer-fix-cont.visible {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateY(0%);
-    transition: opacity 0.4s ease, transform 0.4s ease; /* только при появлении */
-  }
-</style><script src="/assets/local/polyfills.js"></script></body></html>
+<script src="/assets/local/polyfills.js"></script></body></html>

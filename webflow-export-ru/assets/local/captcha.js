@@ -28,6 +28,7 @@ globalThis.onCaptchaLoadedFunction = function () {
       sitekey: CAPTCHA_KEY,
       hl: "ru",
       invisible: true,
+      hideShield: true,
     });
     widgetIds.set(form, widgetId);
   }
