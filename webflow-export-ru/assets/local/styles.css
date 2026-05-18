@@ -637,6 +637,7 @@ p.cg-bs-caption { font-family: 'Spectral', serif; font-size: 24px; line-height: 
   .cg-approach-wrap { padding: 20px 16px; border-radius: 24px; }
   .cg-approach-card-wrap { width: 100%; }
   .cg-approach-card { width: 100%; min-height: 0; border-radius: 16px; }
+  .cg-approach-cards-left > .cg-approach-card { width: 100%; }
   .cg-approach-card:not(.cg-approach-card-itog) { min-height: 0; }
   .cg-approach-card-itog { width: 100%; flex-direction: column; align-items: center; }
   .cg-approach-card-shadow { display: none; }
@@ -796,6 +797,17 @@ body.mtk-body-main { margin-top: 0; }
 .services-desc { padding-top: 0; }
 
 .footer-new { padding-top: 32px; }
+
+/* Мобильные кейсы: убираем большой верхний отступ первых секций */
+@media screen and (max-width: 767px) {
+  .case-section.case-main.case-white { padding-top: 16px; }
+  .case-section.case-main.case-white.gramota.nopad.gm,
+  .case-section.case-main.case-white.nopad.mg { padding-top: 16px; }
+  .case-wrapper.deepgeo { padding-top: 16px; }
+  .case-wrapper.mtx { padding-top: 16px; }
+  .case-wrapper.case-spherum { padding-top: 0; }
+  .main.topnav.overflow-x.case-mobile.case-alg { padding-top: 16px; }
+}
 
 /* Колонки ссылок (портфолио/главная) */
 .designlinks .portlinks {
@@ -973,4 +985,7 @@ body.mtk-body-main { margin-top: 0; }
 
 @media screen and (max-width: 991px) {
   .review-text-p.big-size-p { font-size: 24px; }
+}
+@media screen and (max-width: 767px) {
+  .review-text-p, .review-text-p.big-size-p, .review-text-p.p-more { font-size: 18px !important; }
 }
