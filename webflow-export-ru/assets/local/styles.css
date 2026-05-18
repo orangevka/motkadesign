@@ -941,6 +941,13 @@ body.mtk-body-main { margin-top: 0; }
 /* privacy-policy, consent: список не должен быть тоньше остального текста */
 .cookie-list .cookie-text { font-weight: 400; }
 
+/* ── ai-body: видео «Enjoy the journey» — клип ── */
+.case-video.case-journey { overflow: hidden; }
+.case-video-bg.case-video-journey5 { overflow: hidden; }
+
+/* ── scan: межстрочный интервал основного текста ── */
+.p-case-scan { line-height: 34px; }
+
 @media screen and (max-width: 479px) {
   .mtk-h4-cases {
     font-size: 1.4em;
