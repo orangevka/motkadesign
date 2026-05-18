@@ -11,6 +11,12 @@ body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; 
   .footer-case.desktop { display: flex; position: fixed; bottom: 0; background: #fff; }
   .mtk-about-cont-text, .narrow-cont { width: 100%; max-width: 100%; }
 }
+@media screen and (max-width: 767px) {
+  .footer-case.desktop { display: none; }
+}
+@media screen and (max-width: 479px) {
+  .footer-case.mobile { display: flex; position: relative; }
+}
 .footer-fix-cont { position: relative; }
 .overflow-x { -webkit-font-smoothing: antialiased; }
 .logo-box:hover .hover-text { display: inline-block; }
@@ -785,6 +791,11 @@ p.cg-bs-caption { font-family: 'Spectral', serif; font-size: 24px; line-height: 
 
 /* Root pages: сброс margin-top от Webflow shared CSS */
 body.mtk-body-main { margin-top: 0; }
+
+/* Services: убираем двойной верхний отступ у description-wrapper после page-wrapper */
+.services-desc { padding-top: 0; }
+
+.footer-new { padding-top: 32px; }
 
 /* Колонки ссылок (портфолио/главная) */
 .designlinks .portlinks {
