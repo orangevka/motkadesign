@@ -28,70 +28,7 @@
   </label></div><div class="code-embed w-embed"><label class="checkbox-pill-mobile">
     <input type="checkbox" name="service" value="Дизайн лендинга">
     <span>Дизайн лендинга</span>
-  </label></div><div class="code-embed-2 w-embed"><style>
-        /* 📱 Мобильный вариант без медиазапроса */
-    .checkbox-pill-mobile {
-      position: relative;
-      display: inline-flex;
-      align-items: center;
-      padding: 0;
-      border: none;
-      background: transparent;
-      cursor: pointer;
-      font-family: Factor A, Arial, sans-serif;
-      -webkit-tap-highlight-color: transparent;
-      touch-action: manipulation;
-    }
-
-    /* скрытый инпут, кликабельный */
-    .checkbox-pill-mobile input[type="checkbox"] {
-      position: absolute;
-      inset: 0;
-      opacity: 0;
-      margin: 0;
-      width: 100%;
-      height: 100%;
-      cursor: pointer;
-      z-index: 1;
-    }
-
-    /* сама капсула */
-    .checkbox-pill-mobile span {
-      position: relative;
-      z-index: 0;
-      display: inline-block;
-      padding: 2px 11px;
-      border: 1px solid #D1C2BB;
-      border-radius: 16px;
-      background: transparent;
-      font-size: 14px;
-      line-height: 24px;
-      color: #858585;
-      font-weight: 400;
-      user-select: none;
-      transition: background 0.18s, border-color 0.18s, color 0.18s;
-    }
-
-    /* активное состояние */
-    .checkbox-pill-mobile input[type="checkbox"]:checked + span {
-      background: #F3EFED;
-      border-color: #F3EFED;
-      color: #333;
-    }
-
-    /* ховер */
-    .checkbox-pill-mobile:hover span {
-      border-color: #BBA89C;
-    }
-
-    /* фокус клавиатурой */
-    .checkbox-pill-mobile input[type="checkbox"]:focus-visible + span {
-      outline: 2px solid #BBA89C;
-      outline-offset: 2px;
-    }
-
-
-  </style></div></div><div class="radio-button-wrapper desk"><div class="code-embed w-embed"><label class="checkbox-pill">
+  </label></div></div><div class="radio-button-wrapper desk"><div class="code-embed w-embed"><label class="checkbox-pill">
   <input type="checkbox" name="UX/UI" data-name="Service" value="UX/UI Дизайн">
   <span>UX/UI Дизайн</span>
 </label></div><div class="code-embed w-embed"><label class="checkbox-pill">
@@ -121,57 +58,7 @@
   </label></div><div class="code-embed w-embed"><label class="checkbox-pill">
     <input type="checkbox" name="service" value="Аналитика">
     <span>Аналитика</span>
-  </label></div><div class="code-embed-3 w-embed"><style>
-.checkbox-pill-group {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.checkbox-pill {
-  display: inline-flex;
-  align-items: center;
-  padding: 0;
-  border: none;
-  background: transparent;
-  cursor: pointer;
-  font-family: Factor A, Arial, sans-serif;
-}
-
-.checkbox-pill input[type="checkbox"] {
-  display: none;
-}
-
-.checkbox-pill span {
-  display: inline-block;
-  padding: 3px 16px;
-  border: 1px solid #D1C2BB;
-  border-radius: 22px;
-  background: transparent;
-  font-size: 16px;
-  line-height: 24px;
-  color: #807E7D;
-  font-weight: 400;
-  transition:
-    background 0.18s,
-    border-color 0.18s,
-    color 0.18s;
-}
-
-/* Активный чекбокс — заливка всей капсулы */
-.checkbox-pill input[type="checkbox"]:checked + span {
-  background: #FFFFFF;
-  border-color: #FFFFFF;
-  color: #333;
-}
-
-/* Наведение */
-.checkbox-pill:hover span {
-  border-color: #BBA89C;
-}
-
-
-</style></div></div></div><div class="mtk-form-field-line padding popup desk"><div class="new-check w-embed"><label class="new-checkbox">
+  </label></div></div></div><div class="mtk-form-field-line padding popup desk"><div class="new-check w-embed"><label class="new-checkbox">
   <input
     class="new-checkbox__input"
     type="checkbox"
@@ -182,72 +69,7 @@
   <span class="new-checkbox__box" aria-hidden="true"></span>
 </label>
 
-<style>
-  :root {
-    --cb-size: 16px !important;     /* десктоп */
-    --cb-radius: 2px;    /* или 4px — под макет */
-    --cb-border: 2px;
-    --cb-color: #000;
-    --cb-icon: url("/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/68e6176d02100277331b39b9_material-symbols_check-rounded.svg");
-  }
-
-  @media (max-width: 768px) {
-    :root { --cb-size: 16px !important ; --cb-radius: 2px; }
-  }
-
-  .new-checkbox {
-    display: inline-flex;
-    align-items: center;
-    cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
-    user-select: none;
-  }
-
-  /* скрываем стандартный инпут */
-  .new-checkbox__input {
-    position: absolute;
-    inline-size: 1px;
-    block-size: 1px;
-    margin: 0px;
-    padding: 0;
-    border: 0;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-    white-space: nowrap;
-  }
-
-  /* бокс чекбокса */
-  .new-checkbox__box {
-    inline-size: var(--cb-size);
-    block-size: var(--cb-size);
-    border: var(--cb-border) solid var(--cb-color);
-    border-radius: var(--cb-radius);
-    background: transparent;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 16px 16px !important ; /* фиксированный размер иконки */
-    transition: background-color .2s ease, border-color .2s ease, box-shadow .2s ease;
-    flex: 0 0 auto;
-  }
-
-  /* фокус */
-  .new-checkbox__input:focus-visible + .new-checkbox__box {
-    box-shadow: 0 0 0 3px rgba(0,0,0,.15);
-  }
-
-  /* активное состояние */
-  .new-checkbox__input:checked + .new-checkbox__box {
-    background-color: var(--cb-color);
-    border-color: var(--cb-color);
-    background-image: var(--cb-icon);
-  }
-
-  /* disabled */
-  .new-checkbox__input:disabled + .new-checkbox__box {
-    opacity: .5;
-    cursor: not-allowed;
-  }
-</style></div><div class="form-checkbox">Даю согласие на обработку моих <a href="#" class="mtk-maillink">персональных данных</a></div></div></div></div><div class="mtk-form-fields _40"><h2 class="h2-ru h2-form new-form popup _0">Или напишите нам</h2><div class="mtk-form-field-line vert"><input class="mtk-form-textfield stroke gap w-input" maxlength="256" name="Name-4" data-name="Name 4" placeholder="Как вас зовут?" type="text" id="Name-4" required=""/><textarea id="LetterText-2" name="LetterText-2" maxlength="5000" data-name="Letter Text 2" placeholder="Коротко о вашей задаче" required="" class="mtk-form-textfield mtk-form-textarea stroke gap w-input"></textarea><input class="mtk-form-textfield stroke _0px w-input" maxlength="256" name="Email-4" data-name="Email 4" placeholder="Ваша почта, Телеграм или WhatsApp" type="text" id="Email-4" required=""/></div><div class="mtk-form-field-line padding popup mob"><div class="new-check w-embed"><label class="new-checkbox">
+</div><div class="form-checkbox">Даю согласие на обработку моих <a href="#" class="mtk-maillink">персональных данных</a></div></div></div></div><div class="mtk-form-fields _40"><h2 class="h2-ru h2-form new-form popup _0">Или напишите нам</h2><div class="mtk-form-field-line vert"><input class="mtk-form-textfield stroke gap w-input" maxlength="256" name="Name-4" data-name="Name 4" placeholder="Как вас зовут?" type="text" id="Name-4" required=""/><textarea id="LetterText-2" name="LetterText-2" maxlength="5000" data-name="Letter Text 2" placeholder="Коротко о вашей задаче" required="" class="mtk-form-textfield mtk-form-textarea stroke gap w-input"></textarea><input class="mtk-form-textfield stroke _0px w-input" maxlength="256" name="Email-4" data-name="Email 4" placeholder="Ваша почта, Телеграм или WhatsApp" type="text" id="Email-4" required=""/></div><div class="mtk-form-field-line padding popup mob"><div class="new-check w-embed"><label class="new-checkbox">
   <input
     class="new-checkbox__input"
     type="checkbox"
@@ -258,69 +80,4 @@
   <span class="new-checkbox__box" aria-hidden="true"></span>
 </label>
 
-<style>
-  :root {
-    --cb-size: 16px !important;     /* десктоп */
-    --cb-radius: 2px;    /* или 4px — под макет */
-    --cb-border: 2px;
-    --cb-color: #000;
-    --cb-icon: url("/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/68e6176d02100277331b39b9_material-symbols_check-rounded.svg");
-  }
-
-  @media (max-width: 768px) {
-    :root { --cb-size: 16px !important ; --cb-radius: 2px; }
-  }
-
-  .new-checkbox {
-    display: inline-flex;
-    align-items: center;
-    cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
-    user-select: none;
-  }
-
-  /* скрываем стандартный инпут */
-  .new-checkbox__input {
-    position: absolute;
-    inline-size: 1px;
-    block-size: 1px;
-    margin: 0px;
-    padding: 0;
-    border: 0;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-    white-space: nowrap;
-  }
-
-  /* бокс чекбокса */
-  .new-checkbox__box {
-    inline-size: var(--cb-size);
-    block-size: var(--cb-size);
-    border: var(--cb-border) solid var(--cb-color);
-    border-radius: var(--cb-radius);
-    background: transparent;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 16px 16px !important ; /* фиксированный размер иконки */
-    transition: background-color .2s ease, border-color .2s ease, box-shadow .2s ease;
-    flex: 0 0 auto;
-  }
-
-  /* фокус */
-  .new-checkbox__input:focus-visible + .new-checkbox__box {
-    box-shadow: 0 0 0 3px rgba(0,0,0,.15);
-  }
-
-  /* активное состояние */
-  .new-checkbox__input:checked + .new-checkbox__box {
-    background-color: var(--cb-color);
-    border-color: var(--cb-color);
-    background-image: var(--cb-icon);
-  }
-
-  /* disabled */
-  .new-checkbox__input:disabled + .new-checkbox__box {
-    opacity: .5;
-    cursor: not-allowed;
-  }
-</style></div><div class="form-checkbox">Даю согласие на обработку моих <a href="#" class="mtk-maillink">персональных данных</a></div></div><div class="mtk-form-button-wrapper _0"><input type="submit" data-wait="Отправляем..." id="button-send" class="mtk-submit-button popup w-button" value="Отправить заявку"/></div></div></div></form><div class="mtk-success-cont motka-form-done"><div class="mtk-success-cont-text">Спасибо!<br/>Ваше сообщение отправлено. <br/>В ближайшее время мы вам ответим.</div></div><div class="mtk-form-error-cont hide popup motka-form-fail"><div class="mtk-form-error">Что-то пошло не так… Пожалуйста, повторите попытку.</div></div></div></div></div></div></div></div></div>
+</div><div class="form-checkbox">Даю согласие на обработку моих <a href="#" class="mtk-maillink">персональных данных</a></div></div><div class="mtk-form-button-wrapper _0"><input type="submit" data-wait="Отправляем..." id="button-send" class="mtk-submit-button popup w-button" value="Отправить заявку"/></div></div></div></form><div class="mtk-success-cont motka-form-done"><div class="mtk-success-cont-text">Спасибо!<br/>Ваше сообщение отправлено. <br/>В ближайшее время мы вам ответим.</div></div><div class="mtk-form-error-cont hide popup motka-form-fail"><div class="mtk-form-error">Что-то пошло не так… Пожалуйста, повторите попытку.</div></div></div></div></div></div></div></div></div>

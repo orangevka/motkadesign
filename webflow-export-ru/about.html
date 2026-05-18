@@ -65,70 +65,7 @@
   </label></div><div class="code-embed w-embed"><label class="checkbox-pill-mobile">
     <input type="checkbox" name="service" value="Дизайн лендинга">
     <span>Дизайн лендинга</span>
-  </label></div><div class="code-embed-2 w-embed"><style>
-        /* 📱 Мобильный вариант без медиазапроса */
-    .checkbox-pill-mobile {
-      position: relative;
-      display: inline-flex;
-      align-items: center;
-      padding: 0;
-      border: none;
-      background: transparent;
-      cursor: pointer;
-      font-family: Factor A, Arial, sans-serif;
-      -webkit-tap-highlight-color: transparent;
-      touch-action: manipulation;
-    }
-
-    /* скрытый инпут, кликабельный */
-    .checkbox-pill-mobile input[type="checkbox"] {
-      position: absolute;
-      inset: 0;
-      opacity: 0;
-      margin: 0;
-      width: 100%;
-      height: 100%;
-      cursor: pointer;
-      z-index: 1;
-    }
-
-    /* сама капсула */
-    .checkbox-pill-mobile span {
-      position: relative;
-      z-index: 0;
-      display: inline-block;
-      padding: 2px 11px;
-      border: 1px solid #D1C2BB;
-      border-radius: 16px;
-      background: transparent;
-      font-size: 14px;
-      line-height: 24px;
-      color: #858585;
-      font-weight: 400;
-      user-select: none;
-      transition: background 0.18s, border-color 0.18s, color 0.18s;
-    }
-
-    /* активное состояние */
-    .checkbox-pill-mobile input[type="checkbox"]:checked + span {
-      background: #F3EFED;
-      border-color: #F3EFED;
-      color: #333;
-    }
-
-    /* ховер */
-    .checkbox-pill-mobile:hover span {
-      border-color: #BBA89C;
-    }
-
-    /* фокус клавиатурой */
-    .checkbox-pill-mobile input[type="checkbox"]:focus-visible + span {
-      outline: 2px solid #BBA89C;
-      outline-offset: 2px;
-    }
-
-
-  </style></div></div><div class="radio-button-wrapper desk"><div class="code-embed w-embed"><label class="checkbox-pill">
+  </label></div></div><div class="radio-button-wrapper desk"><div class="code-embed w-embed"><label class="checkbox-pill">
   <input type="checkbox" name="UX/UI" data-name="Service" value="UX/UI Дизайн">
   <span>UX/UI Дизайн</span>
 </label></div><div class="code-embed w-embed"><label class="checkbox-pill">
@@ -158,57 +95,7 @@
   </label></div><div class="code-embed w-embed"><label class="checkbox-pill">
     <input type="checkbox" name="service" value="Аналитика">
     <span>Аналитика</span>
-  </label></div><div class="code-embed-3 w-embed"><style>
-.checkbox-pill-group {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.checkbox-pill {
-  display: inline-flex;
-  align-items: center;
-  padding: 0;
-  border: none;
-  background: transparent;
-  cursor: pointer;
-  font-family: Factor A, Arial, sans-serif;
-}
-
-.checkbox-pill input[type="checkbox"] {
-  display: none;
-}
-
-.checkbox-pill span {
-  display: inline-block;
-  padding: 3px 16px;
-  border: 1px solid #D1C2BB;
-  border-radius: 22px;
-  background: transparent;
-  font-size: 16px;
-  line-height: 24px;
-  color: #807E7D;
-  font-weight: 400;
-  transition:
-    background 0.18s,
-    border-color 0.18s,
-    color 0.18s;
-}
-
-/* Активный чекбокс — заливка всей капсулы */
-.checkbox-pill input[type="checkbox"]:checked + span {
-  background: #FFFFFF;
-  border-color: #FFFFFF;
-  color: #333;
-}
-
-/* Наведение */
-.checkbox-pill:hover span {
-  border-color: #BBA89C;
-}
-
-
-</style></div></div></div><div class="mtk-form-field-line padding popup desk"><div class="new-check w-embed"><label class="new-checkbox">
+  </label></div></div></div><div class="mtk-form-field-line padding popup desk"><div class="new-check w-embed"><label class="new-checkbox">
   <input
     class="new-checkbox__input"
     type="checkbox"
@@ -219,72 +106,7 @@
   <span class="new-checkbox__box" aria-hidden="true"></span>
 </label>
 
-<style>
-  :root {
-    --cb-size: 16px !important;     /* десктоп */
-    --cb-radius: 2px;    /* или 4px — под макет */
-    --cb-border: 2px;
-    --cb-color: #000;
-    --cb-icon: url("/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/68e6176d02100277331b39b9_material-symbols_check-rounded.svg");
-  }
-
-  @media (max-width: 768px) {
-    :root { --cb-size: 16px !important ; --cb-radius: 2px; }
-  }
-
-  .new-checkbox {
-    display: inline-flex;
-    align-items: center;
-    cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
-    user-select: none;
-  }
-
-  /* скрываем стандартный инпут */
-  .new-checkbox__input {
-    position: absolute;
-    inline-size: 1px;
-    block-size: 1px;
-    margin: 0px;
-    padding: 0;
-    border: 0;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-    white-space: nowrap;
-  }
-
-  /* бокс чекбокса */
-  .new-checkbox__box {
-    inline-size: var(--cb-size);
-    block-size: var(--cb-size);
-    border: var(--cb-border) solid var(--cb-color);
-    border-radius: var(--cb-radius);
-    background: transparent;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 16px 16px !important ; /* фиксированный размер иконки */
-    transition: background-color .2s ease, border-color .2s ease, box-shadow .2s ease;
-    flex: 0 0 auto;
-  }
-
-  /* фокус */
-  .new-checkbox__input:focus-visible + .new-checkbox__box {
-    box-shadow: 0 0 0 3px rgba(0,0,0,.15);
-  }
-
-  /* активное состояние */
-  .new-checkbox__input:checked + .new-checkbox__box {
-    background-color: var(--cb-color);
-    border-color: var(--cb-color);
-    background-image: var(--cb-icon);
-  }
-
-  /* disabled */
-  .new-checkbox__input:disabled + .new-checkbox__box {
-    opacity: .5;
-    cursor: not-allowed;
-  }
-</style></div><div class="form-checkbox">Даю согласие на обработку моих <a href="#" class="mtk-maillink">персональных данных</a></div></div></div></div><div class="mtk-form-fields _40"><h2 class="h2-ru h2-form new-form popup _0">Или напишите нам</h2><div class="mtk-form-field-line vert"><input class="mtk-form-textfield stroke gap w-input" maxlength="256" name="Name-4" data-name="Name 4" placeholder="Как вас зовут?" type="text" id="Name-4" required=""/><textarea id="LetterText-2" name="LetterText-2" maxlength="5000" data-name="Letter Text 2" placeholder="Коротко о вашей задаче" required="" class="mtk-form-textfield mtk-form-textarea stroke gap w-input"></textarea><input class="mtk-form-textfield stroke _0px w-input" maxlength="256" name="Email-4" data-name="Email 4" placeholder="Ваша почта, Телеграм или WhatsApp" type="text" id="Email-4" required=""/></div><div class="mtk-form-field-line padding popup mob"><div class="new-check w-embed"><label class="new-checkbox">
+</div><div class="form-checkbox">Даю согласие на обработку моих <a href="#" class="mtk-maillink">персональных данных</a></div></div></div></div><div class="mtk-form-fields _40"><h2 class="h2-ru h2-form new-form popup _0">Или напишите нам</h2><div class="mtk-form-field-line vert"><input class="mtk-form-textfield stroke gap w-input" maxlength="256" name="Name-4" data-name="Name 4" placeholder="Как вас зовут?" type="text" id="Name-4" required=""/><textarea id="LetterText-2" name="LetterText-2" maxlength="5000" data-name="Letter Text 2" placeholder="Коротко о вашей задаче" required="" class="mtk-form-textfield mtk-form-textarea stroke gap w-input"></textarea><input class="mtk-form-textfield stroke _0px w-input" maxlength="256" name="Email-4" data-name="Email 4" placeholder="Ваша почта, Телеграм или WhatsApp" type="text" id="Email-4" required=""/></div><div class="mtk-form-field-line padding popup mob"><div class="new-check w-embed"><label class="new-checkbox">
   <input
     class="new-checkbox__input"
     type="checkbox"
@@ -295,72 +117,7 @@
   <span class="new-checkbox__box" aria-hidden="true"></span>
 </label>
 
-<style>
-  :root {
-    --cb-size: 16px !important;     /* десктоп */
-    --cb-radius: 2px;    /* или 4px — под макет */
-    --cb-border: 2px;
-    --cb-color: #000;
-    --cb-icon: url("/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/68e6176d02100277331b39b9_material-symbols_check-rounded.svg");
-  }
-
-  @media (max-width: 768px) {
-    :root { --cb-size: 16px !important ; --cb-radius: 2px; }
-  }
-
-  .new-checkbox {
-    display: inline-flex;
-    align-items: center;
-    cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
-    user-select: none;
-  }
-
-  /* скрываем стандартный инпут */
-  .new-checkbox__input {
-    position: absolute;
-    inline-size: 1px;
-    block-size: 1px;
-    margin: 0px;
-    padding: 0;
-    border: 0;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-    white-space: nowrap;
-  }
-
-  /* бокс чекбокса */
-  .new-checkbox__box {
-    inline-size: var(--cb-size);
-    block-size: var(--cb-size);
-    border: var(--cb-border) solid var(--cb-color);
-    border-radius: var(--cb-radius);
-    background: transparent;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 16px 16px !important ; /* фиксированный размер иконки */
-    transition: background-color .2s ease, border-color .2s ease, box-shadow .2s ease;
-    flex: 0 0 auto;
-  }
-
-  /* фокус */
-  .new-checkbox__input:focus-visible + .new-checkbox__box {
-    box-shadow: 0 0 0 3px rgba(0,0,0,.15);
-  }
-
-  /* активное состояние */
-  .new-checkbox__input:checked + .new-checkbox__box {
-    background-color: var(--cb-color);
-    border-color: var(--cb-color);
-    background-image: var(--cb-icon);
-  }
-
-  /* disabled */
-  .new-checkbox__input:disabled + .new-checkbox__box {
-    opacity: .5;
-    cursor: not-allowed;
-  }
-</style></div><div class="form-checkbox">Даю согласие на обработку моих <a href="#" class="mtk-maillink">персональных данных</a></div></div><div class="mtk-form-button-wrapper _0"><input type="submit" data-wait="Отправляем..." id="button-send" class="mtk-submit-button popup w-button" value="Отправить заявку"/></div></div></div></form><div class="mtk-success-cont motka-form-done"><div class="mtk-success-cont-text">Спасибо!<br/>Ваше сообщение отправлено. <br/>В ближайшее время мы вам ответим.</div></div><div class="mtk-form-error-cont hide popup motka-form-fail"><div class="mtk-form-error">Что-то пошло не так… Пожалуйста, повторите попытку.</div></div></div></div></div></div></div></div></div></a></div></div></a></div></div></a></div></div><div class="mtk-main"><div class="mtk-wrapper"><div class="mtk-hero mtk-portfolio-hero"><div class="two-colls"><div class="mtk-cont-about about-page"><div class="mb-40"><h1 class="h1-page">Дизайн-десант</h1></div><div class="mtk-cont-about-text"><p class="mtk-slogan"><strong>Поработав с нами, вы узнаете, что такое отлаженные дизайн-процессы, внимательное отношение к деталям и высокий уровень графической культуры.</strong></p><p class="mtk-p-main">Наша специализация — дизайн со смыслом. <br/><br/>Потому что классный дизайн должен не только современно выглядеть, но и эффективно работать, решая конкретные бизнес-задачи: повышение конверсии, увеличение аудитории, унификация брендинга.<br/></p><p class="mtk-p-main">Мотка — это надежная команда профессионалов с уникальным опытом работы над сложными проектами. На протяжении 20 лет мы помогаем создавать новые продукты и улучшаем дизайн существующих. <br/><br/>Студия Мотка создает штучные интерфейсы для проектов, которым не подходят стандартные решения. Мы тщательно прорабатываем каждый элемент дизайна, активно участвуем в процессе принятия решений и охотно делимся своим опытом. <br/><br/>Мы понимаем, когда нужно учесть требования заказчика как можно точнее, а когда уместно предложить свои идеи и гипотезы из нашего дизайнерского опыта.<br/></p></div></div><div id="w-node-a564e96f-54e8-9219-f3b8-c7d9d969ba1d-63ab8ea9" class="mtk-services-cloud"><ul role="list" class="mtk-projects w-list-unstyled"><li class="mtk-projects-item alg"><a href="/portfolio/algoritmika" class="mtk-projects-item-link">Алгоритмика</a></li><li class="mtk-projects-item vtb"><a href="/portfolio/vtb" class="mtk-projects-item-link vtb-link">ВТБ</a></li><li class="mtk-projects-item ffin"><a href="#" class="mtk-projects-item-link nda">Freedom Finance</a><img src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/68f1ea717103c9b8dde8f6ea_8a4a5d24cf2c2b54977988d5f68b926f_Frame%202131327861.png" loading="lazy" alt="" class="nda-popup"/></li><li class="mtk-projects-item gl"><a href="/portfolio/globallab" class="mtk-projects-item-link gl-link">GlobalLab</a></li><li class="mtk-projects-item bg"><a href="#" class="mtk-projects-item-link nda">Большой Город</a><img src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/68f217891c3e7ffd3f82cea1_Frame%202131327861.png" loading="lazy" alt="" class="nda-popup"/></li><li class="mtk-projects-item rbk"><a href="#" class="mtk-projects-item-link nda">Робокасса</a><img src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/68f217891c3e7ffd3f82cea1_Frame%202131327861.png" loading="lazy" alt="" class="nda-popup"/></li><li class="mtk-projects-item zpl"><a href="#" class="mtk-projects-item-link nda">Зарплата.ру</a><img src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/68f1ea717103c9b8dde8f6ea_8a4a5d24cf2c2b54977988d5f68b926f_Frame%202131327861.png" loading="lazy" alt="" class="nda-popup"/></li><li class="mtk-projects-item gztru"><a href="#" class="mtk-projects-item-link nda">Газета.ру</a><img src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/68f217891c3e7ffd3f82cea1_Frame%202131327861.png" loading="lazy" alt="" class="nda-popup"/></li><li class="mtk-projects-item exp"><a href="#" class="mtk-projects-item-link nda">Эксперт</a><img src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/68f217891c3e7ffd3f82cea1_Frame%202131327861.png" loading="lazy" alt="" class="nda-popup"/></li><li class="mtk-projects-item hhru"><a href="#" class="mtk-projects-item-link nda">hh.ru</a><img src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/68f217891c3e7ffd3f82cea1_Frame%202131327861.png" loading="lazy" alt="" class="nda-popup"/></li><li class="mtk-projects-item inf"><a href="/portfolio/interfax-3-0" class="mtk-projects-item-link inf-link">Интерфакс</a></li><li class="mtk-projects-item news360"><a href="/portfolio/news360" class="mtk-projects-item-link n360-link">News360</a></li><li class="mtk-projects-item sber"><a href="#" class="mtk-projects-item-link nda">СБЕР</a><img src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/68f1ea717103c9b8dde8f6ea_8a4a5d24cf2c2b54977988d5f68b926f_Frame%202131327861.png" loading="lazy" alt="" class="nda-popup"/></li><li class="mtk-projects-item mlg"><a href="#" class="mtk-projects-item-link nda">Медиалогия</a><img src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/68f217891c3e7ffd3f82cea1_Frame%202131327861.png" loading="lazy" alt="" class="nda-popup"/></li><li class="mtk-projects-item scan"><a href="/portfolio/scan" class="mtk-projects-item-link scan-link">SCAN</a></li><li class="mtk-projects-item fedr"><a href="#" class="mtk-projects-item-link nda">Федресурс</a><img src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/68f217891c3e7ffd3f82cea1_Frame%202131327861.png" loading="lazy" alt="" class="nda-popup"/></li><li class="mtk-projects-item jour"><a href="/portfolio/ai-body" class="mtk-projects-item-link ai-link">Journey</a></li><li class="mtk-projects-item grru"><a href="/portfolio/gramota" class="mtk-projects-item-link gramota-link">Грамота.ру</a></li><li class="mtk-projects-item mailru"><a href="#" class="mtk-projects-item-link nda">Mail.ru</a><img src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/68f217891c3e7ffd3f82cea1_Frame%202131327861.png" loading="lazy" alt="" class="nda-popup"/></li></ul></div></div></div></div></div><div id="about" class="mtk-main"><div class="mtk-wrapper"><div class="mtk-about-cont pt-0 team"><div class="mb-20 mtk-mob-mb8 team"><h2>Команда</h2></div><div class="mtk-about-cont-people"><div class="mtk-about-cont-person"><div class="mtk-person-avatar"><img src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/65818a6b441714e1db4b32cf_phil.webp" loading="lazy" alt="Phil Smirnov" class="mtk-person-avatar-img"/></div><div class="mtk-about-person-text"><div class="person-header"><h4>Фил Смирнов</h4><p class="p-ru-person-sub"><strong>Дизайн-директор</strong></p></div><p class="p-person-about">Дизайн-решения и управление творческим процессом, обучение</p></div></div><div class="mtk-about-cont-person"><div class="mtk-person-avatar"><img src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/6576c5109dea6fc963ab914a_masha.webp" loading="lazy" alt="Masha Yekimova" class="mtk-person-avatar-img"/></div><div class="mtk-about-person-text"><div class="person-header"><h4>Маша Екимова</h4><p class="p-ru-person-sub"><strong>Арт-директор</strong></p></div><p class="p-person-about">Визуальный стиль, изящество, гармония, иллюстрации, анимация</p></div></div><div class="mtk-about-cont-person"><div class="mtk-person-avatar"><img src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/6576c5109dea6fc963ab9146_lena.webp" loading="lazy" alt="Elena Nochka" class="mtk-person-avatar-img"/></div><div class="mtk-about-person-text"><div class="person-header"><h4>Елена Ночка</h4><p class="p-ru-person-sub"><strong>Директор по маркетингу</strong></p></div><p class="p-person-about">Маркетинг,  стратегический менеджмент, бизнес-аналитика</p></div></div><div class="mtk-about-cont-person"><div class="mtk-person-avatar"><img src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/6576c5109dea6fc963ab9149_nabu.webp" loading="lazy" alt="Natalia Bulanova" class="mtk-person-avatar-img"/></div><div class="mtk-about-person-text"><div class="person-header"><h4>Наталья Буланова</h4><p class="p-ru-person-sub">UX Дизайнер, тимлид</p></div><p class="p-person-about">Проектирование UX, <br/>No-code решения,  управление изменениями</p></div></div><div class="mtk-about-cont-person"><div class="mtk-person-avatar"><img src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/6576c5109dea6fc963ab914c_anna.webp" loading="lazy" alt="Анна Гапеева" class="mtk-person-avatar-img"/></div><div class="mtk-about-person-text"><div class="person-header"><h4>Анна Гапеева</h4><p class="p-ru-person-sub">UX / UI Дизайнер</p></div><p class="p-person-about">Дизайн интерфейсов, проектирование UX,  иллюстрации</p></div></div><div class="mtk-about-cont-person"><div class="mtk-person-avatar"><img src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/6576c5109dea6fc963ab914f_lisa.webp" loading="lazy" alt="Елизавета Плахотная" class="mtk-person-avatar-img"/></div><div class="mtk-about-person-text"><div class="person-header"><h4>Лиза Плахотная</h4><p class="p-ru-person-sub">UX / UI Дизайнер</p></div><p class="p-person-about">Дизайн интерфейсов, прототипирование, графический дизайн</p></div></div><div class="mtk-about-cont-person"><div class="mtk-person-avatar"><img src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/6576c5109dea6fc963ab9147_ser-m.webp" loading="lazy" alt="Сергей Максимов" class="mtk-person-avatar-img"/></div><div class="mtk-about-person-text"><div class="person-header"><h4>Сергей Максимов</h4><p class="p-ru-person-sub">Иллюстратор, дизайнер</p></div><p class="p-person-about">Иллюстрации, вау-эффекты, графический дизайн,  анимация</p></div></div><div class="mtk-about-cont-person"><div class="mtk-person-avatar"><img src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/68fb532869c74661d0c2378d_mk.png" loading="lazy" sizes="(max-width: 660px) 100vw, 660px" srcset="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/68fb532869c74661d0c2378d_mk-p-500.png 500w, /assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/68fb532869c74661d0c2378d_mk.png 660w" alt="Сергей Максимов" class="mtk-person-avatar-img"/></div><div class="mtk-about-person-text"><div class="person-header"><h4>Мария Король</h4><p class="p-ru-person-sub">UX/UI дизайнер</p></div><p class="p-person-about">Дизайн интерфейсов, проектирование UX</p></div></div><div class="mtk-about-cont-person"><div class="mtk-person-avatar"><img src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/68f2044d7ed2e9d6da416300_Frame%202131327887.png" loading="lazy" sizes="(max-width: 502px) 100vw, 502px" srcset="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/68f2044d7ed2e9d6da416300_Frame%202131327887-p-500.png 500w, /assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/68f2044d7ed2e9d6da416300_Frame%202131327887.png 502w" alt="Тамара Тебидзе" class="mtk-person-avatar-img"/></div><div class="mtk-about-person-text"><div class="person-header"><h4>Софья Алябьева</h4><p class="p-ru-person-sub">UX Дизайнер, фронтенд специалист</p></div><p class="p-person-about">Дизайн интерфейсов, прототипирование, JS, HTML, CSS</p></div></div><div class="mtk-about-cont-person"><div class="mtk-person-avatar"><img src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/6576c5109dea6fc963ab9150_david.webp" loading="lazy" alt="Давид Мзареулян" class="mtk-person-avatar-img"/></div><div class="mtk-about-person-text"><div class="person-header"><h4>Давид Мзареулян</h4><p class="p-ru-person-sub">Фронтенд специалист</p></div><p class="p-person-about">JS, React, Node, Go, PHP, PostgreSQL, HTML, CSS</p></div></div></div><div class="pt-50 mb-16"><p class="paragraph-13">Студия была основана в 2005 году, и за это время мы успешно завершили более 300 проектов. <br/>Нами накоплен уникальный опыт понимания того, какие дизайн-решения работают  в самых разных областях:</p></div><div class="mtk-service-list"><ul role="list" class="mtk-service-list-item"><li class="mtk-service-list-item-li">— медиа-проекты</li><li class="mtk-service-list-item-li">— анализ данных</li><li class="mtk-service-list-item-li">— маркетплейсы, краудсорсинг</li><li class="mtk-service-list-item-li">— поиск работы</li><li class="mtk-service-list-item-li">— поиск недвижимости</li><li class="mtk-service-list-item-li">— финтех</li></ul><ul role="list" class="mtk-service-list-item"><li class="mtk-service-list-item-li">— образование и EdTech</li><li class="mtk-service-list-item-li">— AI</li><li class="mtk-service-list-item-li">— VR, AR</li><li class="mtk-service-list-item-li">— соцсети, дейтинг</li><li class="mtk-service-list-item-li">— крупный бизнес</li><li class="mtk-service-list-item-li">— CRM, ERP</li></ul></div></div></div></div><div id="contact-form-page" data-w-id="4f704c1d-c4c8-ab5a-f092-111277796365" class="mtk-main mtk-contact-form team"><div class="mtk-wrapper sectionform form-cat-wrapper animation page"><div class="mtk-form-cont team-form-wrapper"><div class="h-callbuttons-wrapper"><h2 class="h2-ru h2-form new-form mb-8 hnopad">Обсудим ваш проект?</h2><div class="buttons-for-calls-wrapper team-form"><div class="call-button-wrapper team-form"><div class="call-button-text">Назначьте звонок</div><a href="https://planerka.app/meet/design-motka/30min" target="_blank" class="link-block-4 empty w-inline-block"><img src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/68f7541cd6ff4a9992738ea9_1b9a475c4b7d98059d43398da09a8215_Frame%202131327889.svg" loading="lazy" alt="" class="icon-call big"/><div class="text-block-19">Выбрать дату и время</div></a></div><div class="call-button-wrapper team-form"><div class="call-button-text">напишите в Telegram</div><a href="https://t.me/hellomotka" target="_blank" class="link-block-4 empty w-inline-block"><img src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/68f7541cfc7a5da497e7120b_23319605bb02660f0de761488f3f9b7f_Frame%202131327889-1.svg" loading="lazy" alt="" class="icon-call big"/><div class="text-block-19">@hellomotka</div></a></div><div class="call-button-wrapper team-form"><div class="call-button-text">или на почту</div><a href="mailto:design@motka.ru" class="link-block-4 empty w-inline-block"><img src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/68f7541c2c1b9b81eb5d58a8_115b1f0d00cf4f6caa75a2f4b8d69600_Frame%202131327889-2.svg" loading="lazy" alt="" class="icon-call big"/><div class="text-block-19">design@motka.ru</div></a></div></div></div><div class="mtk-form-cont-form-coll"><div id="order-design-page" class="mtk-form team motka-form"><form id="wf-form-Order-Design-page" name="wf-form-Order-Design-page" data-name="Order Design page" method="post" class="form mobileform"><div class="mtk-form-cont-colls animation page team"><div class="mtk-form-text _50 team"><p class="mb8">Мы отвечаем в течение 24 часов, быстро договариваемся и приступаем к работе. К нам можно без ТЗ. Хорошо знаем свое дело и делаем работу на совесть.</p><div class="div-block-30"><p class="heading-form">Какую задачу надо решить?</p><div class="radio-button-wrapper show"><div class="code-embed w-embed"><label class="checkbox-pill">
+</div><div class="form-checkbox">Даю согласие на обработку моих <a href="#" class="mtk-maillink">персональных данных</a></div></div><div class="mtk-form-button-wrapper _0"><input type="submit" data-wait="Отправляем..." id="button-send" class="mtk-submit-button popup w-button" value="Отправить заявку"/></div></div></div></form><div class="mtk-success-cont motka-form-done"><div class="mtk-success-cont-text">Спасибо!<br/>Ваше сообщение отправлено. <br/>В ближайшее время мы вам ответим.</div></div><div class="mtk-form-error-cont hide popup motka-form-fail"><div class="mtk-form-error">Что-то пошло не так… Пожалуйста, повторите попытку.</div></div></div></div></div></div></div></div></div></a></div></div></a></div></div></a></div></div><div class="mtk-main"><div class="mtk-wrapper"><div class="mtk-hero mtk-portfolio-hero"><div class="two-colls"><div class="mtk-cont-about about-page"><div class="mb-40"><h1 class="h1-page">Дизайн-десант</h1></div><div class="mtk-cont-about-text"><p class="mtk-slogan"><strong>Поработав с нами, вы узнаете, что такое отлаженные дизайн-процессы, внимательное отношение к деталям и высокий уровень графической культуры.</strong></p><p class="mtk-p-main">Наша специализация — дизайн со смыслом. <br/><br/>Потому что классный дизайн должен не только современно выглядеть, но и эффективно работать, решая конкретные бизнес-задачи: повышение конверсии, увеличение аудитории, унификация брендинга.<br/></p><p class="mtk-p-main">Мотка — это надежная команда профессионалов с уникальным опытом работы над сложными проектами. На протяжении 20 лет мы помогаем создавать новые продукты и улучшаем дизайн существующих. <br/><br/>Студия Мотка создает штучные интерфейсы для проектов, которым не подходят стандартные решения. Мы тщательно прорабатываем каждый элемент дизайна, активно участвуем в процессе принятия решений и охотно делимся своим опытом. <br/><br/>Мы понимаем, когда нужно учесть требования заказчика как можно точнее, а когда уместно предложить свои идеи и гипотезы из нашего дизайнерского опыта.<br/></p></div></div><div id="w-node-a564e96f-54e8-9219-f3b8-c7d9d969ba1d-63ab8ea9" class="mtk-services-cloud"><ul role="list" class="mtk-projects w-list-unstyled"><li class="mtk-projects-item alg"><a href="/portfolio/algoritmika" class="mtk-projects-item-link">Алгоритмика</a></li><li class="mtk-projects-item vtb"><a href="/portfolio/vtb" class="mtk-projects-item-link vtb-link">ВТБ</a></li><li class="mtk-projects-item ffin"><a href="#" class="mtk-projects-item-link nda">Freedom Finance</a><img src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/68f1ea717103c9b8dde8f6ea_8a4a5d24cf2c2b54977988d5f68b926f_Frame%202131327861.png" loading="lazy" alt="" class="nda-popup"/></li><li class="mtk-projects-item gl"><a href="/portfolio/globallab" class="mtk-projects-item-link gl-link">GlobalLab</a></li><li class="mtk-projects-item bg"><a href="#" class="mtk-projects-item-link nda">Большой Город</a><img src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/68f217891c3e7ffd3f82cea1_Frame%202131327861.png" loading="lazy" alt="" class="nda-popup"/></li><li class="mtk-projects-item rbk"><a href="#" class="mtk-projects-item-link nda">Робокасса</a><img src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/68f217891c3e7ffd3f82cea1_Frame%202131327861.png" loading="lazy" alt="" class="nda-popup"/></li><li class="mtk-projects-item zpl"><a href="#" class="mtk-projects-item-link nda">Зарплата.ру</a><img src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/68f1ea717103c9b8dde8f6ea_8a4a5d24cf2c2b54977988d5f68b926f_Frame%202131327861.png" loading="lazy" alt="" class="nda-popup"/></li><li class="mtk-projects-item gztru"><a href="#" class="mtk-projects-item-link nda">Газета.ру</a><img src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/68f217891c3e7ffd3f82cea1_Frame%202131327861.png" loading="lazy" alt="" class="nda-popup"/></li><li class="mtk-projects-item exp"><a href="#" class="mtk-projects-item-link nda">Эксперт</a><img src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/68f217891c3e7ffd3f82cea1_Frame%202131327861.png" loading="lazy" alt="" class="nda-popup"/></li><li class="mtk-projects-item hhru"><a href="#" class="mtk-projects-item-link nda">hh.ru</a><img src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/68f217891c3e7ffd3f82cea1_Frame%202131327861.png" loading="lazy" alt="" class="nda-popup"/></li><li class="mtk-projects-item inf"><a href="/portfolio/interfax-3-0" class="mtk-projects-item-link inf-link">Интерфакс</a></li><li class="mtk-projects-item news360"><a href="/portfolio/news360" class="mtk-projects-item-link n360-link">News360</a></li><li class="mtk-projects-item sber"><a href="#" class="mtk-projects-item-link nda">СБЕР</a><img src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/68f1ea717103c9b8dde8f6ea_8a4a5d24cf2c2b54977988d5f68b926f_Frame%202131327861.png" loading="lazy" alt="" class="nda-popup"/></li><li class="mtk-projects-item mlg"><a href="#" class="mtk-projects-item-link nda">Медиалогия</a><img src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/68f217891c3e7ffd3f82cea1_Frame%202131327861.png" loading="lazy" alt="" class="nda-popup"/></li><li class="mtk-projects-item scan"><a href="/portfolio/scan" class="mtk-projects-item-link scan-link">SCAN</a></li><li class="mtk-projects-item fedr"><a href="#" class="mtk-projects-item-link nda">Федресурс</a><img src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/68f217891c3e7ffd3f82cea1_Frame%202131327861.png" loading="lazy" alt="" class="nda-popup"/></li><li class="mtk-projects-item jour"><a href="/portfolio/ai-body" class="mtk-projects-item-link ai-link">Journey</a></li><li class="mtk-projects-item grru"><a href="/portfolio/gramota" class="mtk-projects-item-link gramota-link">Грамота.ру</a></li><li class="mtk-projects-item mailru"><a href="#" class="mtk-projects-item-link nda">Mail.ru</a><img src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/68f217891c3e7ffd3f82cea1_Frame%202131327861.png" loading="lazy" alt="" class="nda-popup"/></li></ul></div></div></div></div></div><div id="about" class="mtk-main"><div class="mtk-wrapper"><div class="mtk-about-cont pt-0 team"><div class="mb-20 mtk-mob-mb8 team"><h2>Команда</h2></div><div class="mtk-about-cont-people"><div class="mtk-about-cont-person"><div class="mtk-person-avatar"><img src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/65818a6b441714e1db4b32cf_phil.webp" loading="lazy" alt="Phil Smirnov" class="mtk-person-avatar-img"/></div><div class="mtk-about-person-text"><div class="person-header"><h4>Фил Смирнов</h4><p class="p-ru-person-sub"><strong>Дизайн-директор</strong></p></div><p class="p-person-about">Дизайн-решения и управление творческим процессом, обучение</p></div></div><div class="mtk-about-cont-person"><div class="mtk-person-avatar"><img src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/6576c5109dea6fc963ab914a_masha.webp" loading="lazy" alt="Masha Yekimova" class="mtk-person-avatar-img"/></div><div class="mtk-about-person-text"><div class="person-header"><h4>Маша Екимова</h4><p class="p-ru-person-sub"><strong>Арт-директор</strong></p></div><p class="p-person-about">Визуальный стиль, изящество, гармония, иллюстрации, анимация</p></div></div><div class="mtk-about-cont-person"><div class="mtk-person-avatar"><img src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/6576c5109dea6fc963ab9146_lena.webp" loading="lazy" alt="Elena Nochka" class="mtk-person-avatar-img"/></div><div class="mtk-about-person-text"><div class="person-header"><h4>Елена Ночка</h4><p class="p-ru-person-sub"><strong>Директор по маркетингу</strong></p></div><p class="p-person-about">Маркетинг,  стратегический менеджмент, бизнес-аналитика</p></div></div><div class="mtk-about-cont-person"><div class="mtk-person-avatar"><img src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/6576c5109dea6fc963ab9149_nabu.webp" loading="lazy" alt="Natalia Bulanova" class="mtk-person-avatar-img"/></div><div class="mtk-about-person-text"><div class="person-header"><h4>Наталья Буланова</h4><p class="p-ru-person-sub">UX Дизайнер, тимлид</p></div><p class="p-person-about">Проектирование UX, <br/>No-code решения,  управление изменениями</p></div></div><div class="mtk-about-cont-person"><div class="mtk-person-avatar"><img src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/6576c5109dea6fc963ab914c_anna.webp" loading="lazy" alt="Анна Гапеева" class="mtk-person-avatar-img"/></div><div class="mtk-about-person-text"><div class="person-header"><h4>Анна Гапеева</h4><p class="p-ru-person-sub">UX / UI Дизайнер</p></div><p class="p-person-about">Дизайн интерфейсов, проектирование UX,  иллюстрации</p></div></div><div class="mtk-about-cont-person"><div class="mtk-person-avatar"><img src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/6576c5109dea6fc963ab914f_lisa.webp" loading="lazy" alt="Елизавета Плахотная" class="mtk-person-avatar-img"/></div><div class="mtk-about-person-text"><div class="person-header"><h4>Лиза Плахотная</h4><p class="p-ru-person-sub">UX / UI Дизайнер</p></div><p class="p-person-about">Дизайн интерфейсов, прототипирование, графический дизайн</p></div></div><div class="mtk-about-cont-person"><div class="mtk-person-avatar"><img src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/6576c5109dea6fc963ab9147_ser-m.webp" loading="lazy" alt="Сергей Максимов" class="mtk-person-avatar-img"/></div><div class="mtk-about-person-text"><div class="person-header"><h4>Сергей Максимов</h4><p class="p-ru-person-sub">Иллюстратор, дизайнер</p></div><p class="p-person-about">Иллюстрации, вау-эффекты, графический дизайн,  анимация</p></div></div><div class="mtk-about-cont-person"><div class="mtk-person-avatar"><img src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/68fb532869c74661d0c2378d_mk.png" loading="lazy" sizes="(max-width: 660px) 100vw, 660px" srcset="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/68fb532869c74661d0c2378d_mk-p-500.png 500w, /assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/68fb532869c74661d0c2378d_mk.png 660w" alt="Сергей Максимов" class="mtk-person-avatar-img"/></div><div class="mtk-about-person-text"><div class="person-header"><h4>Мария Король</h4><p class="p-ru-person-sub">UX/UI дизайнер</p></div><p class="p-person-about">Дизайн интерфейсов, проектирование UX</p></div></div><div class="mtk-about-cont-person"><div class="mtk-person-avatar"><img src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/68f2044d7ed2e9d6da416300_Frame%202131327887.png" loading="lazy" sizes="(max-width: 502px) 100vw, 502px" srcset="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/68f2044d7ed2e9d6da416300_Frame%202131327887-p-500.png 500w, /assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/68f2044d7ed2e9d6da416300_Frame%202131327887.png 502w" alt="Тамара Тебидзе" class="mtk-person-avatar-img"/></div><div class="mtk-about-person-text"><div class="person-header"><h4>Софья Алябьева</h4><p class="p-ru-person-sub">UX Дизайнер, фронтенд специалист</p></div><p class="p-person-about">Дизайн интерфейсов, прототипирование, JS, HTML, CSS</p></div></div><div class="mtk-about-cont-person"><div class="mtk-person-avatar"><img src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/6576c5109dea6fc963ab9150_david.webp" loading="lazy" alt="Давид Мзареулян" class="mtk-person-avatar-img"/></div><div class="mtk-about-person-text"><div class="person-header"><h4>Давид Мзареулян</h4><p class="p-ru-person-sub">Фронтенд специалист</p></div><p class="p-person-about">JS, React, Node, Go, PHP, PostgreSQL, HTML, CSS</p></div></div></div><div class="pt-50 mb-16"><p class="paragraph-13">Студия была основана в 2005 году, и за это время мы успешно завершили более 300 проектов. <br/>Нами накоплен уникальный опыт понимания того, какие дизайн-решения работают  в самых разных областях:</p></div><div class="mtk-service-list"><ul role="list" class="mtk-service-list-item"><li class="mtk-service-list-item-li">— медиа-проекты</li><li class="mtk-service-list-item-li">— анализ данных</li><li class="mtk-service-list-item-li">— маркетплейсы, краудсорсинг</li><li class="mtk-service-list-item-li">— поиск работы</li><li class="mtk-service-list-item-li">— поиск недвижимости</li><li class="mtk-service-list-item-li">— финтех</li></ul><ul role="list" class="mtk-service-list-item"><li class="mtk-service-list-item-li">— образование и EdTech</li><li class="mtk-service-list-item-li">— AI</li><li class="mtk-service-list-item-li">— VR, AR</li><li class="mtk-service-list-item-li">— соцсети, дейтинг</li><li class="mtk-service-list-item-li">— крупный бизнес</li><li class="mtk-service-list-item-li">— CRM, ERP</li></ul></div></div></div></div><div id="contact-form-page" data-w-id="4f704c1d-c4c8-ab5a-f092-111277796365" class="mtk-main mtk-contact-form team"><div class="mtk-wrapper sectionform form-cat-wrapper animation page"><div class="mtk-form-cont team-form-wrapper"><div class="h-callbuttons-wrapper"><h2 class="h2-ru h2-form new-form mb-8 hnopad">Обсудим ваш проект?</h2><div class="buttons-for-calls-wrapper team-form"><div class="call-button-wrapper team-form"><div class="call-button-text">Назначьте звонок</div><a href="https://planerka.app/meet/design-motka/30min" target="_blank" class="link-block-4 empty w-inline-block"><img src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/68f7541cd6ff4a9992738ea9_1b9a475c4b7d98059d43398da09a8215_Frame%202131327889.svg" loading="lazy" alt="" class="icon-call big"/><div class="text-block-19">Выбрать дату и время</div></a></div><div class="call-button-wrapper team-form"><div class="call-button-text">напишите в Telegram</div><a href="https://t.me/hellomotka" target="_blank" class="link-block-4 empty w-inline-block"><img src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/68f7541cfc7a5da497e7120b_23319605bb02660f0de761488f3f9b7f_Frame%202131327889-1.svg" loading="lazy" alt="" class="icon-call big"/><div class="text-block-19">@hellomotka</div></a></div><div class="call-button-wrapper team-form"><div class="call-button-text">или на почту</div><a href="mailto:design@motka.ru" class="link-block-4 empty w-inline-block"><img src="/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/68f7541c2c1b9b81eb5d58a8_115b1f0d00cf4f6caa75a2f4b8d69600_Frame%202131327889-2.svg" loading="lazy" alt="" class="icon-call big"/><div class="text-block-19">design@motka.ru</div></a></div></div></div><div class="mtk-form-cont-form-coll"><div id="order-design-page" class="mtk-form team motka-form"><form id="wf-form-Order-Design-page" name="wf-form-Order-Design-page" data-name="Order Design page" method="post" class="form mobileform"><div class="mtk-form-cont-colls animation page team"><div class="mtk-form-text _50 team"><p class="mb8">Мы отвечаем в течение 24 часов, быстро договариваемся и приступаем к работе. К нам можно без ТЗ. Хорошо знаем свое дело и делаем работу на совесть.</p><div class="div-block-30"><p class="heading-form">Какую задачу надо решить?</p><div class="radio-button-wrapper show"><div class="code-embed w-embed"><label class="checkbox-pill">
   <input type="checkbox" name="UX/UI" data-name="Service" value="UX/UI Дизайн">
   <span>UX/UI Дизайн</span>
 </label></div><div class="code-embed w-embed"><label class="checkbox-pill">

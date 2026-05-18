@@ -858,6 +858,86 @@ body.mtk-body-main { margin-top: 0; }
 .checkbox-pill-mobile:hover span { border-color: #BBA89C; }
 .checkbox-pill-mobile input[type="checkbox"]:focus-visible + span { outline: 2px solid #BBA89C; outline-offset: 2px; }
 
+/* ── Форма попап: десктопные капсульные чекбоксы ── */
+.checkbox-pill-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.checkbox-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-family: Factor A, Arial, sans-serif;
+}
+.checkbox-pill input[type="checkbox"] { display: none; }
+.checkbox-pill span {
+  display: inline-block;
+  padding: 3px 16px;
+  border: 1px solid #D1C2BB;
+  border-radius: 22px;
+  background: transparent;
+  font-size: 16px;
+  line-height: 24px;
+  color: #807E7D;
+  font-weight: 400;
+  transition: background 0.18s, border-color 0.18s, color 0.18s;
+}
+.checkbox-pill input[type="checkbox"]:checked + span { background: #fff; border-color: #fff; color: #333; }
+.checkbox-pill:hover span { border-color: #BBA89C; }
+
+/* ── Форма попап: чекбокс «Согласие на обработку данных» ── */
+:root {
+  --cb-size: 16px;
+  --cb-radius: 2px;
+  --cb-border: 2px;
+  --cb-color: #000;
+  --cb-icon: url("/assets/cdn.prod.website-files.com/6576c5109dea6fc963ab8e4e/68e6176d02100277331b39b9_material-symbols_check-rounded.svg");
+}
+@media (max-width: 768px) {
+  :root { --cb-size: 16px; --cb-radius: 2px; }
+}
+.new-checkbox {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+.new-checkbox__input {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  white-space: nowrap;
+}
+.new-checkbox__box {
+  inline-size: var(--cb-size);
+  block-size: var(--cb-size);
+  border: var(--cb-border) solid var(--cb-color);
+  border-radius: var(--cb-radius);
+  background: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  transition: background-color .2s ease, border-color .2s ease, box-shadow .2s ease;
+  flex: 0 0 auto;
+}
+.new-checkbox__input:focus-visible + .new-checkbox__box { box-shadow: 0 0 0 3px rgba(0,0,0,.15); }
+.new-checkbox__input:checked + .new-checkbox__box {
+  background-color: var(--cb-color);
+  border-color: var(--cb-color);
+  background-image: var(--cb-icon);
+}
+.new-checkbox__input:disabled + .new-checkbox__box { opacity: .5; cursor: not-allowed; }
+
 /* privacy-policy, consent: список не должен быть тоньше остального текста */
 .cookie-list .cookie-text { font-weight: 400; }
 
