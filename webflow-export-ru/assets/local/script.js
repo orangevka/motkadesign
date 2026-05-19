@@ -34,21 +34,53 @@ document.addEventListener('click', e => {
   }
 });
 
-// Fixed CTA button: показывать только когда nav полностью ушёл за верхний край
-const navBar = document.querySelector('.mtk-header-category');
-const fixedBtn = document.querySelector('.buttom-design-wrapper');
-if (navBar && fixedBtn) {
-  function syncFixedBtn() {
-    const gone = navBar.getBoundingClientRect().bottom <= 0;
-    if (gone) {
-      fixedBtn.classList.add('active');
-    } else {
-      fixedBtn.classList.remove('active');
+// Fixed CTA: оригинал всегда скрыт, fixed-clone всегда виден — без show/hide, без мерцания
+(function () {
+  const navBar = document.querySelector('.mtk-header-category');
+  const navCta = navBar && navBar.querySelector('nav.mtk-nav-menu .ask-button-link.order-des');
+  if (!navCta) return;
+
+  let clone = null;
+
+  function setup() {
+    const r = navCta.getBoundingClientRect();
+
+    if (r.width === 0) {
+      // Мобайл (<425px): убираем clone, возвращаем оригинал
+      if (clone) { clone.remove(); clone = null; }
+      navCta.style.removeProperty('visibility');
+      navCta.style.removeProperty('pointer-events');
+      return;
+    }
+
+    navCta.style.setProperty('visibility',     'hidden', 'important');
+    navCta.style.setProperty('pointer-events', 'none',   'important');
+
+    if (clone) {
+      // При ресайзе — просто обновляем позицию
+      clone.style.top  = r.top  + 'px';
+      clone.style.left = r.left + 'px';
+      return;
+    }
+
+    // Первый запуск — создаём clone
+    clone = navCta.cloneNode(true);
+    [clone, ...clone.querySelectorAll('[data-w-id]')]
+      .forEach(el => el.removeAttribute('data-w-id'));
+    clone.style.cssText = 'position:fixed;top:' + r.top + 'px;left:' + r.left + 'px;right:auto;bottom:auto;z-index:9999;';
+    clone.style.setProperty('margin',     '0',    'important');
+    clone.style.setProperty('transition', 'none', 'important');
+    document.body.appendChild(clone);
+
+    const popupEl = document.querySelector('.form-wrapper.popup');
+    if (popupEl) {
+      clone.addEventListener('click', e => { e.preventDefault(); popupEl.style.display = 'flex'; });
     }
   }
-  window.addEventListener('scroll', syncFixedBtn, { passive: true });
-  syncFixedBtn();
-}
+
+  requestAnimationFrame(() => requestAnimationFrame(setup));
+  window.addEventListener('resize', () => requestAnimationFrame(setup));
+}());
 
 // Popup open/close (IX2 не управляет попапом на страницах кроме services)
 const popup = document.querySelector('.form-wrapper.popup');
