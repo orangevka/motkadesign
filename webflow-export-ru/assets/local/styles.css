@@ -1,3 +1,7 @@
+/* ── Font overrides ── */
+/* Roboto → Factor A (формы .form.mobileform на всех страницах) */
+.form.mobileform { font-family: 'Factor A', sans-serif; }
+
 /* ── Global (перенесено из <style> страниц) ── */
 /* Форма на странице (не попап): убираем ограничение max-width из Webflow CSS */
 .mtk-form:not(.popup) { max-width: none; }
