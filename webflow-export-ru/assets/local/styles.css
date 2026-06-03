@@ -12,7 +12,8 @@ body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; 
 .footer-case-cont { min-width: 0; max-width: 100%; }
 
 @media screen and (max-width: 991px) {
-  .footer-case.desktop { display: flex; position: fixed; bottom: 0; background: #fff; }
+  /* На планшете и ниже фиксированная нижняя панель перекрывала низ экрана — скрываем */
+  .footer-case.desktop { display: none; }
   .mtk-about-cont-text, .narrow-cont { width: 100%; max-width: 100%; }
 }
 @media screen and (max-width: 767px) {
