@@ -527,6 +527,8 @@ p.cg-bs-caption { font-family: 'Spectral', serif; font-size: 24px; line-height: 
   .cg-approach-card { min-height: 180px; }
   .cg-approach-card-itog { width: 100%; min-height: 180px; flex-direction: row; justify-content: flex-start; gap: 24px; }
   .cg-approach-arrow-wrap { transform: rotate(90deg); }
+  /* Абсолютная тень-картинка карточек на планшете вылезает за правый край (горизонтальный скролл) — скрываем, как и прочие декоративные тени */
+  .cg-approach-card-shadow { display: none; }
 }
 
 @media (max-width: 991px) {
