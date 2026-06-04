@@ -74,7 +74,7 @@ document.addEventListener('click', e => {
 
     const popupEl = document.querySelector('.form-wrapper.popup');
     if (popupEl) {
-      clone.addEventListener('click', e => { e.preventDefault(); popupEl.style.display = 'flex'; });
+      clone.addEventListener('click', e => { e.preventDefault(); popupEl.style.display = 'flex'; popupEl.style.opacity = '1'; });
     }
   }
 
@@ -82,16 +82,26 @@ document.addEventListener('click', e => {
   window.addEventListener('resize', () => requestAnimationFrame(setup));
 }());
 
-// Popup open/close (IX2 не управляет попапом на страницах кроме services)
+// Popup open/close — полностью под управлением нашего скрипта (снят с Webflow IX2).
+// IX2 выставлял обёртке popup начальное состояние opacity:0, а её клик-триггер мы
+// перехватываем (клон без data-w-id, оригинал pointer-events:none) → анимация opacity→1
+// не запускалась и попап оставался невидимым. Убираем data-w-id у попапа и кнопок-триггеров,
+// чтобы IX2 их не трогал, и сами задаём display+opacity при открытии.
 const popup = document.querySelector('.form-wrapper.popup');
 if (popup) {
-    popup.style.display = 'none';
+    [popup, ...popup.querySelectorAll('[data-w-id]'), ...document.querySelectorAll('.order-des[data-w-id]')]
+        .forEach(el => el.removeAttribute('data-w-id'));
+
+    const openPopup = () => { popup.style.display = 'flex'; popup.style.opacity = '1'; };
+    const closePopup = () => { popup.style.display = 'none'; };
+
+    closePopup();
     document.querySelectorAll('.order-des').forEach(btn => {
-        btn.addEventListener('click', e => { e.preventDefault(); popup.style.display = 'flex'; });
+        btn.addEventListener('click', e => { e.preventDefault(); openPopup(); });
     });
     const closeBtn = popup.querySelector('.close-button');
-    if (closeBtn) closeBtn.addEventListener('click', () => { popup.style.display = 'none'; });
-    popup.addEventListener('click', e => { if (e.target === popup) popup.style.display = 'none'; });
+    if (closeBtn) closeBtn.addEventListener('click', closePopup);
+    popup.addEventListener('click', e => { if (e.target === popup) closePopup(); });
 }
 
 const captcha = await import(`./captcha.js?_=${version}`);
