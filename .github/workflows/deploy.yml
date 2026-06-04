@@ -5,38 +5,11 @@ on:
     branches:
       - master
   workflow_dispatch:
-    inputs:
-      target:
-        description: 'Which site to deploy (en / ru / both)'
-        required: false
-        default: 'both'
 
 jobs:
-  deploy-en:
-    name: Deploy EN → motka-rix.erra.net
-    runs-on: ubuntu-latest
-    if: |
-      github.event_name == 'push' ||
-      (github.event_name == 'workflow_dispatch' && (github.event.inputs.target == 'en' || github.event.inputs.target == 'both'))
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Deploy via rsync
-        uses: burnett01/rsync-deployments@7.0.1
-        with:
-          switches: -avz --delete
-          path: webflow-export/
-          remote_path: /var/www/motka-rix.erra.net/
-          remote_host: 213.21.222.128
-          remote_user: motka
-          remote_key: ${{ secrets.DEPLOY_KEY }}
-
   deploy-ru:
     name: Deploy RU → new.motka.ru
     runs-on: ubuntu-latest
-    if: |
-      github.event_name == 'push' ||
-      (github.event_name == 'workflow_dispatch' && (github.event.inputs.target == 'ru' || github.event.inputs.target == 'both'))
     steps:
       - uses: actions/checkout@v4
 
