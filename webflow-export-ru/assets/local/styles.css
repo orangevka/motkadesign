@@ -992,3 +992,6 @@ body.mtk-body-main { margin-top: 0; }
 @media screen and (max-width: 767px) {
   .review-text-p, .review-text-p.big-size-p, .review-text-p.p-more { font-size: 18px !important; }
 }
+
+/* Теги-кейсы в секциях услуг стали ссылками на портфолио — сохраняем вид тега */
+a.tag { text-decoration: none; color: inherit; }
