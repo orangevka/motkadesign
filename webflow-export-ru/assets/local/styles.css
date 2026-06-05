@@ -994,7 +994,10 @@ body.mtk-body-main { margin-top: 0; }
 }
 
 /* Теги-кейсы в секциях услуг стали ссылками на портфолио — сохраняем вид тега */
-a.tag { text-decoration: none; color: inherit; transition: filter .15s ease; }
+a.tag { text-decoration: none; color: inherit; transition: filter .15s ease, background-color .15s ease; }
 a.tag:hover { filter: saturate(1.2) brightness(0.9); }
-/* голубые теги светлее/прозрачнее — нужен более сильный фильтр, чтобы изменение было заметно */
-a.tag.blue:hover, a.tag.blue-20:hover { filter: saturate(1.5) brightness(0.85); }
+/* голубой плотный — умеренный фильтр */
+a.tag.blue:hover { filter: saturate(1.5) brightness(0.85); }
+/* полупрозрачные -20 (alpha 0.2): filter не берёт (за элементом просвечивает белый) — повышаем насыщенность через alpha фона */
+a.tag.blue-20:hover  { filter: none; background-color: rgba(69, 127, 243, 0.47); }
+a.tag.orange-20:hover { filter: none; background-color: rgba(178, 146, 49, 0.46); }
