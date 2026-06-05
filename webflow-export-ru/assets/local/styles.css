@@ -994,4 +994,7 @@ body.mtk-body-main { margin-top: 0; }
 }
 
 /* Теги-кейсы в секциях услуг стали ссылками на портфолио — сохраняем вид тега */
-a.tag { text-decoration: none; color: inherit; }
+a.tag { text-decoration: none; color: inherit; transition: filter .15s ease; }
+a.tag:hover { filter: saturate(1.2) brightness(0.9); }
+/* голубые теги светлее/прозрачнее — нужен более сильный фильтр, чтобы изменение было заметно */
+a.tag.blue:hover, a.tag.blue-20:hover { filter: saturate(1.5) brightness(0.85); }
