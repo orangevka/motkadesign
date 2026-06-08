@@ -1,0 +1,11 @@
+/* Inline-CMS: тулбар и режим редактирования. */
+.cms-toolbar{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);
+  z-index:99999;display:flex;gap:8px;align-items:center;
+  background:#111;color:#fff;padding:10px 14px;border-radius:999px;
+  box-shadow:0 6px 24px rgba(0,0,0,.25);font:14px/1 system-ui,sans-serif}
+.cms-toolbar button{border:0;border-radius:999px;padding:8px 14px;font:inherit;cursor:pointer}
+.cms-toolbar .cms-save{background:#2d7;color:#062}
+.cms-toolbar .cms-logout{background:#333;color:#fff}
+.cms-toolbar .cms-status{opacity:.8;min-width:80px}
+[data-cms].cms-editing{outline:2px dashed #2d7;outline-offset:3px;cursor:text;border-radius:3px}
+[data-cms].cms-dirty{outline-color:#fa0}
