@@ -1,0 +1,24 @@
+name: Deploy TEST
+
+on:
+  push:
+    branches:
+      - staging
+  workflow_dispatch:
+
+jobs:
+  deploy-test:
+    name: Deploy staging → test.motka.ru
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deploy via rsync
+        uses: burnett01/rsync-deployments@7.0.1
+        with:
+          switches: -avz --delete --exclude=tuna/ --exclude=cms-data/
+          path: webflow-export-ru/
+          remote_path: /var/www/test.motka.ru/motka-mirror/motka-ru.webflow.io/
+          remote_host: 176.53.146.40
+          remote_user: motka
+          remote_key: ${{ secrets.DEPLOY_KEY_RU }}
