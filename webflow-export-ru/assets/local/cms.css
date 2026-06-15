@@ -9,3 +9,5 @@
 .cms-toolbar .cms-status{opacity:.8;min-width:80px}
 [data-cms].cms-editing{outline:2px dashed #2d7;outline-offset:3px;cursor:text;border-radius:3px}
 [data-cms].cms-dirty{outline-color:#fa0}
+/* переносы строк из CMS (\n) должны отображаться */
+[data-cms]{white-space:pre-line}
