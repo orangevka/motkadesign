@@ -1,2 +1,4 @@
 .claude/
 .figma-token
+# секреты бэкенда формы — не в git (живут на сервере вне docroot)
+webflow-export-ru/scripts/config.php
