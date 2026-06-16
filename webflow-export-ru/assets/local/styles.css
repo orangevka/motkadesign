@@ -1012,3 +1012,7 @@ a.tag.orange-20:hover { filter: none; background-color: rgba(178, 146, 49, 0.46)
   .mtk-portfolio-item-ill-big.is-video { aspect-ratio: 16 / 10; }
   .mtk-portfolio-item-ill-big.is-video .mtk-portfolio-video { height: 100%; }
 }
+
+/* Бейдж WDA 2026 (Читай-город): теми же классами, что у Грамоты (wda-badge-cont/lenta/wda-gr).
+   Тизер — как у Грамоты (соседний div после h4). Для hero кейса нужен positioned-контекст. */
+.cg-hero-inner { position: relative; }
