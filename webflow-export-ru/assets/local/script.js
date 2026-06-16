@@ -56,10 +56,17 @@ document.addEventListener('click', e => {
     navCta.style.setProperty('visibility',     'hidden', 'important');
     navCta.style.setProperty('pointer-events', 'none',   'important');
 
+    // Координаты относительно документа (инвариант к прокрутке). getBoundingClientRect()
+    // возвращает позицию относительно вьюпорта; если setup() сработает на прокрученной
+    // странице (resize при скролле, перезагрузка/возврат с восстановлением прокрутки),
+    // r.top станет отрицательным и fixed-clone уедет за экран. Добавляем scrollY/scrollX.
+    const top  = r.top  + window.scrollY;
+    const left = r.left + window.scrollX;
+
     if (clone) {
       // При ресайзе — просто обновляем позицию
-      clone.style.top  = r.top  + 'px';
-      clone.style.left = r.left + 'px';
+      clone.style.top  = top  + 'px';
+      clone.style.left = left + 'px';
       return;
     }
 
@@ -67,7 +74,7 @@ document.addEventListener('click', e => {
     clone = navCta.cloneNode(true);
     [clone, ...clone.querySelectorAll('[data-w-id]')]
       .forEach(el => el.removeAttribute('data-w-id'));
-    clone.style.cssText = 'position:fixed;top:' + r.top + 'px;left:' + r.left + 'px;right:auto;bottom:auto;z-index:9999;';
+    clone.style.cssText = 'position:fixed;top:' + top + 'px;left:' + left + 'px;right:auto;bottom:auto;z-index:9999;';
     clone.style.setProperty('margin',     '0',    'important');
     clone.style.setProperty('transition', 'none', 'important');
     document.body.appendChild(clone);
@@ -110,6 +117,53 @@ const captcha = await import(`./captcha.js?_=${version}`);
 document.body.addEventListener("focusin", function (e) {
   if (e.target.closest("form")) captcha.lazyLoad();
 });
+
+// Валидация формы: русские тултипы + проверка формата поля контакта.
+// Constraint Validation API — нативные пузырьки браузера, тексты задаём через setCustomValidity.
+const CONTACT_FIELD_ID = "Email-4";
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const TELEGRAM_RE = /^(@[a-z0-9_]{3,}|(https?:\/\/)?t\.me\/[a-z0-9_]{3,})$/i;
+
+function isValidContact(value) {
+  const v = value.trim();
+  if (!v) return false;
+  if (EMAIL_RE.test(v)) return true;
+  if (TELEGRAM_RE.test(v)) return true;
+  const digits = v.replace(/[^\d]/g, "");
+  return /^[+()\d\s-]+$/.test(v) && digits.length >= 10 && digits.length <= 15;
+}
+
+// Пересчёт формата поля контакта при вводе + сброс кастомных сообщений на любом поле
+document.body.addEventListener("input", function (e) {
+  const el = e.target;
+  if (el.id === CONTACT_FIELD_ID) {
+    el.setCustomValidity(
+      el.value.trim() === "" || isValidContact(el.value) ? "" : "x"
+    );
+  } else if (typeof el.setCustomValidity === "function") {
+    el.setCustomValidity("");
+  }
+});
+
+// invalid не всплывает — слушаем в фазе capture и подставляем русский текст
+document.body.addEventListener(
+  "invalid",
+  function (e) {
+    const el = e.target;
+    if (el.validity.valueMissing) {
+      el.setCustomValidity(
+        el.type === "checkbox"
+          ? "Пожалуйста, подтвердите согласие на обработку персональных данных."
+          : "Пожалуйста, заполните это поле."
+      );
+    } else if (el.id === CONTACT_FIELD_ID) {
+      el.setCustomValidity(
+        "Укажите почту, Телеграм (@username) или номер телефона."
+      );
+    }
+  },
+  true
+);
 
 // Block all form submissions immediately
 document.body.addEventListener("submit", function (e) {
