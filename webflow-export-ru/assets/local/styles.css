@@ -1001,3 +1001,14 @@ a.tag.blue:hover { filter: saturate(1.5) brightness(0.85); }
 /* полупрозрачные -20 (alpha 0.2): filter не берёт (за элементом просвечивает белый) — повышаем насыщенность через alpha фона */
 a.tag.blue-20:hover  { filter: none; background-color: rgba(69, 127, 243, 0.47); }
 a.tag.orange-20:hover { filter: none; background-color: rgba(178, 146, 49, 0.46); }
+
+/* Видео-тизер кейса (Читай-город): одно видео на все брейкпоинты вместо desktop/mobile картинок.
+   Специфичность (0,2,0) перебивает глобальное .mtk-portfolio-item-ill-big{display:none} на мобильном. */
+.mtk-portfolio-item-ill-big.is-video { display: flex; }
+.mtk-portfolio-video { width: 100%; height: 100%; object-fit: cover; display: block; }
+/* На планшете/мобильном кадрируем видео по центру в более узкое соотношение —
+   cover срезает боковые серые поля (~14% с каждой стороны), но края монитора остаются в кадре. */
+@media screen and (max-width: 991px) {
+  .mtk-portfolio-item-ill-big.is-video { aspect-ratio: 16 / 10; }
+  .mtk-portfolio-item-ill-big.is-video .mtk-portfolio-video { height: 100%; }
+}
